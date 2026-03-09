@@ -77,10 +77,10 @@ const skills = [
   "React",
   "HTML",
   "JavaScript",
-  "Adove Illustrator",
+  "Adobe Illustrator",
   "Adobe Photoshop",
   "Adobe InDesign",
-  "Framer",
+  "3D Modeling",
 ];
 
 const stats = [
@@ -318,10 +318,8 @@ export default function App() {
                 <span style={{ color: PINK, fontStyle: "italic" }}>Piper.</span>
               </h2>
               <p className="body-text" style={{ marginBottom: 20 }}>
-                3rd year Interaction Design student at Parsons School of Design,
-                New York. I'm obsessed with the gap between how things work and
-                how they <em>feel</em> — and spending most of my time trying to
-                close it.
+                As a 4th year student at University of Colorado, Boulder, I will
+                be finishing my B.S in Creative Technology and Design.
               </p>
               <p className="body-text" style={{ marginBottom: 28 }}>
                 My work ranges from class projects and hackathons to
@@ -540,7 +538,7 @@ export default function App() {
                     padding: "4px 10px",
                   }}
                 >
-                  2025
+                  Current
                 </span>
               </div>
               <span
@@ -574,7 +572,7 @@ export default function App() {
                   marginBottom: 16,
                 }}
               >
-                Pulse
+                Band Width
               </p>
               <p
                 className="body-text"
@@ -587,11 +585,13 @@ export default function App() {
                 testing.
               </p>
               <div style={{ marginBottom: 24 }}>
-                {["Figma", "Maze", "Dovetail", "FigJam"].map((t) => (
-                  <span key={t} className="tool-chip">
-                    {t}
-                  </span>
-                ))}
+                {["React Native", "Figma", "Expo", "Adobe Illustrator"].map(
+                  (t) => (
+                    <span key={t} className="tool-chip">
+                      {t}
+                    </span>
+                  ),
+                )}
               </div>
               <div
                 style={{
@@ -602,8 +602,8 @@ export default function App() {
                 }}
               >
                 {[
-                  { label: "24", sub: "interviews" },
-                  { label: "3", sub: "test rounds" },
+                  { label: "30+", sub: "interviews" },
+                  { label: "3", sub: "iterations" },
                   { label: "58%", sub: "friction drop" },
                 ].map(({ label, sub }) => (
                   <div key={sub} style={{ textAlign: "center" }}>
