@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import piperPhoto from "./assets/Piper_Vetowich.png";
 
 const PINK = "#FF69B4";
 const CREAM = "#F5F0E8";
+const WARM_TAN = "#E8DDD0";
 const DARK = "#1a1a1a";
 
 const projects = [
@@ -72,44 +74,31 @@ const process = [
 
 const skills = [
   "Figma",
-  "FigJam",
-  "Protopie",
-  "Maze",
-  "Dovetail",
-  "Miro",
-  "Notion",
+  "React",
+  "HTML",
+  "JavaScript",
+  "Adove Illustrator",
+  "Adobe Photoshop",
+  "Adobe InDesign",
   "Framer",
 ];
 
-const services = [
-  { title: "UX Audit", desc: "Heuristic evaluation + actionable report" },
-  {
-    title: "Product Design",
-    desc: "End-to-end design from research to handoff",
-  },
-  {
-    title: "Design Systems",
-    desc: "Scalable components, tokens, documentation",
-  },
-  { title: "UX Research", desc: "Interviews, usability tests, synthesis" },
-];
-
 const stats = [
-  { num: "12+", label: "projects shipped" },
-  { num: "3yrs", label: "experience" },
-  { num: "98%", label: "client satisfaction" },
+  { num: "4th", label: "year student" },
+  { num: "8+", label: "projects completed" },
+  { num: "2026", label: "graduating" },
 ];
 
 const contactItems = [
-  { icon: "✉", label: "alex@portfolio.com" },
-  { icon: "◎", label: "@alexrivera.ux" },
-  { icon: "▷", label: "read.cv/alexrivera" },
+  { icon: "✉", label: "pipervetowich@gmail.com" },
+  { icon: "LinkedIn", label: "www.linkedin.com/in/piper-vetowich" },
+  { icon: "Phone", label: "720-289-3259" },
 ];
 
 const loveItems = [
-  "designing for people, not screens",
-  "research-driven decisions",
-  "systems thinking with an eye for detail",
+  "Designing for people, not screens.",
+  "Learning by doing.",
+  "Turning small projects into big impacts.",
 ];
 
 export default function App() {
@@ -157,21 +146,18 @@ export default function App() {
         .project-card:hover { transform: translateY(-6px); }
         .tool-chip { display: inline-block; background: rgba(255,105,180,0.12); border: 1px solid rgba(255,105,180,0.3); color: ${PINK}; font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 1px; padding: 3px 8px; margin: 2px; }
         .process-step { border-left: 2px solid ${PINK}; padding-left: 20px; margin-bottom: 32px; }
-        .wrap-section { background: ${PINK}; padding: 80px 40px; text-align: center; position: relative; overflow: hidden; }
+        .wrap-section { background: ${PINK}; padding: 100px 60px; text-align: center; position: relative; overflow: hidden; }
         .wrap-section::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.15); }
         .envelope { background: white; padding: 30px; max-width: 400px; margin: 0 auto; position: relative; box-shadow: 8px 8px 0 rgba(0,0,0,0.15); transform: rotate(-1deg); }
         .envelope::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: repeating-linear-gradient(90deg, ${PINK} 0, ${PINK} 10px, white 10px, white 20px); }
-        .bar-chart-bar { background: ${PINK}; transition: height 1s cubic-bezier(0.16, 1, 0.3, 1); }
         .grain-overlay { position: fixed; inset: 0; pointer-events: none; opacity: 0.03; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); z-index: 9999; }
-        .service-card { border: 1.5px solid #ddd; padding: 24px; transition: all 0.2s; }
-        .service-card:hover { border-color: ${PINK}; background: rgba(255,105,180,0.04); }
         .big-quote { font-family: 'Playfair Display', serif; font-size: clamp(28px, 5vw, 56px); font-weight: 900; line-height: 1.1; color: white; }
         .pink-text { color: ${PINK}; font-family: 'Playfair Display', serif; font-style: italic; }
       `}</style>
 
       <div className="grain-overlay" />
 
-      {/* HERO / ABOUT ME */}
+      {/* HERO */}
       <section
         id="about"
         style={{
@@ -179,7 +165,7 @@ export default function App() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "60px 40px 40px",
+          padding: "80px 60px 60px",
           position: "relative",
           background: CREAM,
         }}
@@ -190,47 +176,30 @@ export default function App() {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              marginBottom: 40,
+              marginBottom: 48,
             }}
           >
             <p className="section-label">UX Designer / Product Designer</p>
-            <p className="handwriting" style={{ fontSize: 13 }}>
-              By Alex Rivera
-            </p>
+            <p className="section-label">Colorado, USA</p>
           </div>
 
           <p
             className="handwriting"
-            style={{ fontSize: "clamp(14px, 2vw, 20px)", marginBottom: 8 }}
+            style={{ fontSize: "clamp(14px, 2vw, 20px)" }}
           >
-            Hi. Since you're new here.
+            Hi. Glad you're here.
           </p>
           <p
             className="handwriting"
             style={{
-              fontSize: "clamp(12px, 1.5vw, 16px)",
-              marginBottom: 16,
-              marginLeft: "auto",
-              maxWidth: 300,
+              fontSize: "clamp(14px, 2vw, 20px)",
               textAlign: "right",
             }}
           >
-            let me show you my work ✦
+            Let me show you my work ✦
           </p>
 
           <div style={{ position: "relative", marginBottom: 20 }}>
-            <p
-              className="handwriting"
-              style={{
-                position: "absolute",
-                top: 0,
-                left: "clamp(80px, 15vw, 180px)",
-                zIndex: 2,
-                fontSize: "clamp(13px, 1.8vw, 18px)",
-              }}
-            >
-              This is
-            </p>
             <div style={{ position: "relative" }}>
               <h1
                 className={`hero-title ${loaded ? "visible" : ""}`}
@@ -238,13 +207,13 @@ export default function App() {
                   transition: "all 1s 0.1s cubic-bezier(0.16, 1, 0.3, 1)",
                 }}
               >
-                ALEX
+                PIPER
               </h1>
               <div
                 style={{
                   position: "absolute",
-                  top: "50%",
-                  left: "50%",
+                  top: "42%",
+                  left: "63.5%",
                   transform: "translate(-50%, -60%)",
                   width: "clamp(120px, 20vw, 220px)",
                   height: "clamp(160px, 28vw, 300px)",
@@ -255,33 +224,25 @@ export default function App() {
                   style={{
                     width: "100%",
                     height: "100%",
-                    background: "#c8c0b4",
                     borderRadius: 2,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    position: "relative",
                     overflow: "hidden",
+                    position: "relative",
                   }}
                 >
-                  <span
+                  <img
+                    src={piperPhoto}
+                    alt="Portrait of Piper Vetowich"
                     style={{
-                      fontSize: 9,
-                      letterSpacing: 2,
-                      color: "#999",
-                      fontFamily: "Space Mono",
-                      position: "relative",
-                      zIndex: 1,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center 0%",
                     }}
-                  >
-                    PHOTO
-                  </span>
+                  />
                   <div
                     style={{
                       position: "absolute",
                       inset: 0,
-                      background:
-                        "linear-gradient(135deg, rgba(255,105,180,0.2), transparent)",
                     }}
                   />
                 </div>
@@ -291,30 +252,12 @@ export default function App() {
                 style={{
                   transition: "all 1s 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
                   textAlign: "right",
+                  position: "relative",
+                  zIndex: 3,
                 }}
               >
-                RIVERA
+                VETOWICH
               </h1>
-            </div>
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "flex-end",
-              flexWrap: "wrap",
-              gap: 16,
-            }}
-          >
-            <p className="body-text" style={{ maxWidth: 320 }}>
-              Designing digital experiences that feel
-              <br />
-              <em>intuitive, intentional, and a little beautiful.</em>
-            </p>
-            <div style={{ display: "flex", gap: 8 }}>
-              <span className="sticker">ux ✦</span>
-              <span className="sticker-outline">product</span>
             </div>
           </div>
         </div>
@@ -322,15 +265,20 @@ export default function App() {
         <div
           style={{
             position: "absolute",
-            bottom: 30,
+            bottom: 10,
             left: "50%",
             transform: "translateX(-50%)",
             textAlign: "center",
+            pointerEvents: "none",
           }}
         >
-          <p className="section-label" style={{ marginBottom: 8 }}>
-            scroll to explore
+          <p
+            className="section-label"
+            style={{ marginBottom: 10, opacity: 0.6 }}
+          >
+            Scroll to explore
           </p>
+
           <div
             style={{ width: 1, height: 40, background: PINK, margin: "0 auto" }}
           />
@@ -340,11 +288,11 @@ export default function App() {
       {/* ABOUT ME */}
       <section
         id="about-me"
-        style={{ background: "#EEE8DC", padding: "80px 40px" }}
+        style={{ background: WARM_TAN, padding: "100px 60px" }}
       >
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <p className="section-label" style={{ marginBottom: 40 }}>
-            — 00 / about me
+            About Me
           </p>
           <div
             style={{
@@ -365,24 +313,21 @@ export default function App() {
                   marginBottom: 24,
                 }}
               >
-                I design things
+                Hello, I am
                 <br />
-                people{" "}
-                <span style={{ color: PINK, fontStyle: "italic" }}>
-                  actually
-                </span>
-                <br />
-                want to use.
+                <span style={{ color: PINK, fontStyle: "italic" }}>Piper.</span>
               </h2>
               <p className="body-text" style={{ marginBottom: 20 }}>
-                Based in New York. Currently obsessed with turning complex
-                problems into clean, human-centered interfaces. I work across
-                the full design spectrum — from messy whiteboard sessions to
-                polished, pixel-perfect handoffs.
+                3rd year Interaction Design student at Parsons School of Design,
+                New York. I'm obsessed with the gap between how things work and
+                how they <em>feel</em> — and spending most of my time trying to
+                close it.
               </p>
               <p className="body-text" style={{ marginBottom: 28 }}>
-                Previously at Studio Vyne and Halo Digital. Now freelancing and
-                open to the right full-time role.
+                My work ranges from class projects and hackathons to
+                self-initiated case studies. I'm actively seeking internships
+                and entry-level roles where I can learn fast and contribute
+                meaningfully.
               </p>
               <div style={{ marginBottom: 16 }}>
                 <p className="section-label" style={{ marginBottom: 12 }}>
@@ -415,7 +360,6 @@ export default function App() {
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-              {/* Photo placeholder */}
               <div
                 style={{
                   height: 340,
@@ -448,7 +392,6 @@ export default function App() {
                   PHOTO
                 </span>
               </div>
-              {/* Stats row */}
               <div
                 style={{
                   display: "grid",
@@ -463,7 +406,7 @@ export default function App() {
                       padding: "20px 12px",
                       background: i === 1 ? PINK : CREAM,
                       textAlign: "center",
-                      border: "1px solid #ddd",
+                      border: "1px solid #d4c8b8",
                     }}
                   >
                     <p
@@ -496,22 +439,226 @@ export default function App() {
       </section>
 
       {/* SELECTED WORKS */}
-      <section id="work" style={{ background: CREAM, padding: "80px 40px" }}>
+      <section id="work" style={{ background: DARK, padding: "100px 60px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div style={{ marginBottom: 60 }}>
+            <p className="section-label">Selected Work</p>
+            <h2
+              style={{
+                fontFamily: "Playfair Display",
+                fontSize: "clamp(32px, 4vw, 48px)",
+                marginTop: 8,
+                color: DARK,
+              }}
+            >
+              Projects I've Designed
+            </h2>
+          </div>
           <div
             style={{
               display: "flex",
               justifyContent: "space-between",
               alignItems: "flex-end",
-              marginBottom: 48,
+              marginBottom: 64,
             }}
           >
-            <p className="section-label">— 01 / selected works</p>
-            <p className="handwriting" style={{ fontSize: 13, color: "#888" }}>
-              4 projects ✦
-            </p>
+            <div>
+              <h2
+                style={{
+                  fontFamily: "Playfair Display, serif",
+                  fontSize: "clamp(48px, 8vw, 96px)",
+                  fontWeight: 900,
+                  color: "white",
+                  lineHeight: 0.9,
+                  letterSpacing: "-2px",
+                }}
+              >
+                My
+                <br />
+                <span style={{ color: PINK, fontStyle: "italic" }}>
+                  Projects.
+                </span>
+              </h2>
+            </div>
           </div>
 
+          {/* FEATURED PROJECT */}
+          <div
+            className="project-card"
+            onClick={() => setActiveProject(activeProject === -1 ? null : -1)}
+            style={{
+              background: "#242424",
+              border: "1px solid #333",
+              overflow: "hidden",
+              marginBottom: 24,
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+            }}
+          >
+            <div
+              style={{
+                background: "#b07090",
+                position: "relative",
+                minHeight: 340,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  background:
+                    "linear-gradient(135deg, rgba(255,105,180,0.35), transparent 60%)",
+                }}
+              />
+              <div style={{ position: "absolute", top: 16, left: 16 }}>
+                <span
+                  style={{
+                    background: PINK,
+                    color: "white",
+                    fontFamily: "Space Mono",
+                    fontSize: 9,
+                    letterSpacing: 2,
+                    padding: "4px 10px",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Featured
+                </span>
+              </div>
+              <div style={{ position: "absolute", top: 16, right: 16 }}>
+                <span
+                  style={{
+                    background: "rgba(0,0,0,0.4)",
+                    color: "white",
+                    fontFamily: "Space Mono",
+                    fontSize: 9,
+                    letterSpacing: 2,
+                    padding: "4px 10px",
+                  }}
+                >
+                  2025
+                </span>
+              </div>
+              <span
+                style={{
+                  fontFamily: "Space Mono",
+                  fontSize: 10,
+                  color: "rgba(255,255,255,0.4)",
+                  letterSpacing: 2,
+                  position: "relative",
+                  zIndex: 1,
+                }}
+              >
+                PROJECT PREVIEW
+              </span>
+            </div>
+
+            <div style={{ padding: "40px" }}>
+              <p
+                className="section-label"
+                style={{ color: "#555", marginBottom: 12 }}
+              >
+                Capstone Project · Mobile App
+              </p>
+              <p
+                style={{
+                  fontFamily: "Playfair Display, serif",
+                  fontSize: "clamp(32px, 4vw, 52px)",
+                  fontWeight: 900,
+                  color: "white",
+                  lineHeight: 1.05,
+                  marginBottom: 16,
+                }}
+              >
+                Pulse
+              </p>
+              <p
+                className="body-text"
+                style={{ color: "#aaa", marginBottom: 20, fontSize: 12 }}
+              >
+                A campus mental health companion app designed with and for
+                college students. Led end-to-end from a 3-month research sprint
+                — 24 interviews, 3 usability rounds — through to a high-fidelity
+                prototype. Reduced perceived onboarding friction by 58% in
+                testing.
+              </p>
+              <div style={{ marginBottom: 24 }}>
+                {["Figma", "Maze", "Dovetail", "FigJam"].map((t) => (
+                  <span key={t} className="tool-chip">
+                    {t}
+                  </span>
+                ))}
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  gap: 24,
+                  flexWrap: "wrap",
+                  marginBottom: 24,
+                }}
+              >
+                {[
+                  { label: "24", sub: "interviews" },
+                  { label: "3", sub: "test rounds" },
+                  { label: "58%", sub: "friction drop" },
+                ].map(({ label, sub }) => (
+                  <div key={sub} style={{ textAlign: "center" }}>
+                    <p
+                      style={{
+                        fontFamily: "Playfair Display, serif",
+                        fontSize: 28,
+                        fontWeight: 900,
+                        color: PINK,
+                        lineHeight: 1,
+                      }}
+                    >
+                      {label}
+                    </p>
+                    <p
+                      className="section-label"
+                      style={{ color: "#555", marginTop: 4, fontSize: 9 }}
+                    >
+                      {sub}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <span
+                style={{
+                  fontFamily: "Space Mono",
+                  fontSize: 9,
+                  letterSpacing: 2,
+                  color: PINK,
+                  textTransform: "uppercase",
+                }}
+              >
+                {activeProject === -1 ? "close ↑" : "view case study →"}
+              </span>
+              {activeProject === -1 && (
+                <div
+                  style={{
+                    marginTop: 16,
+                    borderTop: "1px dashed #333",
+                    paddingTop: 16,
+                  }}
+                >
+                  <p
+                    className="body-text"
+                    style={{ fontSize: 11, color: "#666", fontStyle: "italic" }}
+                  >
+                    Full case study coming soon — reach out to see the complete
+                    process deck, research synthesis, and final prototype.
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* SMALL PROJECT GRID */}
           <div
             style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}
           >
@@ -520,7 +667,11 @@ export default function App() {
                 key={i}
                 className="project-card"
                 onClick={() => setActiveProject(activeProject === i ? null : i)}
-                style={{ background: "#EEE8DC", overflow: "hidden" }}
+                style={{
+                  background: "#242424",
+                  border: "1px solid #333",
+                  overflow: "hidden",
+                }}
               >
                 <div
                   style={{
@@ -599,13 +750,16 @@ export default function App() {
                           fontFamily: "Playfair Display, serif",
                           fontSize: 22,
                           fontWeight: 900,
-                          color: DARK,
+                          color: "white",
                           lineHeight: 1.1,
                         }}
                       >
                         {p.title}
                       </p>
-                      <p className="section-label" style={{ marginTop: 4 }}>
+                      <p
+                        className="section-label"
+                        style={{ marginTop: 4, color: "#666" }}
+                      >
                         {p.type}
                       </p>
                     </div>
@@ -613,8 +767,8 @@ export default function App() {
                       style={{
                         fontFamily: "Space Mono",
                         fontSize: 9,
-                        color: "#888",
-                        border: "1px solid #ddd",
+                        color: "#666",
+                        border: "1px solid #333",
                         padding: "4px 8px",
                         whiteSpace: "nowrap",
                       }}
@@ -622,14 +776,12 @@ export default function App() {
                       {p.role}
                     </span>
                   </div>
-
                   <p
                     className="body-text"
-                    style={{ fontSize: 11, marginBottom: 12, color: "#555" }}
+                    style={{ fontSize: 11, marginBottom: 12, color: "#888" }}
                   >
                     {p.desc}
                   </p>
-
                   <div>
                     {p.tools.map((t) => (
                       <span key={t} className="tool-chip">
@@ -637,7 +789,6 @@ export default function App() {
                       </span>
                     ))}
                   </div>
-
                   <div
                     style={{
                       marginTop: 16,
@@ -658,12 +809,11 @@ export default function App() {
                       {activeProject === i ? "close ↑" : "view case study →"}
                     </span>
                   </div>
-
                   {activeProject === i && (
                     <div
                       style={{
                         marginTop: 16,
-                        borderTop: "1px dashed #ddd",
+                        borderTop: "1px dashed #333",
                         paddingTop: 16,
                       }}
                     >
@@ -690,14 +840,14 @@ export default function App() {
       {/* MY CRAFTS */}
       <section
         id="crafts"
-        style={{ background: DARK, padding: "80px 40px", color: "white" }}
+        style={{ background: CREAM, padding: "100px 60px", color: DARK }}
       >
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <p
             className="section-label"
-            style={{ color: "#666", marginBottom: 60 }}
+            style={{ color: "#aaa", marginBottom: 60 }}
           >
-            — 02 / my crafts
+            My Process
           </p>
           <div
             style={{
@@ -707,7 +857,7 @@ export default function App() {
               alignItems: "start",
             }}
           >
-            {/* Left — tools + process */}
+            {/* Left */}
             <div>
               <h2
                 style={{
@@ -720,39 +870,48 @@ export default function App() {
                   marginBottom: 32,
                 }}
               >
-                tools
+                Tools
                 <br />&<br />
-                process
+                Process
               </h2>
               <div style={{ marginBottom: 32 }}>
                 {skills.map((s) => (
                   <span
                     key={s}
                     className="skill-tag"
-                    style={{ borderColor: "#444", color: "#ccc" }}
+                    style={{ borderColor: "#ccc", color: DARK }}
                   >
                     {s}
                   </span>
                 ))}
               </div>
               <p
-                className="big-quote"
-                style={{ fontSize: "clamp(22px, 3.5vw, 36px)", marginTop: 32 }}
+                style={{
+                  fontFamily: "Playfair Display, serif",
+                  fontSize: "clamp(22px, 3.5vw, 36px)",
+                  fontWeight: 900,
+                  lineHeight: 1.1,
+                  color: DARK,
+                  marginTop: 32,
+                }}
               >
-                design is just <span className="pink-text">empathy</span> with
-                pixels.
+                Design is just{" "}
+                <span style={{ color: PINK, fontStyle: "italic" }}>
+                  empathy
+                </span>{" "}
+                with pixels.
               </p>
             </div>
 
-            {/* Right — process steps + services */}
+            {/* Right — process only */}
             <div>
               <p
                 className="section-label"
-                style={{ color: "#666", marginBottom: 24 }}
+                style={{ color: "#aaa", marginBottom: 24 }}
               >
-                how i work
+                How I Design
               </p>
-              <div style={{ marginBottom: 48 }}>
+              <div>
                 {process.map(({ num, label, desc }) => (
                   <div key={num} className="process-step">
                     <p
@@ -771,7 +930,7 @@ export default function App() {
                         fontFamily: "Playfair Display, serif",
                         fontSize: 18,
                         fontWeight: 700,
-                        color: "white",
+                        color: DARK,
                         marginBottom: 4,
                       }}
                     >
@@ -779,44 +938,7 @@ export default function App() {
                     </p>
                     <p
                       className="body-text"
-                      style={{ color: "#666", fontSize: 11 }}
-                    >
-                      {desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <p
-                className="section-label"
-                style={{ color: "#666", marginBottom: 16 }}
-              >
-                services
-              </p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {services.map(({ title, desc }) => (
-                  <div
-                    key={title}
-                    style={{
-                      borderLeft: "2px solid #333",
-                      paddingLeft: 16,
-                      paddingBottom: 8,
-                    }}
-                  >
-                    <p
-                      style={{
-                        fontFamily: "Playfair Display, serif",
-                        fontSize: 15,
-                        fontWeight: 700,
-                        color: "white",
-                        marginBottom: 2,
-                      }}
-                    >
-                      {title}
-                    </p>
-                    <p
-                      className="body-text"
-                      style={{ color: "#666", fontSize: 10 }}
+                      style={{ color: "#777", fontSize: 11 }}
                     >
                       {desc}
                     </p>
@@ -835,7 +957,7 @@ export default function App() {
             className="section-label"
             style={{ color: "rgba(255,255,255,0.6)", marginBottom: 24 }}
           >
-            — 03 / let's connect
+            Contact
           </p>
           <h2
             style={{
@@ -862,7 +984,7 @@ export default function App() {
               marginBottom: 48,
             }}
           >
-            ✦ open for freelance & full-time roles ✦
+            ✦✦✦
           </p>
           <div className="envelope">
             <p
@@ -876,7 +998,7 @@ export default function App() {
               }}
             >
               "Thank you for exploring my portfolio! I'm always looking for
-              meaningful problems to solve and teams to grow with."
+              opportunities to grow."
             </p>
             <p
               style={{
@@ -887,8 +1009,7 @@ export default function App() {
                 marginBottom: 16,
               }}
             >
-              If you'd like to collaborate or just chat design, I'd love to hear
-              from you.
+              If you'd like to chat design, I'd love to hear from you.
             </p>
             <div
               style={{
@@ -920,7 +1041,7 @@ export default function App() {
             className="section-label"
             style={{ color: "rgba(255,255,255,0.4)", marginTop: 48 }}
           >
-            © 2026 Alex Rivera — All Rights Reserved
+            © 2026 Piper Vetowich — All Rights Reserved
           </p>
         </div>
       </section>
