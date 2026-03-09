@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
 import piperPhoto from "./assets/Piper_Vetowich.png";
+import piperPhoto2 from "./assets/Piper_Vetowich.jpg";
+import bandwidthLogo from "./assets/Band_Width_Logo.jpg";
+import denverZoo from "./assets/Denver_Zoo.jpg";
+import ymcaPhoto from "./assets/YMCA.jpg";
+import bhcPhoto from "./assets/BHC.jpg";
+import noodlesPhoto from "./assets/Noodles.jpg";
 
 const PINK = "#FF69B4";
 const CREAM = "#F5F0E8";
@@ -8,44 +14,48 @@ const DARK = "#1a1a1a";
 
 const projects = [
   {
-    title: "Bloom",
-    type: "Mobile App",
-    role: "Lead UX Designer",
-    tools: ["Figma", "Maze", "FigJam"],
-    desc: "A mental wellness app focused on habit-building for Gen Z. Redesigned onboarding flow, reducing drop-off by 42%.",
-    color: "#c8b4a8",
-    tag: "Case Study",
-    year: "2025",
-  },
-  {
-    title: "Reframe",
-    type: "Web Platform",
-    role: "UX / UI Designer",
-    tools: ["Figma", "Notion", "Lottie"],
-    desc: "B2B dashboard for content agencies. Designed a component system and information architecture from scratch.",
-    color: "#9ca8b4",
-    tag: "System Design",
+    title: "Denver Zoo Redesign",
+    type: "UX/UI Design Project",
+    role: "UX/UI Designer",
+    tools: ["Figma", "User Testing", "User Flows"],
+    desc: "Redesigned the Denver Zoo website to improve ticket purchasing and navigation flow.",
+    tag: "UX/UI",
     year: "2024",
-  },
-  {
-    title: "Folio",
-    type: "Design System",
-    role: "Design Systems Lead",
-    tools: ["Figma", "Storybook", "Zeroheight"],
-    desc: "End-to-end design system for a fintech startup. 120+ components, token library, and full documentation.",
     color: "#b4c8b0",
-    tag: "Design System",
-    year: "2024",
+    image: denverZoo,
   },
   {
-    title: "Waypoint",
-    type: "Travel App",
-    role: "UX Researcher + Designer",
-    tools: ["Figma", "Dovetail", "Protopie"],
-    desc: "User research-led redesign of a travel planning app. Conducted 18 interviews, affinity mapping, and 3 iteration rounds.",
+    title: "YMCA Rebrand",
+    type: "Logo & Brand Identity",
+    role: "Graphic Designer",
+    tools: ["Adobe Illustrator", "Marketing", "Brand Identity"],
+    desc: "Revamped YMCA's visual identity, creating a cohesive brand identity for marketing and digital platforms.",
+    color: "#121212",
+    tag: "Identity & Branding",
+    year: "2026",
+    image: ymcaPhoto,
+  },
+  {
+    title: "Boulder Housing Coalition UX Audit",
+    type: "UX/UI Design Project",
+    role: "UX Auditor",
+    tools: ["Figma", "User Testing", "Accessibility"],
+    desc: "Conducted a comprehensive UX audit for the Boulder Housing Coalition website, identifying pain points and accessibility issues. Created a mockup of redesign suggestions.",
+    color: "#b4c8b0",
+    tag: "UX/UI",
+    year: "2025",
+    image: bhcPhoto,
+  },
+  {
+    title: "Food Product Packaging Design",
+    type: "Physical Product Design",
+    role: "Product Designer",
+    tools: ["Sketching", "Prototyping", "Adobe Illustrator"],
+    desc: "Designed packaging for a product, including branding, label layout, and mockup creation.",
     color: "#c4b8d4",
-    tag: "Research",
+    tag: "Product Design",
     year: "2023",
+    image: noodlesPhoto,
   },
 ];
 
@@ -58,17 +68,17 @@ const process = [
   {
     num: "02",
     label: "Define",
-    desc: "Personas, journey maps, problem framing",
+    desc: "Personas, journey maps, affinity mapping",
   },
   {
     num: "03",
     label: "Design",
-    desc: "Wireframes, prototypes, component systems",
+    desc: "Wireframes, prototypes, accessibility",
   },
   {
     num: "04",
-    label: "Deliver",
-    desc: "Handoff, testing, iteration, documentation",
+    label: "Test",
+    desc: "User testing, iterate feedback, refine",
   },
 ];
 
@@ -103,7 +113,9 @@ const loveItems = [
 
 export default function App() {
   const [loaded, setLoaded] = useState(false);
-  const [activeProject, setActiveProject] = useState<number | null>(null);
+  const [activeProject, setActiveProject] = useState<
+    number | "featured" | null
+  >(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoaded(true), 100);
@@ -237,6 +249,7 @@ export default function App() {
                       height: "100%",
                       objectFit: "cover",
                       objectPosition: "center 0%",
+                      zIndex: 2,
                     }}
                   />
                   <div
@@ -318,14 +331,21 @@ export default function App() {
                 <span style={{ color: PINK, fontStyle: "italic" }}>Piper.</span>
               </h2>
               <p className="body-text" style={{ marginBottom: 20 }}>
-                As a 4th year student at University of Colorado, Boulder, I will
-                be finishing my B.S in Creative Technology and Design.
+                I'm a 4th-year student at the University of Colorado, Boulder,
+                completing my B.S. in Creative Technology and Design in May
+                2026. Throughout my studies, I've developed a strong foundation
+                in design thinking, user experience, front-end development, and
+                creative problem-solving. My experience spans designing
+                intuitive digital experiences, building responsive interfaces,
+                and iterating solutions based on user feedback. Beyond technical
+                skills, I value collaboration, adaptability, and attention to
+                detail.
               </p>
               <p className="body-text" style={{ marginBottom: 28 }}>
-                My work ranges from class projects and hackathons to
-                self-initiated case studies. I'm actively seeking internships
-                and entry-level roles where I can learn fast and contribute
-                meaningfully.
+                I'm actively seeking internships and entry-level opportunities
+                where I can continue learning, apply my skills to real-world
+                projects, and contribute meaningfully to a team. I'm especially
+                excited to innovate and create engaging experiences for users.
               </p>
               <div style={{ marginBottom: 16 }}>
                 <p className="section-label" style={{ marginBottom: 12 }}>
@@ -369,26 +389,18 @@ export default function App() {
                   overflow: "hidden",
                 }}
               >
-                <div
+                <img
+                  src={piperPhoto2}
+                  alt="Piper Vetowich"
                   style={{
-                    position: "absolute",
-                    inset: 0,
-                    background:
-                      "linear-gradient(135deg, rgba(255,105,180,0.2), transparent)",
-                  }}
-                />
-                <span
-                  style={{
-                    fontFamily: "Space Mono",
-                    fontSize: 10,
-                    color: "#999",
-                    letterSpacing: 2,
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
                     position: "relative",
+                    objectPosition: "center 35%",
                     zIndex: 1,
                   }}
-                >
-                  PHOTO
-                </span>
+                />
               </div>
               <div
                 style={{
@@ -483,7 +495,9 @@ export default function App() {
           {/* FEATURED PROJECT */}
           <div
             className="project-card"
-            onClick={() => setActiveProject(activeProject === -1 ? null : -1)}
+            onClick={() =>
+              setActiveProject(activeProject === "featured" ? null : "featured")
+            }
             style={{
               background: "#242424",
               border: "1px solid #333",
@@ -504,12 +518,13 @@ export default function App() {
                 overflow: "hidden",
               }}
             >
-              <div
+              <img
+                src={bandwidthLogo}
+                alt="Bandwidth App Preview"
                 style={{
-                  position: "absolute",
-                  inset: 0,
-                  background:
-                    "linear-gradient(135deg, rgba(255,105,180,0.35), transparent 60%)",
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
                 }}
               />
               <div style={{ position: "absolute", top: 16, left: 16 }}>
@@ -524,7 +539,7 @@ export default function App() {
                     textTransform: "uppercase",
                   }}
                 >
-                  Featured
+                  Mobile App
                 </span>
               </div>
               <div style={{ position: "absolute", top: 16, right: 16 }}>
@@ -541,18 +556,6 @@ export default function App() {
                   Current
                 </span>
               </div>
-              <span
-                style={{
-                  fontFamily: "Space Mono",
-                  fontSize: 10,
-                  color: "rgba(255,255,255,0.4)",
-                  letterSpacing: 2,
-                  position: "relative",
-                  zIndex: 1,
-                }}
-              >
-                PROJECT PREVIEW
-              </span>
             </div>
 
             <div style={{ padding: "40px" }}>
@@ -578,11 +581,10 @@ export default function App() {
                 className="body-text"
                 style={{ color: "#aaa", marginBottom: 20, fontSize: 12 }}
               >
-                A campus mental health companion app designed with and for
-                college students. Led end-to-end from a 3-month research sprint
-                — 24 interviews, 3 usability rounds — through to a high-fidelity
-                prototype. Reduced perceived onboarding friction by 58% in
-                testing.
+                Bandwidth is a mobile app designed to make local music discovery
+                easy and community-focused. We make discovering, promoting, and
+                organizing local music easy for bands, fans, and hosts. All on
+                one platform.
               </p>
               <div style={{ marginBottom: 24 }}>
                 {["React Native", "Figma", "Expo", "Adobe Illustrator"].map(
@@ -636,9 +638,9 @@ export default function App() {
                   textTransform: "uppercase",
                 }}
               >
-                {activeProject === -1 ? "close ↑" : "view case study →"}
+                {activeProject === "featured" ? "close ↑" : "view case study →"}
               </span>
-              {activeProject === -1 && (
+              {activeProject === "featured" && (
                 <div
                   style={{
                     marginTop: 16,
@@ -721,18 +723,17 @@ export default function App() {
                       {p.year}
                     </span>
                   </div>
-                  <span
+                  <img
+                    src={p.image}
+                    alt={p.title}
                     style={{
-                      fontFamily: "Space Mono",
-                      fontSize: 10,
-                      color: "rgba(255,255,255,0.5)",
-                      letterSpacing: 2,
-                      position: "relative",
-                      zIndex: 1,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      position: "absolute",
+                      inset: 0,
                     }}
-                  >
-                    PROJECT PREVIEW
-                  </span>
+                  />
                 </div>
 
                 <div style={{ padding: "20px 24px 24px" }}>
@@ -885,22 +886,6 @@ export default function App() {
                   </span>
                 ))}
               </div>
-              <p
-                style={{
-                  fontFamily: "Playfair Display, serif",
-                  fontSize: "clamp(22px, 3.5vw, 36px)",
-                  fontWeight: 900,
-                  lineHeight: 1.1,
-                  color: DARK,
-                  marginTop: 32,
-                }}
-              >
-                Design is just{" "}
-                <span style={{ color: PINK, fontStyle: "italic" }}>
-                  empathy
-                </span>{" "}
-                with pixels.
-              </p>
             </div>
 
             {/* Right — process only */}
@@ -997,8 +982,7 @@ export default function App() {
                 marginBottom: 20,
               }}
             >
-              "Thank you for exploring my portfolio! I'm always looking for
-              opportunities to grow."
+              "Thank you for exploring my portfolio!
             </p>
             <p
               style={{
