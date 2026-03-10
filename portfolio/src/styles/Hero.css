@@ -48,12 +48,12 @@
 
 .hero__photo-wrapper {
   position: absolute;
-  top: 42%;
-  left: 63.5%;
+  top: 74%;
+  left: 65.5%;
   transform: translate(-50%, -60%);
   width: clamp(120px, 20vw, 220px);
-  height: clamp(160px, 28vw, 300px);
-  z-index: 2;
+  height: clamp(260px, 100vw, 500px);
+  z-index: 3;
   border-radius: 2px;
   overflow: hidden;
 }
@@ -72,6 +72,7 @@
   transform: translateX(-50%);
   text-align: center;
   pointer-events: none;
+  z-index: 5;
 }
 
 .hero__scroll-line {
