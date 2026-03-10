@@ -1,0 +1,220 @@
+.work {
+  background: var(--dark);
+  padding: 100px 60px;
+}
+
+.work__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.work__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 64px;
+}
+
+.work__heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 900;
+  color: white;
+  line-height: 0.9;
+  letter-spacing: -2px;
+}
+
+.work__heading span {
+  color: var(--pink);
+  font-style: italic;
+}
+
+/* ── Project card shared ── */
+.project-card {
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card__expand-note {
+  margin-top: 16px;
+  border-top: 1px dashed #333;
+  padding-top: 16px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #666;
+  font-style: italic;
+  line-height: 1.9;
+}
+
+.project-card__badge {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+}
+
+.project-card__cta {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--pink);
+  text-transform: uppercase;
+}
+
+/* ── Featured card ── */
+.featured-card {
+  background: var(--cream);
+  overflow: hidden;
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.featured-card__image-pane {
+  position: relative;
+  min-height: 340px;
+  overflow: hidden;
+}
+
+.featured-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-card__badge-tl {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--pink);
+  color: white;
+}
+
+.featured-card__badge-tr {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.featured-card__body {
+  padding: 40px;
+  background: var(--cream);
+}
+
+.featured-card__title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 900;
+  color: var(--dark);
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.featured-card__metrics {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.featured-card__metric-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--pink);
+  line-height: 1;
+}
+
+/* ── Small project grid ── */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.project-item {
+  background: var(--warm-tan);
+  overflow: hidden;
+}
+
+.project-item__thumb {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-item__thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.project-item__thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 105, 180, 0.25), transparent);
+}
+
+.project-item__badge-tl {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--pink);
+  color: white;
+}
+
+.project-item__badge-tr {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.project-item__body {
+  padding: 20px 24px 24px;
+}
+
+.project-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.project-item__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--dark);
+  line-height: 1.1;
+}
+
+.project-item__role {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+
+.project-card__expand-note {
+  margin-top: 16px;
+  border-top: 1px dashed #ccc;
+  padding-top: 16px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #777;
+  font-style: italic;
+  line-height: 1.9;
+}
