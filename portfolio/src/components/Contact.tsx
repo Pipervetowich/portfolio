@@ -5,13 +5,6 @@ export default function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="contact__inner">
-        <p
-          className="section-label"
-          style={{ color: "rgba(255,255,255,0.6)", marginBottom: 24 }}
-        >
-          Contact
-        </p>
-
         <h2 className="contact__heading">
           and
           <br />

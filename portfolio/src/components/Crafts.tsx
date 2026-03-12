@@ -5,13 +5,6 @@ export default function Crafts() {
   return (
     <section id="crafts" className="crafts">
       <div className="crafts__inner">
-        <p
-          className="section-label"
-          style={{ color: "#3d3d3d", marginBottom: 60 }}
-        >
-          My Process
-        </p>
-
         <div className="crafts__grid">
           <div>
             <h2 className="crafts__heading">

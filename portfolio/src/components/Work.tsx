@@ -14,7 +14,7 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
           <h2 className="work__heading">
             My
             <br />
-            <span>Projects.</span>
+            <span>Work.</span>
           </h2>
         </div>
 

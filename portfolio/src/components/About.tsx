@@ -9,10 +9,6 @@ export default function About({ piperPhoto2 }: AboutProps) {
   return (
     <section id="about-me" className="about">
       <div className="about__inner">
-        <p className="section-label" style={{ marginBottom: 40 }}>
-          About Me
-        </p>
-
         <div className="about__grid">
           <div>
             <h2 className="about__heading">

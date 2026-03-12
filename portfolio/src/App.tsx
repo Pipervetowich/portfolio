@@ -7,6 +7,8 @@ import ymcaPhoto from "./assets/YMCA.jpg";
 import bhcPhoto from "./assets/BHC.jpg";
 import noodlesPhoto from "./assets/Noodles.jpg";
 
+import Nav from "./components/Nav.tsx";
+
 import "./styles/global.css";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -30,29 +32,63 @@ const images: Record<string, string> = {
 
 type PageKey = "home" | "bandwidth" | "denver-zoo" | "ymca" | "bhc" | "noodles";
 
+function getPageFromHash(): PageKey {
+  const hash = window.location.hash.replace("#", "") as PageKey;
+  const valid: PageKey[] = [
+    "bandwidth",
+    "denver-zoo",
+    "ymca",
+    "bhc",
+    "noodles",
+  ];
+  return valid.includes(hash) ? hash : "home";
+}
+
 export default function App() {
   const [loaded, setLoaded] = useState(false);
-  const [page, setPage] = useState<PageKey>("home");
+  const [page, setPage] = useState<PageKey>(getPageFromHash);
 
   useEffect(() => {
     const t = setTimeout(() => setLoaded(true), 100);
     return () => clearTimeout(t);
   }, []);
 
+  useEffect(() => {
+    const onPop = () => {
+      const next = getPageFromHash();
+      setPage(next);
+      if (next === "home") {
+        setTimeout(() => {
+          document
+            .getElementById("work")
+            ?.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+
+  const navigate = (next: PageKey) => {
+    if (next === "home") {
+      window.history.pushState({}, "", window.location.pathname);
+    } else {
+      window.history.pushState({}, "", `#${next}`);
+    }
+    setPage(next);
+  };
+
   const handleOpenCaseStudy = (id: number | "featured") => {
     if (id === "featured") {
-      setPage("bandwidth");
+      navigate("bandwidth");
       return;
     }
     const keys: PageKey[] = ["denver-zoo", "ymca", "bhc", "noodles"];
-    setPage(keys[id as number] ?? "home");
+    navigate(keys[id as number] ?? "home");
   };
 
   const handleBack = () => {
-    setPage("home");
-    setTimeout(() => {
-      document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
+    window.history.back();
   };
 
   if (page === "bandwidth")
@@ -71,6 +107,7 @@ export default function App() {
   return (
     <div>
       <div className="grain-overlay" />
+      <Nav />
       <Hero loaded={loaded} piperPhoto={piperPhoto} />
       <About piperPhoto2={piperPhoto2} />
       <Work onOpenCaseStudy={handleOpenCaseStudy} images={images} />
