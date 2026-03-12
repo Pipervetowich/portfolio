@@ -54,6 +54,7 @@
   background: #c8c0b4;
   position: relative;
   overflow: hidden;
+  border-radius: 4px;
 }
 
 .about__photo {
@@ -74,6 +75,7 @@
   text-align: center;
   border: 1px solid #d4c8b8;
   background: var(--cream);
+  border-radius: 4px;
 }
 
 .about__stat--highlight {

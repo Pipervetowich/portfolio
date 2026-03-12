@@ -13,7 +13,7 @@
   right: -60px;
   width: 200px;
   height: 200px;
-  border-radius: 50%;
+  border-radius: 4px;
   background: rgba(255, 255, 255, 0.15);
 }
 
@@ -48,6 +48,7 @@
   position: relative;
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
   transform: rotate(-1deg);
+  border-radius: 4px;
 }
 
 .envelope::before {

@@ -141,12 +141,6 @@ export default function CaseStudyYMCA({ image, onBack }: Props) {
             modern and approachable with community focus groups.
           </p>
         </section>
-
-        <div className="ymca__cta">
-          <a href="mailto:pipervetowich@gmail.com" className="cs-cta-btn">
-            See the full brand deck →
-          </a>
-        </div>
       </main>
     </div>
   );

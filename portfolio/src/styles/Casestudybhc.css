@@ -28,17 +28,14 @@
 .bhc__kicker { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #FF69B4; margin-bottom: 16px; display: block; font-weight: 600; }
 .bhc__title { font-size: clamp(44px, 7vw, 84px); font-weight: 800; line-height: 1.0; color: #F5F0E8; letter-spacing: -0.02em; margin-bottom: 14px; }
 .bhc__title span { color: #FF69B4; }
-/* Fix: 0.6 opacity on dark overlay — use solid */
 .bhc__subtitle { font-size: 13px; color: #b0a8a0; margin-bottom: 20px; }
 .bhc__tools-row { display: flex; flex-wrap: wrap; gap: 8px; }
-/* Fix: 0.7 opacity on dark — use solid */
 .bhc__tool-chip { border: 1px solid rgba(245,240,232,0.4); padding: 5px 12px; font-size: 10px; letter-spacing: 0.08em; color: #c8c0b8; border-radius: 4px; }
 
 .bhc__banner {
   background: #e0458a;
   padding: 32px 80px;
 }
-/* Fix: white on #FF69B4 is only ~2.7:1 — use darker pink and white stays fine */
 .bhc__banner p { font-size: clamp(14px, 2vw, 20px); color: #fff; font-style: italic; max-width: 760px; line-height: 1.55; }
 
 .bhc__body { max-width: 960px; margin: 0 auto; padding: 80px 60px 120px; }
@@ -53,7 +50,6 @@
   margin-bottom: 16px;
   font-weight: 600;
 }
-/* Fix: #444 → #333 */
 .bhc__body-text { font-size: 15px; line-height: 1.75; color: #333; }
 .bhc__two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 64px; padding-top: 16px; }
 
@@ -66,7 +62,7 @@
 .bhc__finding {
   background: #fff;
   border: 1px solid rgba(26,26,26,0.1);
-  border-radius: 14px;
+  border-radius: 4px;
   padding: 28px 20px;
   display: flex;
   flex-direction: column;
@@ -75,15 +71,13 @@
 }
 .bhc__finding-severity { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: #e0458a; font-weight: 700; }
 .bhc__finding-count { font-size: 52px; font-weight: 800; color: #1a1a1a; line-height: 1; letter-spacing: -0.02em; }
-/* Fix: #888 on white — use #5a5a5a */
 .bhc__finding-label { font-size: 11px; color: #5a5a5a; line-height: 1.4; }
 
-.bhc__process { display: flex; flex-direction: column; border: 1px solid rgba(26,26,26,0.12); border-radius: 16px; overflow: hidden; }
+.bhc__process { display: flex; flex-direction: column; border: 1px solid rgba(26,26,26,0.12); border-radius: 4px; overflow: hidden; }
 .bhc__process-item { display: grid; grid-template-columns: 56px 1fr; border-bottom: 1px solid rgba(26,26,26,0.08); }
 .bhc__process-item:last-child { border-bottom: none; }
 .bhc__process-num {
   background: #1a1a1a;
-  /* Fix: 0.3 opacity — use solid muted */
   color: #8a8480;
   font-size: 11px;
   letter-spacing: 0.1em;
@@ -95,26 +89,23 @@
 }
 .bhc__process-content { padding: 28px 36px; background: #fff; border-left: 1px solid rgba(26,26,26,0.08); }
 .bhc__process-phase { font-size: 16px; font-weight: 700; color: #1a1a1a; margin-bottom: 10px; }
-/* Fix: #666 → #4a4a4a */
 .bhc__process-detail { font-size: 13px; line-height: 1.7; color: #4a4a4a; }
 
 .bhc__stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   background: #E8DDD0;
-  border-radius: 16px;
+  border-radius: 4px;
   overflow: hidden;
   margin-bottom: 64px;
 }
 .bhc__stat { padding: 36px 24px; border-right: 1px solid rgba(26,26,26,0.1); text-align: center; }
 .bhc__stat:last-child { border-right: none; }
 .bhc__stat-n { display: block; font-size: 40px; font-weight: 800; color: #1a1a1a; line-height: 1; margin-bottom: 8px; letter-spacing: -0.02em; }
-/* Fix: #888 on tan — use #5a5a5a */
 .bhc__stat-l { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #5a5a5a; }
 
-.bhc__outcome { background: #1a1a1a; border-radius: 16px; padding: 48px; margin-bottom: 60px; }
+.bhc__outcome { background: #1a1a1a; border-radius: 4px; padding: 48px; margin-bottom: 60px; }
 .bhc__outcome .bhc__label { color: #FF69B4; }
-/* Fix: 0.75 opacity — use solid */
 .bhc__outcome-text { font-size: 16px; line-height: 1.75; color: #c8c0b8; }
 
 .bhc__cta { text-align: center; }

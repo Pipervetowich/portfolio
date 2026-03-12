@@ -41,7 +41,6 @@
 }
 .dz__title span { color: #e0458a; font-style: italic; font-weight: 800; }
 
-/* Fix: #999 on cream fails AA — use #5a5a5a */
 .dz__role { font-size: 11px; color: #5a5a5a; letter-spacing: 0.06em; margin-bottom: 20px; }
 
 .dz__tools-row { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -50,7 +49,6 @@
   padding: 5px 12px;
   font-size: 10px;
   letter-spacing: 0.08em;
-  /* Fix: #666 borderline — use #4a4a4a */
   color: #4a4a4a;
   border-radius: 4px;
 }
@@ -62,7 +60,6 @@
   background: #1a1a1a;
   padding: 40px 80px;
 }
-/* Fix: 0.8 opacity on dark — use solid */
 .dz__intro-text {
   font-size: clamp(16px, 2.5vw, 26px);
   color: #ddd8d0;
@@ -84,7 +81,6 @@
   font-weight: 600;
 }
 
-/* Fix: #444 is fine; keep */
 .dz__body-text { font-size: 15px; line-height: 1.75; color: #333; }
 
 .dz__two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 64px; padding-top: 16px; }
@@ -93,7 +89,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   background: #E8DDD0;
-  border-radius: 16px;
+  border-radius: 4px;
   overflow: hidden;
   margin-bottom: 64px;
 }
@@ -104,15 +100,13 @@
 }
 .dz__metric:last-child { border-right: none; }
 .dz__metric-n { font-size: 40px; font-weight: 800; color: #1a1a1a; letter-spacing: -0.02em; line-height: 1; margin-bottom: 8px; }
-/* Fix: #888 on #E8DDD0 fails — use #5a5a5a */
 .dz__metric-l { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #5a5a5a; }
 
-.dz__timeline { display: flex; flex-direction: column; border: 1px solid rgba(26,26,26,0.12); border-radius: 16px; overflow: hidden; }
+.dz__timeline { display: flex; flex-direction: column; border: 1px solid rgba(26,26,26,0.12); border-radius: 4px; overflow: hidden; }
 .dz__timeline-item { display: grid; grid-template-columns: 64px 1fr; border-bottom: 1px solid rgba(26,26,26,0.1); }
 .dz__timeline-item:last-child { border-bottom: none; }
 .dz__timeline-num {
   background: #1a1a1a;
-  /* Fix: 0.3 opacity on dark — use solid muted */
   color: #8a8480;
   font-size: 11px;
   letter-spacing: 0.1em;
@@ -125,13 +119,11 @@
 .dz__timeline-content { padding: 28px 36px; background: #fff; border-left: 1px solid rgba(26,26,26,0.08); }
 .dz__timeline-phase { font-size: 16px; font-weight: 700; color: #1a1a1a; margin-bottom: 12px; }
 .dz__timeline-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; }
-/* Fix: #666 on white — use #4a4a4a */
 .dz__timeline-list li { font-size: 12px; color: #4a4a4a; line-height: 1.5; padding-left: 14px; position: relative; }
 .dz__timeline-list li::before { content: "✦"; position: absolute; left: 0; color: #e0458a; font-size: 8px; top: 3px; }
 
-.dz__outcome { background: #1a1a1a; border-radius: 16px; padding: 48px; margin-bottom: 60px; }
+.dz__outcome { background: #1a1a1a; border-radius: 4px; padding: 48px; margin-bottom: 60px; }
 .dz__outcome .dz__label { color: #FF69B4; }
-/* Fix: 0.75 opacity — use solid */
 .dz__outcome-text { font-size: 16px; line-height: 1.75; color: #c8c0b8; }
 
 .dz__cta { text-align: center; }

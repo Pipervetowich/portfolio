@@ -61,6 +61,27 @@ body {
   color: white;
 }
 
+.skill-tag {
+  display: inline-block;
+  border: 1.5px solid var(--dark);
+  padding: 6px 14px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 4px;
+  transition: all 0.2s;
+  cursor: default;
+  color: var(--dark);
+  border-radius: 4px;
+}
+
+.skill-tag:hover {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: white;
+}
+
 .tool-chip {
   display: inline-block;
   background: rgba(255, 105, 180, 0.12);
@@ -71,6 +92,7 @@ body {
   letter-spacing: 1px;
   padding: 3px 8px;
   margin: 2px;
+  border-radius: 4px;
 }
 
 .grain-overlay {
@@ -103,4 +125,16 @@ body {
 .page-loader.done {
   width: 100%;
   opacity: 0;
+}
+.project-card__cta {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: white;
+  text-transform: uppercase;
+  background: var(--pink);
+  padding: 10px 18px;
+  border-radius: 2px;
+  transition: background 0.2s ease, transform 0.15s ease;
 }

@@ -162,12 +162,6 @@ export default function CaseStudyNoodles({ image, onBack }: Props) {
             communication of Happy Noodles' clean-ingredient mission.
           </p>
         </section>
-
-        <div className="nd__cta">
-          <a href="mailto:pipervetowich@gmail.com" className="cs-cta-btn">
-            See full project files →
-          </a>
-        </div>
       </main>
     </div>
   );

@@ -150,12 +150,6 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
             study at CU Boulder's design showcase.
           </p>
         </section>
-
-        <div className="dz__cta">
-          <a href="mailto:pipervetowich@gmail.com" className="cs-cta-btn">
-            Request case study deck ✦
-          </a>
-        </div>
       </main>
     </div>
   );

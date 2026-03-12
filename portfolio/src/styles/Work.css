@@ -55,6 +55,7 @@
   letter-spacing: 2px;
   padding: 4px 10px;
   text-transform: uppercase;
+  border-radius: 4px;
 }
 
 .project-card__cta {
@@ -66,7 +67,7 @@
   text-transform: uppercase;
   background: var(--pink);
   padding: 10px 18px;
-  border-radius: 100px;
+  border-radius: 4px;
   transition: background 0.2s ease, transform 0.15s ease;
 }
 
@@ -81,6 +82,7 @@
   margin-bottom: 24px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  border-radius: 4px;
 }
 
 .featured-card__image-pane {
@@ -149,6 +151,7 @@
 .project-item {
   background: var(--warm-tan);
   overflow: hidden;
+  border-radius: 4px;
 }
 
 .project-item__thumb {
@@ -177,6 +180,7 @@
   left: 12px;
   background: var(--pink);
   color: white;
+  border-radius: 4px;
 }
 
 .project-item__badge-tr {
@@ -185,6 +189,7 @@
   right: 12px;
   background: rgba(0, 0, 0, 0.3);
   color: white;
+  border-radius: 4px;
 }
 
 .project-item__body {
@@ -213,6 +218,7 @@
   border: 1px solid #ccc;
   padding: 4px 8px;
   white-space: nowrap;
+  border-radius: 4px;
 }
 
 .project-card__expand-note {

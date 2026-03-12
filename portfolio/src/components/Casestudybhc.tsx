@@ -174,12 +174,6 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
             development sprint.
           </p>
         </section>
-
-        <div className="bhc__cta">
-          <a href="mailto:pipervetowich@gmail.com" className="cs-cta-btn">
-            Request the full audit report ✦
-          </a>
-        </div>
       </main>
     </div>
   );

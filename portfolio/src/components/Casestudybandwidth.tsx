@@ -143,12 +143,6 @@ export default function CaseStudyBandWidth({ image, onBack }: Props) {
             capstone design showcase.
           </p>
         </section>
-
-        <div className="bw__cta">
-          <a href="mailto:pipervetowich@gmail.com" className="cs-cta-btn">
-            See the full prototype →
-          </a>
-        </div>
       </main>
     </div>
   );
