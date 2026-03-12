@@ -19,7 +19,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Shared typography ── */
 .section-label {
   font-family: 'Space Mono', monospace;
   font-size: 10px;
@@ -42,7 +41,6 @@ body {
   color: var(--dark);
 }
 
-/* ── Shared components ── */
 .skill-tag {
   display: inline-block;
   border: 1.5px solid var(--dark);
@@ -54,6 +52,7 @@ body {
   margin: 4px;
   transition: all 0.2s;
   cursor: default;
+  color: var(--dark);
 }
 
 .skill-tag:hover {
@@ -74,7 +73,6 @@ body {
   margin: 2px;
 }
 
-/* ── Grain overlay ── */
 .grain-overlay {
   position: fixed;
   inset: 0;

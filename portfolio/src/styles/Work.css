@@ -29,7 +29,6 @@
   font-style: italic;
 }
 
-/* ── Project card shared ── */
 .project-card {
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -66,7 +65,6 @@
   text-transform: uppercase;
 }
 
-/* ── Featured card ── */
 .featured-card {
   background: var(--cream);
   overflow: hidden;
@@ -132,7 +130,6 @@
   line-height: 1;
 }
 
-/* ── Small project grid ── */
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

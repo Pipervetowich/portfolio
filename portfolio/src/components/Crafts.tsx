@@ -7,7 +7,7 @@ export default function Crafts() {
       <div className="crafts__inner">
         <p
           className="section-label"
-          style={{ color: "#aaa", marginBottom: 60 }}
+          style={{ color: "#3d3d3d", marginBottom: 60 }}
         >
           My Process
         </p>
@@ -31,7 +31,7 @@ export default function Crafts() {
           <div>
             <p
               className="section-label"
-              style={{ color: "#aaa", marginBottom: 24 }}
+              style={{ color: "#3d3d3d", marginBottom: 24 }}
             >
               How I Design
             </p>
@@ -41,7 +41,7 @@ export default function Crafts() {
                 <p className="process-step__label">{label}</p>
                 <p
                   className="body-text"
-                  style={{ color: "#777", fontSize: 11 }}
+                  style={{ color: "#3d3d3d", fontSize: 11 }}
                 >
                   {desc}
                 </p>

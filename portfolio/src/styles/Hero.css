@@ -44,6 +44,7 @@
   text-align: right;
   position: relative;
   z-index: 3;
+  background: transparent;
 }
 
 .hero__photo-wrapper {
@@ -56,6 +57,7 @@
   z-index: 3;
   border-radius: 2px;
   overflow: hidden;
+  background: transparent;
 }
 
 .hero__photo {
@@ -63,6 +65,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center 0%;
+  display: block;
 }
 
 .hero__scroll-hint {
