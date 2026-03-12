@@ -7,14 +7,14 @@
   font-family: inherit;
 }
 
-/* shared back button — applied via .cs-back on all pages */
+/* ── Shared across all case study pages ── */
 .cs-back {
   position: fixed;
   top: 24px;
   left: 28px;
   z-index: 100;
-  background: rgba(245, 240, 232, 0.92);
-  border: 1px solid rgba(26, 26, 26, 0.15);
+  background: rgba(245, 240, 232, 0.95);
+  border: 1px solid rgba(26, 26, 26, 0.25);
   color: #1a1a1a;
   font-family: inherit;
   font-size: 10px;
@@ -31,7 +31,6 @@
   color: #F5F0E8;
 }
 
-/* shared CTA button */
 .cs-cta-btn {
   display: inline-block;
   background: #1a1a1a;
@@ -44,7 +43,7 @@
   border-radius: 100px;
   transition: all 0.2s;
 }
-.cs-cta-btn:hover { background: #FF69B4; }
+.cs-cta-btn:hover { background: #e0458a; }
 
 /* Hero */
 .bw__hero {
@@ -76,15 +75,17 @@
 }
 .bw__title em { font-style: normal; color: #FF69B4; }
 
-.bw__tagline { font-size: 14px; color: rgba(245,240,232,0.55); margin-bottom: 28px; line-height: 1.6; }
+/* Fix: was 0.55 opacity — too low contrast on dark bg */
+.bw__tagline { font-size: 14px; color: #b0a8a0; margin-bottom: 28px; line-height: 1.6; }
 
 .bw__chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .bw__chip {
-  border: 1px solid rgba(245,240,232,0.2);
+  border: 1px solid rgba(245,240,232,0.35);
   padding: 5px 12px;
   font-size: 10px;
   letter-spacing: 0.08em;
-  color: rgba(245,240,232,0.6);
+  /* Fix: was 0.6 opacity — too low contrast */
+  color: #c8c0b8;
   border-radius: 4px;
 }
 
@@ -92,7 +93,7 @@
   width: 260px; height: 260px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid rgba(255,105,180,0.3);
+  border: 1px solid rgba(255,105,180,0.4);
   background: #111;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
@@ -107,12 +108,13 @@
 }
 .bw__stat {
   padding: 32px 40px;
-  border-right: 1px solid rgba(26,26,26,0.1);
+  border-right: 1px solid rgba(26,26,26,0.12);
   display: flex; flex-direction: column; gap: 6px;
 }
 .bw__stat:last-child { border-right: none; }
 .bw__stat-n { font-size: 44px; font-weight: 800; color: #1a1a1a; line-height: 1; letter-spacing: -0.02em; }
-.bw__stat-l { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #888; }
+/* Fix: #888 on #E8DDD0 fails AA — use #5a5a5a */
+.bw__stat-l { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #5a5a5a; }
 
 /* Body */
 .bw__body { max-width: 860px; margin: 0 auto; padding: 80px 40px 120px; }
@@ -123,12 +125,12 @@
   font-size: 9px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #FF69B4;
+  color: #e0458a;
   margin-bottom: 20px;
   font-weight: 600;
 }
 
-.bw__lead { font-size: 17px; line-height: 1.75; color: #333; }
+.bw__lead { font-size: 17px; line-height: 1.75; color: #2a2a2a; }
 
 .bw__callout {
   background: #1a1a1a;
@@ -136,22 +138,27 @@
   padding: 40px 48px;
   margin-bottom: 64px;
 }
+/* Fix: was 0.4 opacity label on dark — use solid light color */
+.bw__callout .bw__label { color: #FF69B4; }
 .bw__callout-text { font-size: 20px; line-height: 1.55; color: #F5F0E8; font-style: italic; }
 
 /* Process */
 .bw__process { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.bw__phase { background: #fff; border: 1px solid rgba(26,26,26,0.08); border-radius: 14px; padding: 28px; }
+.bw__phase { background: #fff; border: 1px solid rgba(26,26,26,0.1); border-radius: 14px; padding: 28px; }
 .bw__phase-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 18px; }
-.bw__phase-num { font-size: 28px; font-weight: 800; color: rgba(255,105,180,0.25); line-height: 1; }
+/* Fix: was 0.25 opacity — decorative only, bumped to visible but muted */
+.bw__phase-num { font-size: 28px; font-weight: 800; color: #f0b8d0; line-height: 1; }
 .bw__phase-name { font-size: 13px; font-weight: 700; color: #1a1a1a; letter-spacing: 0.02em; }
 .bw__phase-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
-.bw__phase-list li { font-size: 12px; line-height: 1.6; color: #666; padding-left: 16px; position: relative; }
-.bw__phase-list li::before { content: "✦"; position: absolute; left: 0; color: #FF69B4; font-size: 8px; top: 3px; }
+/* Fix: #666 on white is borderline — use #4a4a4a */
+.bw__phase-list li { font-size: 12px; line-height: 1.6; color: #4a4a4a; padding-left: 16px; position: relative; }
+.bw__phase-list li::before { content: "✦"; position: absolute; left: 0; color: #e0458a; font-size: 8px; top: 3px; }
 
 /* Outcome */
 .bw__outcome { background: #1a1a1a; border-radius: 16px; padding: 48px; margin-bottom: 60px; }
-.bw__outcome .bw__label { color: rgba(245,240,232,0.4); }
-.bw__outcome-text { font-size: 16px; line-height: 1.75; color: rgba(245,240,232,0.75); }
+.bw__outcome .bw__label { color: #FF69B4; }
+/* Fix: was 0.75 opacity — use solid readable color */
+.bw__outcome-text { font-size: 16px; line-height: 1.75; color: #c8c0b8; }
 
 .bw__cta { text-align: center; }
 

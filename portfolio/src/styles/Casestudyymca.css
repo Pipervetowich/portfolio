@@ -7,7 +7,6 @@
   font-family: inherit;
 }
 
-/* Hero — image left, text right */
 .ymca__hero {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -25,7 +24,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border-left: 1px solid rgba(26,26,26,0.1);
+  border-left: 1px solid rgba(26,26,26,0.12);
   background: #F5F0E8;
 }
 
@@ -34,7 +33,7 @@
   font-size: 9px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #FF69B4;
+  color: #e0458a;
   margin-bottom: 20px;
   font-weight: 600;
 }
@@ -47,16 +46,17 @@
   letter-spacing: -0.02em;
   margin-bottom: 20px;
 }
-.ymca__title span { color: #FF69B4; }
+.ymca__title span { color: #e0458a; }
 
-.ymca__desc { font-size: 14px; line-height: 1.65; color: #666; margin-bottom: 28px; max-width: 360px; }
+/* Fix: #666 on cream — use #4a4a4a */
+.ymca__desc { font-size: 14px; line-height: 1.65; color: #4a4a4a; margin-bottom: 28px; max-width: 360px; }
 
 .ymca__meta { display: flex; flex-direction: column; gap: 10px; }
 .ymca__meta > div { display: flex; flex-direction: column; gap: 2px; }
-.ymca__meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #aaa; }
+/* Fix: #aaa on cream fails AA — use #6a6a6a */
+.ymca__meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6a6a6a; }
 .ymca__meta-val { font-size: 12px; font-weight: 600; color: #1a1a1a; }
 
-/* Body */
 .ymca__body { max-width: 960px; margin: 0 auto; padding: 80px 60px 120px; }
 .ymca__section { margin-bottom: 64px; }
 
@@ -65,22 +65,21 @@
   font-size: 9px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #FF69B4;
+  color: #e0458a;
   margin-bottom: 20px;
   font-weight: 600;
 }
 
-/* Problem */
 .ymca__problem {
   background: #1a1a1a;
   border-radius: 16px;
   padding: 48px;
   margin-bottom: 64px;
 }
-.ymca__problem .ymca__label { color: rgba(245,240,232,0.4); }
-.ymca__problem-text { font-size: 17px; line-height: 1.7; color: rgba(245,240,232,0.8); }
+.ymca__problem .ymca__label { color: #FF69B4; }
+/* Fix: 0.8 opacity — use solid */
+.ymca__problem-text { font-size: 17px; line-height: 1.7; color: #ddd8d0; }
 
-/* Stats */
 .ymca__stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -89,25 +88,27 @@
   overflow: hidden;
   margin-bottom: 64px;
 }
-.ymca__stat { padding: 36px 24px; border-right: 1px solid rgba(26,26,26,0.08); text-align: center; }
+.ymca__stat { padding: 36px 24px; border-right: 1px solid rgba(26,26,26,0.1); text-align: center; }
 .ymca__stat:last-child { border-right: none; }
 .ymca__stat-n { display: block; font-size: 44px; font-weight: 800; color: #1a1a1a; line-height: 1; margin-bottom: 8px; letter-spacing: -0.02em; }
-.ymca__stat-l { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; }
+/* Fix: #888 on tan — use #5a5a5a */
+.ymca__stat-l { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #5a5a5a; }
 
-/* Steps */
 .ymca__steps { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.ymca__step { background: #fff; border: 1px solid rgba(26,26,26,0.08); border-radius: 14px; padding: 28px; }
+.ymca__step { background: #fff; border: 1px solid rgba(26,26,26,0.1); border-radius: 14px; padding: 28px; }
 .ymca__step-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px; }
-.ymca__step-num { font-size: 28px; font-weight: 800; color: rgba(255,105,180,0.2); line-height: 1; }
+/* Fix: 0.2 opacity — use visible muted pink */
+.ymca__step-num { font-size: 28px; font-weight: 800; color: #f0b8d0; line-height: 1; }
 .ymca__step-phase { font-size: 14px; font-weight: 700; color: #1a1a1a; }
 .ymca__step-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
-.ymca__step-list li { font-size: 12px; line-height: 1.6; color: #666; padding-left: 16px; position: relative; }
-.ymca__step-list li::before { content: "✦"; position: absolute; left: 0; color: #FF69B4; font-size: 8px; top: 3px; }
+/* Fix: #666 on white — use #4a4a4a */
+.ymca__step-list li { font-size: 12px; line-height: 1.6; color: #4a4a4a; padding-left: 16px; position: relative; }
+.ymca__step-list li::before { content: "✦"; position: absolute; left: 0; color: #e0458a; font-size: 8px; top: 3px; }
 
-/* Outcome */
 .ymca__outcome { background: #1a1a1a; border-radius: 16px; padding: 48px; margin-bottom: 60px; }
-.ymca__outcome .ymca__label { color: rgba(245,240,232,0.4); }
-.ymca__outcome-text { font-size: 16px; line-height: 1.75; color: rgba(245,240,232,0.75); }
+.ymca__outcome .ymca__label { color: #FF69B4; }
+/* Fix: 0.75 opacity — use solid */
+.ymca__outcome-text { font-size: 16px; line-height: 1.75; color: #c8c0b8; }
 
 .ymca__cta { text-align: center; }
 
