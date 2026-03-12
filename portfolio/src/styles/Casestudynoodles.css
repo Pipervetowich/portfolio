@@ -1,0 +1,114 @@
+/* ── Happy Noodles — portfolio palette: cream / dark / pink ── */
+
+.nd {
+  background: #F5F0E8;
+  color: #1a1a1a;
+  min-height: 100vh;
+  font-family: inherit;
+}
+
+/* Hero — text left, image right */
+.nd__hero {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  min-height: 80vh;
+  background: #1a1a1a;
+}
+
+.nd__hero-text {
+  padding: 130px 60px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.nd__kicker { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #FF69B4; margin-bottom: 20px; display: block; font-weight: 600; }
+
+.nd__title {
+  font-size: clamp(56px, 9vw, 110px);
+  font-weight: 800;
+  line-height: 0.9;
+  color: #F5F0E8;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+.nd__title span { color: #FF69B4; }
+
+.nd__desc { font-size: 14px; line-height: 1.65; color: rgba(245,240,232,0.55); margin-bottom: 28px; max-width: 340px; }
+
+.nd__meta { display: flex; flex-direction: column; gap: 10px; }
+.nd__meta > div { display: flex; flex-direction: column; gap: 2px; }
+.nd__meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245,240,232,0.35); }
+.nd__meta-val { font-size: 12px; font-weight: 600; color: rgba(245,240,232,0.75); }
+
+.nd__hero-img-wrap { overflow: hidden; border-left: 1px solid rgba(245,240,232,0.08); }
+.nd__hero-img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Strip */
+.nd__strip { background: #E8DDD0; padding: 36px 80px; border-bottom: 1px solid rgba(26,26,26,0.1); }
+.nd__strip-text { font-size: clamp(15px, 2vw, 22px); color: #1a1a1a; font-style: italic; max-width: 660px; line-height: 1.5; }
+
+/* Body */
+.nd__body { max-width: 960px; margin: 0 auto; padding: 80px 60px 120px; }
+.nd__section { margin-bottom: 64px; }
+
+.nd__label {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #FF69B4;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+.nd__body-text { font-size: 15px; line-height: 1.75; color: #444; }
+
+.nd__two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 64px; padding-top: 16px; align-items: start; }
+
+.nd__challenge-box { background: #1a1a1a; border-radius: 14px; padding: 32px; }
+.nd__challenge-head { font-size: 15px; font-weight: 700; color: #FF69B4; margin-bottom: 10px; }
+.nd__challenge-text { font-size: 14px; line-height: 1.7; color: rgba(245,240,232,0.75); }
+.nd__challenge-text em { font-style: italic; color: #FF69B4; }
+
+/* Stats */
+.nd__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #E8DDD0;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 64px;
+}
+.nd__stat { padding: 36px 24px; border-right: 1px solid rgba(26,26,26,0.08); text-align: center; }
+.nd__stat:last-child { border-right: none; }
+.nd__stat-n { display: block; font-size: 44px; font-weight: 800; color: #1a1a1a; line-height: 1; margin-bottom: 8px; letter-spacing: -0.02em; }
+.nd__stat-l { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; }
+
+/* Process */
+.nd__process { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.nd__phase { background: #fff; border: 1px solid rgba(26,26,26,0.08); border-radius: 14px; padding: 28px; }
+.nd__phase-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid rgba(26,26,26,0.07); }
+.nd__phase-num { font-size: 28px; font-weight: 800; color: rgba(255,105,180,0.2); line-height: 1; }
+.nd__phase-name { font-size: 14px; font-weight: 700; color: #1a1a1a; }
+.nd__phase-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.nd__phase-list li { font-size: 12px; line-height: 1.6; color: #666; padding-left: 16px; position: relative; }
+.nd__phase-list li::before { content: "✦"; position: absolute; left: 0; color: #FF69B4; font-size: 8px; top: 3px; }
+
+/* Outcome */
+.nd__outcome { background: #1a1a1a; border-radius: 16px; padding: 48px; margin-bottom: 60px; }
+.nd__outcome .nd__label { color: rgba(245,240,232,0.4); }
+.nd__outcome-text { font-size: 16px; line-height: 1.75; color: rgba(245,240,232,0.75); }
+
+.nd__cta { text-align: center; }
+
+@media (max-width: 768px) {
+  .nd__hero { grid-template-columns: 1fr; }
+  .nd__hero-text { padding: 100px 24px 48px; }
+  .nd__hero-img-wrap { height: 260px; }
+  .nd__strip { padding: 28px 24px; }
+  .nd__body { padding: 48px 24px 80px; }
+  .nd__two-col { grid-template-columns: 1fr; }
+  .nd__stats { grid-template-columns: repeat(2, 1fr); }
+  .nd__process { grid-template-columns: 1fr; }
+  .nd__outcome { padding: 32px 24px; }
+}

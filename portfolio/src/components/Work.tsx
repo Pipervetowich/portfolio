@@ -4,10 +4,16 @@ import { projects } from "../Constants";
 interface WorkProps {
   activeProject: number | "featured" | null;
   onToggle: (id: number | "featured") => void;
+  onOpenCaseStudy: (id: number | "featured") => void;
   images: Record<string, string>;
 }
 
-export default function Work({ activeProject, onToggle, images }: WorkProps) {
+export default function Work({
+  activeProject,
+  onToggle,
+  onOpenCaseStudy,
+  images,
+}: WorkProps) {
   return (
     <section id="work" className="work">
       <div className="work__inner">
@@ -22,7 +28,7 @@ export default function Work({ activeProject, onToggle, images }: WorkProps) {
         {/* Featured */}
         <div
           className="project-card featured-card"
-          onClick={() => onToggle("featured")}
+          onClick={() => onOpenCaseStudy("featured")}
         >
           <div className="featured-card__image-pane">
             <img
@@ -84,16 +90,7 @@ export default function Work({ activeProject, onToggle, images }: WorkProps) {
               ))}
             </div>
 
-            <span className="project-card__cta">
-              {activeProject === "featured" ? "close ↑" : "view case study →"}
-            </span>
-
-            {activeProject === "featured" && (
-              <p className="project-card__expand-note">
-                Full case study coming soon — reach out to see the complete
-                process deck, research synthesis, and final prototype.
-              </p>
-            )}
+            <span className="project-card__cta">view case study →</span>
           </div>
         </div>
 
@@ -103,7 +100,7 @@ export default function Work({ activeProject, onToggle, images }: WorkProps) {
             <div
               key={i}
               className="project-card project-item"
-              onClick={() => onToggle(i)}
+              onClick={() => onOpenCaseStudy(i)}
             >
               <div
                 className="project-item__thumb"
@@ -153,17 +150,8 @@ export default function Work({ activeProject, onToggle, images }: WorkProps) {
                 </div>
 
                 <div style={{ marginTop: 16 }}>
-                  <span className="project-card__cta">
-                    {activeProject === i ? "close ↑" : "view case study →"}
-                  </span>
+                  <span className="project-card__cta">view case study →</span>
                 </div>
-
-                {activeProject === i && (
-                  <p className="project-card__expand-note">
-                    Full case study coming soon — reach out to see the full
-                    process deck, research findings, and final designs.
-                  </p>
-                )}
               </div>
             </div>
           ))}

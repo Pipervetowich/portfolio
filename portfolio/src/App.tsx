@@ -14,7 +14,13 @@ import Work from "./components/Work";
 import Crafts from "./components/Crafts";
 import Contact from "./components/Contact";
 
-const images = {
+import CaseStudyBandWidth from "./components/Casestudybandwidth";
+import CaseStudyDenverZoo from "./components/Casestudydenverzoo";
+import CaseStudyYMCA from "./components/Casestudyymca";
+import CaseStudyBHC from "./components/Casestudybhc";
+import CaseStudyNoodles from "./components/Casestudynoodles";
+
+const images: Record<string, string> = {
   bandwidthLogo,
   denverZoo,
   ymcaPhoto,
@@ -22,19 +28,45 @@ const images = {
   noodlesPhoto,
 };
 
+type PageKey = "home" | "bandwidth" | "denver-zoo" | "ymca" | "bhc" | "noodles";
+
 export default function App() {
   const [loaded, setLoaded] = useState(false);
-  const [activeProject, setActiveProject] = useState<
-    number | "featured" | null
-  >(null);
+  const [page, setPage] = useState<PageKey>("home");
 
   useEffect(() => {
     const t = setTimeout(() => setLoaded(true), 100);
     return () => clearTimeout(t);
   }, []);
 
-  const handleToggle = (id: number | "featured") =>
-    setActiveProject((prev) => (prev === id ? null : id));
+  const handleOpenCaseStudy = (id: number | "featured") => {
+    if (id === "featured") {
+      setPage("bandwidth");
+      return;
+    }
+    const keys: PageKey[] = ["denver-zoo", "ymca", "bhc", "noodles"];
+    setPage(keys[id as number] ?? "home");
+  };
+
+  const handleBack = () => {
+    setPage("home");
+    setTimeout(() => {
+      document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
+
+  if (page === "bandwidth")
+    return (
+      <CaseStudyBandWidth image={images.bandwidthLogo} onBack={handleBack} />
+    );
+  if (page === "denver-zoo")
+    return <CaseStudyDenverZoo image={images.denverZoo} onBack={handleBack} />;
+  if (page === "ymca")
+    return <CaseStudyYMCA image={images.ymcaPhoto} onBack={handleBack} />;
+  if (page === "bhc")
+    return <CaseStudyBHC image={images.bhcPhoto} onBack={handleBack} />;
+  if (page === "noodles")
+    return <CaseStudyNoodles image={images.noodlesPhoto} onBack={handleBack} />;
 
   return (
     <div>
@@ -42,8 +74,9 @@ export default function App() {
       <Hero loaded={loaded} piperPhoto={piperPhoto} />
       <About piperPhoto2={piperPhoto2} />
       <Work
-        activeProject={activeProject}
-        onToggle={handleToggle}
+        activeProject={null}
+        onToggle={() => {}}
+        onOpenCaseStudy={handleOpenCaseStudy}
         images={images}
       />
       <Crafts />
