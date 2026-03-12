@@ -2,8 +2,6 @@ import "../styles/Work.css";
 import { projects } from "../Constants";
 
 interface WorkProps {
-  activeProject: number | "featured" | null;
-  onToggle: (id: number | "featured") => void;
   onOpenCaseStudy: (id: number | "featured") => void;
   images: Record<string, string>;
 }
