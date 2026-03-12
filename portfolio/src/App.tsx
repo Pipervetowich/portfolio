@@ -73,12 +73,7 @@ export default function App() {
       <div className="grain-overlay" />
       <Hero loaded={loaded} piperPhoto={piperPhoto} />
       <About piperPhoto2={piperPhoto2} />
-      <Work
-        activeProject={null}
-        onToggle={() => {}}
-        onOpenCaseStudy={handleOpenCaseStudy}
-        images={images}
-      />
+      <Work onOpenCaseStudy={handleOpenCaseStudy} images={images} />
       <Crafts />
       <Contact />
     </div>

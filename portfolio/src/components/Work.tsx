@@ -8,12 +8,7 @@ interface WorkProps {
   images: Record<string, string>;
 }
 
-export default function Work({
-  activeProject,
-  onToggle,
-  onOpenCaseStudy,
-  images,
-}: WorkProps) {
+export default function Work({ onOpenCaseStudy, images }: WorkProps) {
   return (
     <section id="work" className="work">
       <div className="work__inner">
