@@ -42,7 +42,7 @@ export const projects = [
     type: "Physical Product Design",
     role: "Product Designer",
     tools: ["Sketching", "Prototyping", "Adobe Illustrator"],
-    desc: "Designed packaging for a product, including branding, label layout, and mockup creation.",
+    desc: "Designed packaging for a product, including branding, label layout, and mockup creation. Focused on creating a visually cohesive design that clearly communicated the brand identity.",
     color: "#c4b8d4",
     tag: "Product Design",
     year: "2023",

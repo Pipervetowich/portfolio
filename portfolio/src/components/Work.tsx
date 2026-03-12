@@ -51,8 +51,17 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
             >
               Bandwidth is a mobile app designed to make local music discovery
               easy and community-focused. We make discovering, promoting, and
-              organizing local music easy for bands, fans, and hosts. All on one
-              platform.
+              organizing local music easy for bands, fans, and hosts, all on one
+              platform. The app connects artists with audiences by highlighting
+              local shows, helping bands promote events, and allowing fans to
+              explore music happening in their area. By bringing together
+              performers, venues, and listeners, Bandwidth builds a stronger and
+              more accessible local music community. It also gives emerging
+              artists more visibility and opportunities to grow their local
+              following. Users can easily browse upcoming shows, discover new
+              artists, and stay connected to the music scene around them. This
+              helps strengthen relationships within the local music community
+              and supports independent artists.
             </p>
 
             <div style={{ marginBottom: 24 }}>
@@ -63,24 +72,6 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
                   </span>
                 ),
               )}
-            </div>
-
-            <div className="featured-card__metrics">
-              {[
-                { label: "30+", sub: "interviews" },
-                { label: "3", sub: "iterations" },
-                { label: "58%", sub: "friction drop" },
-              ].map(({ label, sub }) => (
-                <div key={sub} style={{ textAlign: "center" }}>
-                  <p className="featured-card__metric-num">{label}</p>
-                  <p
-                    className="section-label"
-                    style={{ color: "#555", marginTop: 4, fontSize: 9 }}
-                  >
-                    {sub}
-                  </p>
-                </div>
-              ))}
             </div>
 
             <span className="project-card__cta">view case study →</span>

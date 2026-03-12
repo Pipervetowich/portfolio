@@ -47,6 +47,8 @@ function getPageFromHash(): PageKey {
 export default function App() {
   const [loaded, setLoaded] = useState(false);
   const [page, setPage] = useState<PageKey>(getPageFromHash);
+  const [loading, setLoading] = useState(false);
+  const [loaderDone, setLoaderDone] = useState(false);
 
   useEffect(() => {
     const t = setTimeout(() => setLoaded(true), 100);
@@ -70,12 +72,22 @@ export default function App() {
   }, []);
 
   const navigate = (next: PageKey) => {
-    if (next === "home") {
-      window.history.pushState({}, "", window.location.pathname);
-    } else {
-      window.history.pushState({}, "", `#${next}`);
-    }
-    setPage(next);
+    setLoaderDone(false);
+    setLoading(true);
+
+    setTimeout(() => {
+      if (next === "home") {
+        window.history.pushState({}, "", window.location.pathname);
+      } else {
+        window.history.pushState({}, "", `#${next}`);
+      }
+      setPage(next);
+      setLoading(false);
+      setLoaderDone(true);
+
+      // Reset done state after fade-out completes
+      setTimeout(() => setLoaderDone(false), 400);
+    }, 400);
   };
 
   const handleOpenCaseStudy = (id: number | "featured") => {
@@ -88,24 +100,62 @@ export default function App() {
   };
 
   const handleBack = () => {
-    window.history.back();
+    setLoaderDone(false);
+    setLoading(true);
+
+    setTimeout(() => {
+      window.history.back();
+      setLoading(false);
+      setLoaderDone(true);
+      setTimeout(() => setLoaderDone(false), 400);
+    }, 400);
   };
+
+  const loaderClass = loading
+    ? "page-loader loading"
+    : loaderDone
+      ? "page-loader done"
+      : "page-loader";
 
   if (page === "bandwidth")
     return (
-      <CaseStudyBandWidth image={images.bandwidthLogo} onBack={handleBack} />
+      <>
+        <div className={loaderClass} />
+        <CaseStudyBandWidth image={images.bandwidthLogo} onBack={handleBack} />
+      </>
     );
   if (page === "denver-zoo")
-    return <CaseStudyDenverZoo image={images.denverZoo} onBack={handleBack} />;
+    return (
+      <>
+        <div className={loaderClass} />
+        <CaseStudyDenverZoo image={images.denverZoo} onBack={handleBack} />
+      </>
+    );
   if (page === "ymca")
-    return <CaseStudyYMCA image={images.ymcaPhoto} onBack={handleBack} />;
+    return (
+      <>
+        <div className={loaderClass} />
+        <CaseStudyYMCA image={images.ymcaPhoto} onBack={handleBack} />
+      </>
+    );
   if (page === "bhc")
-    return <CaseStudyBHC image={images.bhcPhoto} onBack={handleBack} />;
+    return (
+      <>
+        <div className={loaderClass} />
+        <CaseStudyBHC image={images.bhcPhoto} onBack={handleBack} />
+      </>
+    );
   if (page === "noodles")
-    return <CaseStudyNoodles image={images.noodlesPhoto} onBack={handleBack} />;
+    return (
+      <>
+        <div className={loaderClass} />
+        <CaseStudyNoodles image={images.noodlesPhoto} onBack={handleBack} />
+      </>
+    );
 
   return (
     <div>
+      <div className={loaderClass} />
       <div className="grain-overlay" />
       <Nav />
       <Hero loaded={loaded} piperPhoto={piperPhoto} />
