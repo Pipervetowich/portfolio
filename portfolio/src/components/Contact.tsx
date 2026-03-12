@@ -30,10 +30,17 @@ export default function Contact() {
           </p>
 
           <div className="envelope__contacts">
-            {contactItems.map(({ icon, label }, i) => (
+            {contactItems.map(({ icon, label, href }, i) => (
               <p key={i} className="body-text envelope__contact-item">
                 <span className="envelope__contact-icon">{icon}</span>
-                {label}
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "inherit", textDecoration: "underline" }}
+                >
+                  {label}
+                </a>
               </p>
             ))}
           </div>

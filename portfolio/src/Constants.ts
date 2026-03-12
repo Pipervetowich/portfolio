@@ -69,9 +69,9 @@ export const stats = [
 ];
 
 export const contactItems = [
-  { icon: "✉", label: "pipervetowich@gmail.com" },
-  { icon: "LinkedIn", label: "www.linkedin.com/in/piper-vetowich" },
-  { icon: "Phone", label: "720-289-3259" },
+  { icon: "✉", label: "pipervetowich@gmail.com", href: "mailto:pipervetowich@gmail.com" },
+  { icon: "LinkedIn", label: "www.linkedin.com/in/piper-vetowich", href: "https://www.linkedin.com/in/piper-vetowich" },
+  { icon: "Phone", label: "720-289-3259", href: "tel:7202893259" },
 ];
 
 export const loveItems = [
