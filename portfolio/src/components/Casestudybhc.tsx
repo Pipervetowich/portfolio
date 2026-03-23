@@ -37,7 +37,13 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
           </h1>
           <p className="bhc__subtitle">UX Audit & Redesign Recommendations</p>
           <div className="bhc__tools-row">
-            {["Figma", "User Testing", "Accessibility"].map((t) => (
+            {[
+              "Figma",
+              "Heuristic Eval",
+              "Card Sorting",
+              "Accessibility",
+              "Journey Mapping",
+            ].map((t) => (
               <span key={t} className="bhc__tool-chip">
                 {t}
               </span>
@@ -59,18 +65,19 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
             <p className="bhc__label">Overview</p>
             <p className="bhc__body-text">
               The Boulder Housing Coalition provides permanently affordable
-              cooperative housing for low-income residents. Their website is a
-              critical access point — but usability and accessibility issues
-              were preventing the people who needed it most from using it
-              effectively.
+              cooperative housing for low-income Boulder residents. Their
+              website is a critical access point — but usability and
+              accessibility issues were getting in the way of the people who
+              needed it most.
             </p>
           </div>
           <div>
             <p className="bhc__label">My Role</p>
             <p className="bhc__body-text">
-              I conducted a comprehensive expert UX audit, documenting 24 issues
-              across the site with severity ratings, identifying WCAG 2.1
-              violations, and delivering both a written report and a Figma
+              I conducted a full UX audit covering the Home, People's Mansion,
+              and Application pages — including heuristic evaluation, card
+              sorting, journey mapping, cognitive bias analysis, and an
+              accessibility review. Delivered a 30-page report and Figma
               redesign mockup.
             </p>
           </div>
@@ -79,31 +86,19 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
         <div className="bhc__findings">
           {[
             {
-              id: "01",
               severity: "Critical",
-              count: "9",
-              label: "WCAG 2.1 accessibility violations",
+              count: "3",
+              label: "WCAG contrast failures",
             },
+            { severity: "High", count: "3", label: "Navigation failures" },
             {
-              id: "02",
-              severity: "High",
-              count: "8",
-              label: "Navigation & flow failures",
-            },
-            {
-              id: "03",
               severity: "Medium",
-              count: "5",
-              label: "Content clarity issues",
-            },
-            {
-              id: "04",
-              severity: "Low",
               count: "2",
-              label: "Visual inconsistencies",
+              label: "Missing labels & focus issues",
             },
-          ].map(({ id, severity, count, label }) => (
-            <div key={id} className="bhc__finding">
+            { severity: "Low", count: "4", label: "Content clarity & bias" },
+          ].map(({ severity, count, label }) => (
+            <div key={severity} className="bhc__finding">
               <span className="bhc__finding-severity">{severity}</span>
               <span className="bhc__finding-count">{count}</span>
               <span className="bhc__finding-label">{label}</span>
@@ -112,40 +107,190 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
         </div>
 
         <section className="bhc__section">
-          <p className="bhc__label">Process</p>
-          <div className="bhc__process">
+          <p className="bhc__label">Persona</p>
+          <div className="bhc__persona-card">
+            <div className="bhc__persona-left">
+              <p className="bhc__persona-name">Andrew McFergy</p>
+              <p className="bhc__persona-meta">
+                21 · CU Boulder Student · High tech comfort
+              </p>
+              <p className="bhc__persona-quote">
+                "Trustworthy and ad-free, but the homepage is overwhelming."
+              </p>
+            </div>
+            <div className="bhc__persona-right">
+              <p className="bhc__label" style={{ marginBottom: 12 }}>
+                Pain Points
+              </p>
+              <ul className="bhc__persona-list">
+                <li>No back/home buttons during navigation</li>
+                <li>Dense text blocks are hard to scan</li>
+                <li>Inconsistent colors create visual clutter</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="bhc__section">
+          <p className="bhc__label">Heuristic Evaluation</p>
+          <p className="bhc__body-text" style={{ marginBottom: 24 }}>
+            Evaluated against Nielsen's 10 usability heuristics. Five of nine
+            had notable failures.
+          </p>
+          <div className="bhc__heuristics">
+            {[
+              {
+                pass: true,
+                h: "Match Between System & Real World",
+                note: "Familiar language, content matches housing needs.",
+              },
+              {
+                pass: true,
+                h: "Consistency & Standards",
+                note: "Consistent headers, typography, and layout.",
+              },
+              {
+                pass: true,
+                h: "Recognition vs. Recall",
+                note: "Persistent nav and clearly labeled links aid memory.",
+              },
+              {
+                pass: false,
+                h: "Visibility of System Status",
+                note: "No loading indicators — users lack transition feedback.",
+              },
+              {
+                pass: false,
+                h: "User Control & Freedom",
+                note: "Forms lack cancel/undo options.",
+              },
+              {
+                pass: false,
+                h: "Error Prevention",
+                note: "No real-time validation or confirmation dialogs.",
+              },
+              {
+                pass: false,
+                h: "Aesthetic & Minimalist Design",
+                note: "Excessive whitespace and dense text hurt readability.",
+              },
+              {
+                pass: false,
+                h: "Help & Documentation",
+                note: "No FAQ page or help center — answers are buried.",
+              },
+            ].map(({ pass, h, note }) => (
+              <div
+                key={h}
+                className={`bhc__heuristic-item ${pass ? "bhc__heuristic-item--pass" : "bhc__heuristic-item--fail"}`}
+              >
+                <span className="bhc__heuristic-status">
+                  {pass ? "✔" : "✖"}
+                </span>
+                <div>
+                  <p className="bhc__heuristic-title">{h}</p>
+                  <p className="bhc__heuristic-note">{note}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="bhc__section">
+          <p className="bhc__label">Information Architecture — Card Sorting</p>
+          <p className="bhc__body-text" style={{ marginBottom: 24 }}>
+            Open card sorting with two participants revealed users naturally
+            collapse the site into fewer, broader categories than the current
+            nav provides.
+          </p>
+          <div className="bhc__ia-grid">
             {[
               {
                 num: "01",
-                phase: "Heuristic Evaluation",
-                detail:
-                  "Evaluated all key pages against Nielsen's 10 usability heuristics. Documented 24 distinct issues with severity ratings 1–4. Flagged 9 WCAG 2.1 violations affecting screen reader users, low-vision visitors, and keyboard navigators.",
+                title: "Simplify Navigation",
+                note: "Reduce dropdowns, merge similar links.",
               },
               {
                 num: "02",
-                phase: "Journey Mapping",
-                detail:
-                  "Mapped 2 critical user journeys: finding available housing resources and completing an application. Identified 3 critical path failures — places where users couldn't complete their goal regardless of effort.",
+                title: "Introduce a Dashboard",
+                note: "Centralize listings, applications, and resources.",
               },
               {
                 num: "03",
-                phase: "Redesign Mockup",
-                detail:
-                  "Wireframed key page redesigns in Figma. Improved information architecture, simplified navigation, and redesigned the application flow. Added accessible color contrast and enlarged tap targets throughout.",
+                title: "Separate Media & Portal",
+                note: "Users expect these to be architecturally distinct.",
               },
               {
                 num: "04",
-                phase: "Stakeholder Delivery",
-                detail:
-                  "Walked BHC staff through audit findings with annotated screenshots. Presented the Figma redesign mockup with rationale for each change. Delivered a 30-page report and Figma file for the development team.",
+                title: "Rename House Categories",
+                note: "Participants couldn't sort house names without more context.",
               },
-            ].map(({ num, phase, detail }) => (
-              <div key={num} className="bhc__process-item">
-                <div className="bhc__process-num">{num}</div>
-                <div className="bhc__process-content">
-                  <p className="bhc__process-phase">{phase}</p>
-                  <p className="bhc__process-detail">{detail}</p>
+            ].map(({ num, title, note }) => (
+              <div key={num} className="bhc__ia-card">
+                <span className="bhc__ia-num">{num}</span>
+                <p className="bhc__ia-title">{title}</p>
+                <p className="bhc__ia-note">{note}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="bhc__section">
+          <p className="bhc__label">User Journey — Finding the FAQ</p>
+          <div className="bhc__journey-wrap">
+            <div className="bhc__journey-steps">
+              {[
+                "Navigate to BHC Homepage",
+                'Click "Resources" in the main nav',
+                'Scroll to "Income Qualification"',
+                "Find FAQ buried at the bottom",
+              ].map((step, i, arr) => (
+                <div key={i} className="bhc__journey-step">
+                  <span className="bhc__journey-num">0{i + 1}</span>
+                  <span className="bhc__journey-text">{step}</span>
+                  {i < arr.length - 1 && (
+                    <span className="bhc__journey-arrow">→</span>
+                  )}
                 </div>
+              ))}
+            </div>
+            <p className="bhc__journey-verdict">
+              The FAQ is buried 4 steps deep with no search, no direct link, and
+              no fallback. A dedicated FAQ page in the main nav would resolve
+              this entirely.
+            </p>
+          </div>
+        </section>
+
+        <section className="bhc__section">
+          <p className="bhc__label">Accessibility Evaluation</p>
+          <div className="bhc__a11y-grid">
+            {[
+              {
+                type: "Automated",
+                issue: "Low Button Contrast",
+                rec: "Darken Apply, Donate, and newsletter buttons to meet WCAG AA.",
+              },
+              {
+                type: "Automated",
+                issue: "Missing Form Labels",
+                rec: "Add accessible labels to newsletter inputs for screen readers.",
+              },
+              {
+                type: "Automated",
+                issue: "Ambiguous Link Text",
+                rec: "Use descriptive, unique link text explaining each destination.",
+              },
+              {
+                type: "Manual",
+                issue: "Faint Focus Indicator",
+                rec: "Increase outline thickness and contrast for keyboard navigation.",
+              },
+            ].map(({ type, issue, rec }) => (
+              <div key={issue} className="bhc__a11y-card">
+                <span className="bhc__a11y-type">{type}</span>
+                <p className="bhc__a11y-issue">{issue}</p>
+                <p className="bhc__a11y-rec">→ {rec}</p>
               </div>
             ))}
           </div>
@@ -153,10 +298,10 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
 
         <div className="bhc__stats">
           {[
-            { n: "24", l: "Total issues" },
-            { n: "9", l: "A11y violations" },
+            { n: "24", l: "Issues documented" },
+            { n: "8", l: "Heuristic violations" },
+            { n: "4", l: "A11y failures" },
             { n: "30pg", l: "Audit report" },
-            { n: "2", l: "Journeys mapped" },
           ].map(({ n, l }) => (
             <div key={l} className="bhc__stat">
               <span className="bhc__stat-n">{n}</span>
@@ -168,9 +313,10 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
         <section className="bhc__outcome">
           <p className="bhc__label">Outcome</p>
           <p className="bhc__outcome-text">
-            Delivered a 30-page UX audit report identifying 24 usability issues
-            — including 9 WCAG accessibility violations — alongside a Figma
-            redesign mockup. The BHC team used the findings to guide their next
+            Delivered a 30-page audit covering five research methods — heuristic
+            evaluation, card sorting, journey mapping, cognitive bias analysis,
+            and accessibility testing. Findings were presented to BHC staff
+            alongside a Figma redesign mockup, and used to guide their next
             development sprint.
           </p>
         </section>

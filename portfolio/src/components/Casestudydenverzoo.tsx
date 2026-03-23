@@ -25,9 +25,15 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
             <br />
             <span>Redesign</span>
           </h1>
-          <p className="dz__role">Role: UX/UI Designer</p>
+          <p className="dz__role">Role: UX/UI Designer & Researcher</p>
           <div className="dz__tools-row">
-            {["Figma", "User Testing", "User Flows"].map((t) => (
+            {[
+              "Figma",
+              "User Interviews",
+              "Competitive Analysis",
+              "Wireframing",
+              "Prototyping",
+            ].map((t) => (
               <span key={t} className="dz__tool-chip">
                 {t}
               </span>
@@ -41,38 +47,104 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
 
       <div className="dz__intro-strip">
         <p className="dz__intro-text">
-          How do you help 2 million annual visitors find their way — online and
-          in the zoo?
+          How do you simplify a ticket purchase without losing what makes the
+          zoo experience special?
         </p>
       </div>
 
       <main className="dz__body">
+        {/* Overview + Challenge */}
         <section className="dz__two-col">
           <div>
-            <p className="dz__label">The Challenge</p>
+            <p className="dz__label">Overview</p>
             <p className="dz__body-text">
-              The Denver Zoo's existing website buried critical visitor
-              information under confusing navigation. Ticket purchases had a
-              high abandonment rate due to a convoluted checkout flow and
-              unclear pricing.
+              The Denver Zoo's existing website made buying tickets confusing
+              and repetitive — too many pages, too much redundancy. I redesigned
+              the ticket purchasing flow from the ground up to be simpler,
+              faster, and less frustrating for visitors.
             </p>
           </div>
           <div>
-            <p className="dz__label">My Approach</p>
+            <p className="dz__label">The Challenge</p>
             <p className="dz__body-text">
-              I led a full UX redesign grounded in user research — starting with
-              interviews and a competitive audit, working through personas and
-              journey maps, and delivering an interactive Figma prototype.
+              Balancing real user needs against project constraints. Users
+              unanimously wanted no account creation, but it was a project
+              requirement. The goal was to honor that frustration while still
+              delivering a flow that felt as frictionless as possible.
             </p>
           </div>
         </section>
 
+        {/* Research findings */}
+        <section className="dz__section">
+          <p className="dz__label">Research — User Interviews</p>
+          <p className="dz__body-text" style={{ marginBottom: 24 }}>
+            I interviewed multiple users on the existing Denver Zoo website.
+            Three clear pain points surfaced across every single interview.
+          </p>
+          <div className="dz__insights">
+            {[
+              {
+                num: "01",
+                title: "Too Many Pages",
+                note: "Every person interviewed complained about the number of pages they had to click through just to buy a ticket.",
+              },
+              {
+                num: "02",
+                title: "Account Creation Feels Useless",
+                note: "Everyone found making a zoo account annoying. They preferred Apple Pay — all info auto-filled, no account needed.",
+              },
+              {
+                num: "03",
+                title: "Just Let Me Pay",
+                note: "Users wanted to get to payment fast. Multiple screens that could be combined were creating unnecessary frustration.",
+              },
+            ].map(({ num, title, note }) => (
+              <div key={num} className="dz__insight-card">
+                <span className="dz__insight-num">{num}</span>
+                <p className="dz__insight-title">{title}</p>
+                <p className="dz__insight-note">{note}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* HMW + Competitive */}
+        <section className="dz__two-col" style={{ paddingTop: 0 }}>
+          <div>
+            <p className="dz__label">Competitive Analysis</p>
+            <p className="dz__body-text">
+              I analyzed three competitors — the Denver Aquarium, Cheyenne
+              Mountain Zoo, and the Nature & Science Museum — to understand how
+              similar organizations handle ticket flows and navigation
+              structure.
+            </p>
+          </div>
+          <div>
+            <p className="dz__label">"How Might We" Statements</p>
+            <ul className="dz__hmw-list">
+              <li>
+                How might we make buying tickets more enjoyable without
+                overwhelming the user?
+              </li>
+              <li>
+                How might we provide comprehensive event details and ticket
+                options effectively?
+              </li>
+              <li>
+                How might we simplify navigation and reduce the number of pages?
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Metrics */}
         <div className="dz__metrics">
           {[
-            { n: "40%", l: "Faster ticket purchase" },
-            { n: "60%", l: "Faster info retrieval" },
-            { n: "8", l: "User interviews" },
+            { n: "3", l: "Competitors analyzed" },
             { n: "3", l: "Design iterations" },
+            { n: "7→4", l: "Ticket steps reduced" },
+            { n: "2", l: "Usability test rounds" },
           ].map(({ n, l }) => (
             <div key={l} className="dz__metric">
               <p className="dz__metric-n">{n}</p>
@@ -81,48 +153,45 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
           ))}
         </div>
 
+        {/* Design process */}
         <section className="dz__section">
-          <p className="dz__label">Process</p>
+          <p className="dz__label">Design Process</p>
           <div className="dz__timeline">
             {[
               {
                 num: "01",
-                phase: "Discover",
+                phase: "User Flow",
                 items: [
-                  "8 user interviews with zoo visitors",
-                  "Competitive audit of 5 similar zoo websites",
-                  "Heuristic evaluation (Nielsen's 10 principles)",
-                  "Journey mapping: homepage → ticket confirmation",
+                  "Mapped a simplified flow cutting unnecessary pages",
+                  "Removed the 'create account' screen based on user feedback",
+                  "Prioritized the most direct path from browsing to confirmation",
                 ],
               },
               {
                 num: "02",
-                phase: "Define",
+                phase: "Low Fidelity",
                 items: [
-                  "Affinity mapping from interview transcripts",
-                  "3 primary user personas developed",
-                  "Pain points: confusing nav, unclear pricing, slow checkout",
-                  "Feature prioritization for redesign scope",
+                  "Sketched key screens based on the user flow",
+                  "Focused on layout and information hierarchy",
+                  "Header, footer, and core content blocked on every page",
                 ],
               },
               {
                 num: "03",
-                phase: "Design",
+                phase: "Mid Fidelity",
                 items: [
-                  "12 screens wireframed (lo-fi → hi-fi)",
-                  "Interactive Figma prototype with revised nav",
-                  "Simplified ticket flow: 7 steps → 4",
-                  "Improved visual hierarchy and CTA placement",
+                  "Built directly from lo-fi in Figma",
+                  "Applied 8pt grid for consistent spacing",
+                  "More structured layout, ready for real content",
                 ],
               },
               {
                 num: "04",
-                phase: "Test",
+                phase: "High Fidelity",
                 items: [
-                  "Usability tests with 6 participants",
-                  "3 rounds of iteration based on feedback",
-                  "Task completion rate measurements",
-                  "Stakeholder presentation of final recommendations",
+                  "Added real Denver Zoo photos and brand colors",
+                  "Designed a footer with logo and links",
+                  "Used a legible font with character to match the brand",
                 ],
               },
             ].map(({ num, phase, items }) => (
@@ -141,13 +210,43 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
           </div>
         </section>
 
+        {/* Feedback + Updates */}
+        <section className="dz__two-col" style={{ paddingTop: 0 }}>
+          <div>
+            <p className="dz__label">Feedback</p>
+            <p className="dz__body-text">
+              Most feedback centered on spacing — a harder challenge than
+              expected when working in Figma for the first time on a full
+              website. I also received notes on indentation in the purchase
+              summary, which I agreed with and corrected. The feedback process
+              was eye-opening: user input surfaces things you genuinely don't
+              notice yourself.
+            </p>
+          </div>
+          <div>
+            <p className="dz__label">Iterations Made</p>
+            <ul className="dz__update-list">
+              <li>
+                Added "read more" buttons to news articles on the home page
+              </li>
+              <li>
+                Made the calendar interactive with month navigation arrows
+              </li>
+              <li>Fixed indentation in the purchase summary</li>
+              <li>Refined spacing across screens using 8pt increments</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Outcome */}
         <section className="dz__outcome">
           <p className="dz__label">Outcome</p>
           <p className="dz__outcome-text">
-            The redesigned prototype reduced ticket purchase task time by 40% in
-            usability testing. Navigation restructuring helped users find
-            exhibit information 60% faster. Presented as a comprehensive UX case
-            study at CU Boulder's design showcase.
+            Delivered a fully interactive high-fidelity Figma prototype — lo-fi
+            through hi-fi — with a simplified ticket flow, real Denver Zoo
+            branding, and iterated improvements from two rounds of user
+            feedback. The redesign cut the ticket purchase path from 7 steps to
+            4 and removed friction points every interviewed user flagged.
           </p>
         </section>
       </main>
