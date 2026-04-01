@@ -22,7 +22,7 @@ export default function Nav() {
         ([entry]) => {
           if (entry.isIntersecting) setActive(id);
         },
-        { threshold: 0.2, rootMargin: "0px 0px -40% 0px" },
+        { threshold: 0.05, rootMargin: "0px 0px -20% 0px" },
       );
       obs.observe(el);
       observers.push(obs);
