@@ -1,4 +1,3 @@
-// Nav.tsx
 import { useState, useEffect } from "react";
 import "../styles/Nav.css";
 
@@ -38,9 +37,9 @@ export default function Nav() {
 
   return (
     <nav className="nav">
-      {sections.map(({ id, label }, i) => (
-        <>
-          {i > 0 && <span key={`dot-${id}`} className="nav__dot" />}
+      <span className="nav__logo">PV</span>
+      <div className="nav__items">
+        {sections.map(({ id, label }) => (
           <button
             key={id}
             className={`nav__item ${active === id ? "nav__item--active" : ""}`}
@@ -48,8 +47,8 @@ export default function Nav() {
           >
             {label}
           </button>
-        </>
-      ))}
+        ))}
+      </div>
     </nav>
   );
 }

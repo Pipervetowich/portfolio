@@ -30,7 +30,7 @@
 
 .ymca__tag {
   display: inline-block;
-  font-size: 9px;
+  font-size: 13px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #e0458a;
@@ -52,15 +52,15 @@
 
 .ymca__meta { display: flex; flex-direction: column; gap: 10px; }
 .ymca__meta > div { display: flex; flex-direction: column; gap: 2px; }
-.ymca__meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6a6a6a; }
-.ymca__meta-val { font-size: 12px; font-weight: 600; color: #1a1a1a; }
+.ymca__meta-label { font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #6a6a6a; }
+.ymca__meta-val { font-size: 14px; font-weight: 600; color: #1a1a1a; }
 
 .ymca__body { max-width: 960px; margin: 0 auto; padding: 80px 60px 120px; }
 .ymca__section { margin-bottom: 64px; }
 
 .ymca__label {
   display: block;
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #e0458a;
@@ -88,7 +88,7 @@
 .ymca__stat { padding: 36px 24px; border-right: 1px solid rgba(26,26,26,0.1); text-align: center; }
 .ymca__stat:last-child { border-right: none; }
 .ymca__stat-n { display: block; font-size: 44px; font-weight: 800; color: #1a1a1a; line-height: 1; margin-bottom: 8px; letter-spacing: -0.02em; }
-.ymca__stat-l { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #5a5a5a; }
+.ymca__stat-l { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #5a5a5a; }
 
 .ymca__steps { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .ymca__step { background: #fff; border: 1px solid rgba(26,26,26,0.1); border-radius: 4px; padding: 28px; }
@@ -96,7 +96,7 @@
 .ymca__step-num { font-size: 28px; font-weight: 800; color: #f0b8d0; line-height: 1; }
 .ymca__step-phase { font-size: 14px; font-weight: 700; color: #1a1a1a; }
 .ymca__step-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
-.ymca__step-list li { font-size: 12px; line-height: 1.6; color: #4a4a4a; padding-left: 16px; position: relative; }
+.ymca__step-list li { font-size: 14px; line-height: 1.6; color: #4a4a4a; padding-left: 16px; position: relative; }
 .ymca__step-list li::before { content: "✦"; position: absolute; left: 0; color: #e0458a; font-size: 8px; top: 3px; }
 
 .ymca__outcome { background: #1a1a1a; border-radius: 4px; padding: 48px; margin-bottom: 60px; }
@@ -104,6 +104,32 @@
 .ymca__outcome-text { font-size: 16px; line-height: 1.75; color: #c8c0b8; }
 
 .ymca__cta { text-align: center; }
+
+
+.ymca__body-text { font-size: 15px; line-height: 1.75; color: #333; margin-bottom: 0; }
+
+.ymca__directions { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.ymca__direction-card {
+  background: #fff;
+  border: 1px solid rgba(26,26,26,0.1);
+  border-radius: 4px;
+  padding: 28px 24px;
+  border-top: 3px solid #e0458a;
+}
+.ymca__direction-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e0458a;
+  margin-bottom: 12px;
+}
+.ymca__direction-text { font-size: 15px; line-height: 1.7; color: #4a4a4a; }
+
+@media (max-width: 768px) {
+  .ymca__directions { grid-template-columns: 1fr; }
+}
 
 @media (max-width: 768px) {
   .ymca__hero { grid-template-columns: 1fr; }

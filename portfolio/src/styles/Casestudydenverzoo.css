@@ -41,13 +41,13 @@
 }
 .dz__title span { color: #e0458a; font-style: italic; font-weight: 800; }
 
-.dz__role { font-size: 11px; color: #5a5a5a; letter-spacing: 0.06em; margin-bottom: 20px; }
+.dz__role { font-size: 13px; color: #5a5a5a; letter-spacing: 0.06em; margin-bottom: 20px; }
 
 .dz__tools-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .dz__tool-chip {
   border: 1px solid rgba(26,26,26,0.2);
   padding: 5px 12px;
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.08em;
   color: #4a4a4a;
   border-radius: 4px;
@@ -57,6 +57,7 @@
 .dz__hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 
 .dz__intro-strip {
+  text-align: center;
   background: #1a1a1a;
   padding: 40px 80px;
 }
@@ -65,6 +66,7 @@
   color: #ddd8d0;
   font-style: italic;
   max-width: 700px;
+  margin: 0 auto;
   line-height: 1.5;
 }
 
@@ -73,7 +75,7 @@
 
 .dz__label {
   display: block;
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #e0458a;
@@ -99,8 +101,8 @@
   border-top: 3px solid #e0458a;
 }
 .dz__insight-num { display: block; font-size: 28px; font-weight: 800; color: #f0b8d0; line-height: 1; margin-bottom: 12px; }
-.dz__insight-title { font-size: 14px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
-.dz__insight-note { font-size: 12px; line-height: 1.65; color: #5a5a5a; }
+.dz__insight-title { font-size: 16px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
+.dz__insight-note { font-size: 14px; line-height: 1.65; color: #5a5a5a; }
 
 /* HMW list */
 .dz__hmw-list {
@@ -111,7 +113,7 @@
   gap: 12px;
 }
 .dz__hmw-list li {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.6;
   color: #333;
   padding: 14px 16px;
@@ -138,7 +140,7 @@
 }
 .dz__metric:last-child { border-right: none; }
 .dz__metric-n { font-size: 40px; font-weight: 800; color: #1a1a1a; letter-spacing: -0.02em; line-height: 1; margin-bottom: 8px; }
-.dz__metric-l { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #5a5a5a; }
+.dz__metric-l { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #5a5a5a; }
 
 /* Timeline (design process) */
 .dz__timeline { display: flex; flex-direction: column; border: 1px solid rgba(26,26,26,0.12); border-radius: 4px; overflow: hidden; }
@@ -147,7 +149,7 @@
 .dz__timeline-num {
   background: #1a1a1a;
   color: #8a8480;
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.1em;
   font-weight: 700;
   display: flex;
@@ -156,9 +158,9 @@
   writing-mode: vertical-lr;
 }
 .dz__timeline-content { padding: 28px 36px; background: #fff; border-left: 1px solid rgba(26,26,26,0.08); }
-.dz__timeline-phase { font-size: 16px; font-weight: 700; color: #1a1a1a; margin-bottom: 12px; }
+.dz__timeline-phase { font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 12px; }
 .dz__timeline-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-.dz__timeline-list li { font-size: 12px; color: #4a4a4a; line-height: 1.5; padding-left: 14px; position: relative; }
+.dz__timeline-list li { font-size: 14px; color: #4a4a4a; line-height: 1.5; padding-left: 14px; position: relative; }
 .dz__timeline-list li::before { content: "✦"; position: absolute; left: 0; color: #e0458a; font-size: 8px; top: 3px; }
 
 /* Update list */
@@ -170,7 +172,7 @@
   gap: 10px;
 }
 .dz__update-list li {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.6;
   color: #3a3a3a;
   padding-left: 16px;
@@ -196,7 +198,8 @@
   .dz__hero { grid-template-columns: 1fr; }
   .dz__hero-text { padding: 100px 24px 40px; }
   .dz__hero-img-wrap { height: 280px; }
-  .dz__intro-strip { padding: 36px 24px; }
+  .dz__intro-strip {
+  text-align: center; padding: 36px 24px; }
   .dz__body { padding: 48px 24px 80px; }
   .dz__two-col { grid-template-columns: 1fr; gap: 36px; }
   .dz__insights { grid-template-columns: 1fr; }

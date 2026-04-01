@@ -38,15 +38,15 @@ export const projects = [
     image: "bhcPhoto",
   },
   {
-    title: "Food Product Packaging Design",
-    type: "Physical Product Design",
-    role: "Product Designer",
-    tools: ["Sketching", "Prototyping", "Adobe Illustrator"],
-    desc: "Designed packaging for a product, including branding, label layout, and mockup creation. Focused on creating a visually cohesive design that clearly communicated the brand identity.",
+    title: "Bangkok Olympic Visual Identity",
+    type: "Brand Identity & Design Systems",
+    role: "Brand & Systems Designer",
+    tools: ["Figma", "Adobe Illustrator", "Design Systems"],
+    desc: "🚧 Work in progress — researching and designing a visual identity system for Bangkok as a host city for the Olympic Games, rooted in Thai cultural heritage, architecture, and urban energy.",
     color: "#c4b8d4",
-    tag: "Product Design",
-    year: "2023",
-    image: "noodlesPhoto",
+    tag: "Identity & Branding",
+    year: "2026",
+    image: "",
   },
 ];
 

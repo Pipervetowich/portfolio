@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 60px 60px;
+  padding: 120px 60px 60px;
   position: relative;
   background: var(--cream);
 }
@@ -23,7 +23,7 @@
 
 .hero__title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(80px, 18vw, 220px);
+  font-size: clamp(60px, 13.5vw, 175px);
   font-weight: 900;
   color: var(--pink);
   line-height: 0.85;
@@ -41,7 +41,7 @@
 
 .hero__title--delayed {
   transition-delay: 0.2s;
-  text-align: right;
+  text-align: left;
   position: relative;
   z-index: 3;
   background: transparent;

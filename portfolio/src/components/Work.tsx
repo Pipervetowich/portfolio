@@ -40,14 +40,14 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
           <div className="featured-card__body">
             <p
               className="section-label"
-              style={{ color: "#555", marginBottom: 12 }}
+              style={{ color: "#333", marginBottom: 12, fontSize: 13 }}
             >
               Capstone Project · Mobile App
             </p>
             <p className="featured-card__title">Band Width</p>
             <p
               className="body-text"
-              style={{ color: "#666", marginBottom: 20, fontSize: 12 }}
+              style={{ color: "#333", marginBottom: 20, fontSize: 14 }}
             >
               Bandwidth is a mobile app designed to make local music discovery
               easy and community-focused. We make discovering, promoting, and
@@ -91,11 +91,13 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
                 style={{ background: p.color }}
               >
                 <div className="project-item__thumb-overlay" />
-                <img
-                  src={images[p.image]}
-                  alt={p.title}
-                  className="project-item__thumb-img"
-                />
+                {p.image && images[p.image] && (
+                  <img
+                    src={images[p.image]}
+                    alt={p.title}
+                    className="project-item__thumb-img"
+                  />
+                )}
                 <span className="project-card__badge project-item__badge-tl">
                   {p.tag}
                 </span>
@@ -110,7 +112,7 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
                     <p className="project-item__title">{p.title}</p>
                     <p
                       className="section-label"
-                      style={{ marginTop: 4, color: "#666" }}
+                      style={{ marginTop: 4, color: "#333", fontSize: 12 }}
                     >
                       {p.type}
                     </p>
@@ -120,7 +122,7 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
 
                 <p
                   className="body-text"
-                  style={{ fontSize: 11, marginBottom: 12, color: "#666" }}
+                  style={{ fontSize: 13, marginBottom: 12, color: "#333" }}
                 >
                   {p.desc}
                 </p>
