@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --pink: #FF69B4;
+  --pink: #c22d77;
   --cream: #F5F0E8;
   --warm-tan: #E8DDD0;
   --dark: #1a1a1a;
@@ -21,17 +21,17 @@ body {
 
 .section-label {
   font-family: 'Space Mono', monospace;
-  font-size: 12px;
-  letter-spacing: 3px;
+  font-size: 10px;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  color: var(--pink);
+  color: #595959;
 }
 
 .body-text {
   font-family: 'Space Mono', monospace;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.9;
-  color: #2a2a2a;
+  color: #444;
 }
 
 .handwriting {
@@ -84,11 +84,11 @@ body {
 
 .tool-chip {
   display: inline-block;
-  background: rgba(255, 105, 180, 0.12);
-  border: 1px solid rgba(255, 105, 180, 0.3);
+  background: rgba(194, 45, 119, 0.12);
+  border: 1px solid rgba(194, 45, 119, 0.3);
   color: var(--pink);
   font-family: 'Space Mono', monospace;
-  font-size: 11px;
+  font-size: 9px;
   letter-spacing: 1px;
   padding: 3px 8px;
   margin: 2px;

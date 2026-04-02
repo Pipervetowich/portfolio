@@ -18,9 +18,6 @@ export default function Contact() {
           <p className="envelope__quote">
             "Thank you for exploring my portfolio!
           </p>
-          <p className="envelope__sub">
-            If you'd like to chat design, I'd love to hear from you.
-          </p>
 
           <div className="envelope__contacts">
             {contactItems.map(({ icon, label, href }, i) => (
