@@ -71,7 +71,7 @@ export default function CaseStudyNoodles({ image: _image, onBack }: Props) {
         {/* City Context */}
         <section className="nd__two-col">
           <div>
-            <p className="nd__label">City Context</p>
+            <h2 className="nd__label">City Context</h2>
             <p className="nd__body-text">
               Bangkok has been the capital of Thailand since 1782, founded by
               King Rama I during the Rattanakosin era. Built along the Chao
@@ -110,7 +110,7 @@ export default function CaseStudyNoodles({ image: _image, onBack }: Props) {
 
         {/* Cultural Identity */}
         <section className="nd__section">
-          <p className="nd__label">Cultural Identity</p>
+          <h2 className="nd__label">Cultural Identity</h2>
           <div className="nd__process">
             <div className="nd__phase">
               <div className="nd__phase-head">
@@ -161,7 +161,7 @@ export default function CaseStudyNoodles({ image: _image, onBack }: Props) {
 
         {/* Key Characteristics */}
         <section className="nd__section">
-          <p className="nd__label">Key Characteristics</p>
+          <h2 className="nd__label">Key Characteristics</h2>
           <div className="nd__characteristics">
             {[
               {
@@ -203,7 +203,7 @@ export default function CaseStudyNoodles({ image: _image, onBack }: Props) {
 
         {/* Design Directions */}
         <section className="nd__section">
-          <p className="nd__label">Initial Design Directions</p>
+          <h2 className="nd__label">Initial Design Directions</h2>
           <div className="nd__process">
             <div className="nd__phase">
               <div className="nd__phase-head">
@@ -245,7 +245,7 @@ export default function CaseStudyNoodles({ image: _image, onBack }: Props) {
         </section>
 
         <section className="nd__outcome">
-          <p className="nd__label">Next Steps</p>
+          <h2 className="nd__label">Next Steps</h2>
           <p className="nd__outcome-text">
             With research and initial directions complete, the next phase
             focuses on refining a chosen direction into a full design system —

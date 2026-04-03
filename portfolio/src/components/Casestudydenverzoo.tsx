@@ -56,7 +56,7 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
         {/* Overview + Challenge */}
         <section className="dz__two-col">
           <div>
-            <p className="dz__label">Overview</p>
+            <h2 className="dz__label">Overview</h2>
             <p className="dz__body-text">
               The Denver Zoo's existing website made buying tickets confusing
               and repetitive — too many pages, too much redundancy. I redesigned
@@ -65,7 +65,7 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
             </p>
           </div>
           <div>
-            <p className="dz__label">The Challenge</p>
+            <h2 className="dz__label">The Challenge</h2>
             <p className="dz__body-text">
               Balancing real user needs against project constraints. Users
               unanimously wanted no account creation, but it was a project
@@ -77,7 +77,7 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
 
         {/* Research findings */}
         <section className="dz__section">
-          <p className="dz__label">Research — User Interviews</p>
+          <h2 className="dz__label">Research — User Interviews</h2>
           <p className="dz__body-text" style={{ marginBottom: 24 }}>
             I interviewed multiple users on the existing Denver Zoo website.
             Three clear pain points surfaced across every single interview.
@@ -112,7 +112,7 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
         {/* HMW + Competitive */}
         <section className="dz__two-col" style={{ paddingTop: 0 }}>
           <div>
-            <p className="dz__label">Competitive Analysis</p>
+            <h2 className="dz__label">Competitive Analysis</h2>
             <p className="dz__body-text">
               I analyzed three competitors — the Denver Aquarium, Cheyenne
               Mountain Zoo, and the Nature & Science Museum — to understand how
@@ -121,7 +121,7 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
             </p>
           </div>
           <div>
-            <p className="dz__label">"How Might We" Statements</p>
+            <h2 className="dz__label">"How Might We" Statements</h2>
             <ul className="dz__hmw-list">
               <li>
                 How might we make buying tickets more enjoyable without
@@ -147,15 +147,15 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
             { n: "2", l: "Usability test rounds" },
           ].map(({ n, l }) => (
             <div key={l} className="dz__metric">
-              <p className="dz__metric-n">{n}</p>
-              <p className="dz__metric-l">{l}</p>
+              <h1 className="dz__metric-n">{n}</h1>
+              <h2 className="dz__metric-l">{l}</h2>
             </div>
           ))}
         </div>
 
         {/* Design process */}
         <section className="dz__section">
-          <p className="dz__label">Design Process</p>
+          <h2 className="dz__label">Design Process</h2>
           <div className="dz__timeline">
             {[
               {
@@ -198,7 +198,7 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
               <div key={num} className="dz__timeline-item">
                 <div className="dz__timeline-num">{num}</div>
                 <div className="dz__timeline-content">
-                  <p className="dz__timeline-phase">{phase}</p>
+                  <h2 className="dz__timeline-phase">{phase}</h2>
                   <ul className="dz__timeline-list">
                     {items.map((item, i) => (
                       <li key={i}>{item}</li>
@@ -213,7 +213,7 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
         {/* Feedback + Updates */}
         <section className="dz__two-col" style={{ paddingTop: 0 }}>
           <div>
-            <p className="dz__label">Feedback</p>
+            <h2 className="dz__label">Feedback</h2>
             <p className="dz__body-text">
               Most feedback centered on spacing — a harder challenge than
               expected when working in Figma for the first time on a full
@@ -224,7 +224,7 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
             </p>
           </div>
           <div>
-            <p className="dz__label">Iterations Made</p>
+            <h2 className="dz__label">Iterations Made</h2>
             <ul className="dz__update-list">
               <li>
                 Added "read more" buttons to news articles on the home page
@@ -240,7 +240,7 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
 
         {/* Outcome */}
         <section className="dz__outcome">
-          <p className="dz__label">Outcome</p>
+          <h2 className="dz__label">Outcome</h2>
           <p className="dz__outcome-text">
             Delivered a fully interactive high-fidelity Figma prototype — lo-fi
             through hi-fi — with a simplified ticket flow, real Denver Zoo

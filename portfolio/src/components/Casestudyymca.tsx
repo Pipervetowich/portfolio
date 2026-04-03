@@ -51,7 +51,7 @@ export default function CaseStudyYMCA({ image, onBack }: Props) {
       <main className="ymca__body">
         {/* Problem */}
         <section className="ymca__problem">
-          <p className="ymca__label">The Problem</p>
+          <h2 className="ymca__label">The Problem</h2>
           <p className="ymca__problem-text">
             The current YMCA logo feels outdated, and the existing color
             selections don't reflect the organization's core values of openness,
@@ -77,7 +77,7 @@ export default function CaseStudyYMCA({ image, onBack }: Props) {
 
         {/* Initial Explorations */}
         <section className="ymca__section">
-          <p className="ymca__label">Initial Explorations</p>
+          <h2 className="ymca__label">Initial Explorations</h2>
           <p className="ymca__body-text">
             I started by researching the existing YMCA logo and looking at
             comparable organizations for inspiration. I explored community
@@ -93,7 +93,7 @@ export default function CaseStudyYMCA({ image, onBack }: Props) {
 
         {/* Concept Directions */}
         <section className="ymca__section">
-          <p className="ymca__label">Concept Directions</p>
+          <h2 className="ymca__label">Concept Directions</h2>
           <div className="ymca__directions">
             <div className="ymca__direction-card">
               <span className="ymca__direction-label">Direction A</span>
@@ -138,7 +138,7 @@ export default function CaseStudyYMCA({ image, onBack }: Props) {
 
         {/* Rationale */}
         <section className="ymca__section">
-          <p className="ymca__label">Rationale for Final Direction</p>
+          <h2 className="ymca__label">Rationale for Final Direction</h2>
           <p className="ymca__body-text">
             I chose to move forward with the person-as-Y concept from Direction
             B. The blocky lettering of Direction A felt too catered to a kids'
@@ -154,7 +154,7 @@ export default function CaseStudyYMCA({ image, onBack }: Props) {
 
         {/* Refinement Process */}
         <section className="ymca__section">
-          <p className="ymca__label">Refinement</p>
+          <h2 className="ymca__label">Refinement</h2>
           <div className="ymca__steps">
             {[
               {
@@ -215,7 +215,7 @@ export default function CaseStudyYMCA({ image, onBack }: Props) {
 
         {/* Outcome */}
         <section className="ymca__outcome">
-          <p className="ymca__label">Outcome</p>
+          <h2 className="ymca__label">Outcome</h2>
           <p className="ymca__outcome-text">
             The final logo uses a human figure as the Y — arms raised, conveying
             energy and welcome — paired with simplified lettering and a calmer

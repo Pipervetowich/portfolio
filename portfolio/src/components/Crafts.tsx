@@ -22,20 +22,17 @@ export default function Crafts() {
           </div>
 
           <div>
-            <p
+            <h3
               className="section-label"
               style={{ color: "#3d3d3d", marginBottom: 24 }}
             >
               How I Design
-            </p>
+            </h3>
             {process.map(({ num, label, desc }) => (
               <div key={num} className="process-step">
                 <p className="process-step__num">{num}</p>
-                <p className="process-step__label">{label}</p>
-                <p
-                  className="body-text"
-                  style={{ color: "#3d3d3d", fontSize: 11 }}
-                >
+                <h2 className="process-step__label">{label}</h2>
+                <p className="body-text" style={{ color: "#3d3d3d" }}>
                   {desc}
                 </p>
               </div>

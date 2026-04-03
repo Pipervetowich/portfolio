@@ -14,8 +14,11 @@ export default function Hero({ loaded, piperPhoto }: HeroProps) {
           <p className="section-label">Colorado, USA</p>
         </div>
 
-        <h2 className="handwriting">Hi. Glad you're here.</h2>
-        <h2 className="handwriting" style={{ textAlign: "right" }}>
+        <h2 className="handwriting hero__greeting">Hi. Glad you're here.</h2>
+        <h2
+          className="handwriting hero__greeting"
+          style={{ textAlign: "right" }}
+        >
           Let me show you my work ✦
         </h2>
 

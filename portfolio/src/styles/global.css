@@ -24,12 +24,12 @@ body {
   font-size: 16px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #595959;
+  color: #4a4a4a; /* improved contrast on cream bg: ~5.2:1 */
 }
 
 .body-text {
   font-family: 'Space Mono', monospace;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.9;
   color: #444;
 }
@@ -46,7 +46,7 @@ body {
   border: 1.5px solid var(--dark);
   padding: 6px 14px;
   font-family: 'Space Mono', monospace;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 4px;
@@ -66,7 +66,7 @@ body {
   border: 1.5px solid var(--dark);
   padding: 6px 14px;
   font-family: 'Space Mono', monospace;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 4px;
@@ -88,9 +88,9 @@ body {
   border: 1px solid rgba(194, 45, 119, 0.3);
   color: var(--pink);
   font-family: 'Space Mono', monospace;
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 1px;
-  padding: 3px 8px;
+  padding: 4px 10px;
   margin: 2px;
   border-radius: 4px;
 }
@@ -129,7 +129,7 @@ body {
 .project-card__cta {
   display: inline-block;
   font-family: 'Space Mono', monospace;
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 2px;
   color: white;
   text-transform: uppercase;

@@ -21,7 +21,13 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
         {/* Featured */}
         <div
           className="project-card featured-card"
+          role="button"
+          tabIndex={0}
           onClick={() => onOpenCaseStudy("featured")}
+          onKeyDown={(e) =>
+            (e.key === "Enter" || e.key === " ") && onOpenCaseStudy("featured")
+          }
+          aria-label="View Band Width case study"
         >
           <div className="featured-card__image-pane">
             <img
@@ -40,14 +46,14 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
           <div className="featured-card__body">
             <p
               className="section-label"
-              style={{ color: "#333", marginBottom: 12, fontSize: 13 }}
+              style={{ color: "#333", marginBottom: 12 }}
             >
               Capstone Project · Mobile App
             </p>
-            <p className="featured-card__title">Band Width</p>
+            <h3 className="featured-card__title">Band Width</h3>
             <p
               className="body-text"
-              style={{ color: "#333", marginBottom: 20, fontSize: 14 }}
+              style={{ color: "#333", marginBottom: 20 }}
             >
               Bandwidth is a mobile app designed to make local music discovery
               easy and community-focused. We make discovering, promoting, and
@@ -84,7 +90,13 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
             <div
               key={i}
               className="project-card project-item"
+              role="button"
+              tabIndex={0}
               onClick={() => onOpenCaseStudy(i)}
+              onKeyDown={(e) =>
+                (e.key === "Enter" || e.key === " ") && onOpenCaseStudy(i)
+              }
+              aria-label={`View ${p.title} case study`}
             >
               <div
                 className="project-item__thumb"
@@ -109,10 +121,10 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
               <div className="project-item__body">
                 <div className="project-item__header">
                   <div>
-                    <p className="project-item__title">{p.title}</p>
+                    <h3 className="project-item__title">{p.title}</h3>
                     <p
                       className="section-label"
-                      style={{ marginTop: 4, color: "#333", fontSize: 12 }}
+                      style={{ marginTop: 4, color: "#333" }}
                     >
                       {p.type}
                     </p>
@@ -122,7 +134,7 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
 
                 <p
                   className="body-text"
-                  style={{ fontSize: 13, marginBottom: 12, color: "#333" }}
+                  style={{ marginBottom: 12, color: "#333" }}
                 >
                   {p.desc}
                 </p>

@@ -63,10 +63,10 @@ export default function About({ piperPhoto2 }: AboutProps) {
                   key={i}
                   className={`about__stat ${i === 1 ? "about__stat--highlight" : ""}`}
                 >
-                  <p className="about__stat-num">{num}</p>
+                  <h1 className="about__stat-num">{num}</h1>
                   <p
                     className="section-label"
-                    style={{ marginTop: 6, fontSize: 12 }}
+                    style={{ marginTop: 6, fontSize: 14 }}
                   >
                     {label}
                   </p>

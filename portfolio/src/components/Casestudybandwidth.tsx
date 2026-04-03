@@ -64,7 +64,7 @@ export default function CaseStudyBandWidth({ image, onBack }: Props) {
 
       <main className="bw__body">
         <section className="bw__section">
-          <p className="bw__label">Overview</p>
+          <h2 className="bw__label">Overview</h2>
           <p className="bw__lead">
             Local music scenes are fragmented across Instagram DMs, Facebook
             Events, and word of mouth. BandWidth is a community-focused mobile
@@ -75,7 +75,7 @@ export default function CaseStudyBandWidth({ image, onBack }: Props) {
         </section>
 
         <section className="bw__callout">
-          <p className="bw__label">The Problem</p>
+          <h2 className="bw__label">The Problem</h2>
           <p className="bw__callout-text">
             "Bands can't reach audiences. Fans don't know what's happening
             locally. Hosts have no central booking tool."
@@ -83,7 +83,7 @@ export default function CaseStudyBandWidth({ image, onBack }: Props) {
         </section>
 
         <section className="bw__section">
-          <p className="bw__label">Process</p>
+          <h2 className="bw__label">Process</h2>
           <div className="bw__process">
             {[
               {
@@ -143,7 +143,7 @@ export default function CaseStudyBandWidth({ image, onBack }: Props) {
         </section>
 
         <section className="bw__section">
-          <p className="bw__label">Key Features Built</p>
+          <h2 className="bw__label">Key Features Built</h2>
           <div className="bw__features">
             {[
               {
@@ -172,7 +172,7 @@ export default function CaseStudyBandWidth({ image, onBack }: Props) {
         </section>
 
         <section className="bw__section">
-          <p className="bw__label">User Testing Insights</p>
+          <h2 className="bw__label">User Testing Insights</h2>
           <div className="bw__insights">
             {[
               {
@@ -200,7 +200,7 @@ export default function CaseStudyBandWidth({ image, onBack }: Props) {
         </section>
 
         <section className="bw__outcome">
-          <p className="bw__label">Outcome</p>
+          <h2 className="bw__label">Outcome</h2>
           <p className="bw__outcome-text">
             Delivered a fully interactive prototype, a reusable React Native
             component library, and a research-backed design system. The team

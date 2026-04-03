@@ -62,7 +62,7 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
       <main className="bhc__body">
         <section className="bhc__two-col">
           <div>
-            <p className="bhc__label">Overview</p>
+            <h2 className="bhc__label">Overview</h2>
             <p className="bhc__body-text">
               The Boulder Housing Coalition provides permanently affordable
               cooperative housing for low-income Boulder residents. Their
@@ -72,7 +72,7 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
             </p>
           </div>
           <div>
-            <p className="bhc__label">My Role</p>
+            <h2 className="bhc__label">My Role</h2>
             <p className="bhc__body-text">
               I conducted a full UX audit covering the Home, People's Mansion,
               and Application pages — including heuristic evaluation, card
@@ -107,10 +107,10 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
         </div>
 
         <section className="bhc__section">
-          <p className="bhc__label">Persona</p>
+          <h2 className="bhc__label">Persona</h2>
           <div className="bhc__persona-card">
             <div className="bhc__persona-left">
-              <p className="bhc__persona-name">Andrew McFergy</p>
+              <h1 className="bhc__persona-name">Andrew McDonald</h1>
               <p className="bhc__persona-meta">
                 21 · CU Boulder Student · High tech comfort
               </p>
@@ -119,9 +119,9 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
               </p>
             </div>
             <div className="bhc__persona-right">
-              <p className="bhc__label" style={{ marginBottom: 12 }}>
+              <h1 className="bhc__label" style={{ marginBottom: 12 }}>
                 Pain Points
-              </p>
+              </h1>
               <ul className="bhc__persona-list">
                 <li>No back/home buttons during navigation</li>
                 <li>Dense text blocks are hard to scan</li>
@@ -132,7 +132,7 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
         </section>
 
         <section className="bhc__section">
-          <p className="bhc__label">Heuristic Evaluation</p>
+          <h2 className="bhc__label">Heuristic Evaluation</h2>
           <p className="bhc__body-text" style={{ marginBottom: 24 }}>
             Evaluated against Nielsen's 10 usability heuristics. Five of nine
             had notable failures.
@@ -197,7 +197,9 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
         </section>
 
         <section className="bhc__section">
-          <p className="bhc__label">Information Architecture — Card Sorting</p>
+          <h2 className="bhc__label">
+            Information Architecture — Card Sorting
+          </h2>
           <p className="bhc__body-text" style={{ marginBottom: 24 }}>
             Open card sorting with two participants revealed users naturally
             collapse the site into fewer, broader categories than the current
@@ -236,7 +238,7 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
         </section>
 
         <section className="bhc__section">
-          <p className="bhc__label">User Journey — Finding the FAQ</p>
+          <h2 className="bhc__label">User Journey — Finding the FAQ</h2>
           <div className="bhc__journey-wrap">
             <div className="bhc__journey-steps">
               {[
@@ -263,7 +265,7 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
         </section>
 
         <section className="bhc__section">
-          <p className="bhc__label">Accessibility Evaluation</p>
+          <h2 className="bhc__label">Accessibility Evaluation</h2>
           <div className="bhc__a11y-grid">
             {[
               {
@@ -306,7 +308,7 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
         </div>
 
         <section className="bhc__outcome">
-          <p className="bhc__label">Outcome</p>
+          <h2 className="bhc__label">Outcome</h2>
           <p className="bhc__outcome-text">
             Delivered a 30-page audit covering five research methods — heuristic
             evaluation, card sorting, journey mapping, cognitive bias analysis,

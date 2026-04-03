@@ -12,12 +12,12 @@ export default function Contact() {
           <br />a wrap.
         </h2>
 
-        <p className="contact__divider">✦✦✦</p>
+        <h2 className="contact__divider">✦✦✦</h2>
 
         <div className="envelope">
-          <p className="envelope__quote">
+          <blockquote className="envelope__quote">
             "Thank you for exploring my portfolio!
-          </p>
+          </blockquote>
 
           <div className="envelope__contacts">
             {contactItems.map(({ icon, label, href }, i) => (
