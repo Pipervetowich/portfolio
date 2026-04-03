@@ -26,7 +26,7 @@
   font-size: 16px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #e0458a;
+  color: #c22d77; /* darkened from #e0458a — passes WCAG AA at 4.70:1 on cream */
   margin-bottom: 20px;
   font-weight: 600;
 }
