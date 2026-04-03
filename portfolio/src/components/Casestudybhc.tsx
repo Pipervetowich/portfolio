@@ -267,28 +267,23 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
           <div className="bhc__a11y-grid">
             {[
               {
-                type: "Automated",
                 issue: "Low Button Contrast",
                 rec: "Darken Apply, Donate, and newsletter buttons to meet WCAG AA.",
               },
               {
-                type: "Automated",
                 issue: "Missing Form Labels",
                 rec: "Add accessible labels to newsletter inputs for screen readers.",
               },
               {
-                type: "Automated",
                 issue: "Ambiguous Link Text",
                 rec: "Use descriptive, unique link text explaining each destination.",
               },
               {
-                type: "Manual",
                 issue: "Faint Focus Indicator",
                 rec: "Increase outline thickness and contrast for keyboard navigation.",
               },
-            ].map(({ type, issue, rec }) => (
+            ].map(({ issue, rec }) => (
               <div key={issue} className="bhc__a11y-card">
-                <span className="bhc__a11y-type">{type}</span>
                 <p className="bhc__a11y-issue">{issue}</p>
                 <p className="bhc__a11y-rec">→ {rec}</p>
               </div>

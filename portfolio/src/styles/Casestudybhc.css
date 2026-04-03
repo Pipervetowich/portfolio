@@ -44,7 +44,7 @@
 
 .bhc__label {
   display: block;
-  font-size: 14px;
+  font-size: 24px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #e0458a;
@@ -73,7 +73,7 @@
 }
 .bhc__finding-severity { font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #e0458a; font-weight: 700; }
 .bhc__finding-count { font-size: 52px; font-weight: 800; color: #1a1a1a; line-height: 1; letter-spacing: -0.02em; }
-.bhc__finding-label { font-size: 13px; color: #5a5a5a; line-height: 1.4; }
+.bhc__finding-label { font-size: 16px; color: #5a5a5a; line-height: 1.4; }
 
 /* Persona */
 .bhc__persona-card {
