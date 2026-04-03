@@ -19,7 +19,7 @@ export default function CaseStudyNoodles({ image: _image, onBack }: Props) {
 
       <header className="nd__hero">
         <div className="nd__hero-text">
-          <div className="nd__wip-badge">🚧 Work in Progress</div>
+          <div className="nd__wip-badge"> Work in Progress</div>
           <p className="nd__kicker">Brand Identity & Design Systems · 2026</p>
           <h1 className="nd__title">
             Bangkok
@@ -42,16 +42,6 @@ export default function CaseStudyNoodles({ image: _image, onBack }: Props) {
                 Figma · Adobe Illustrator · Design Systems
               </span>
             </div>
-            <div>
-              <span className="nd__meta-label">Team</span>
-              <span className="nd__meta-val">
-                Emme Novak, Piper Vetowich, Aidan Youell
-              </span>
-            </div>
-            <div>
-              <span className="nd__meta-label">Course</span>
-              <span className="nd__meta-val">ATLS 4519 — Design Project 2</span>
-            </div>
           </div>
         </div>
         <div className="nd__hero-img-wrap nd__hero-color-block" />
@@ -66,7 +56,7 @@ export default function CaseStudyNoodles({ image: _image, onBack }: Props) {
 
       <main className="nd__body">
         <div className="nd__wip-notice">
-          <span className="nd__wip-icon">🚧</span>
+          <span className="nd__wip-icon"></span>
           <div>
             <p className="nd__wip-title">
               This project is currently in progress.

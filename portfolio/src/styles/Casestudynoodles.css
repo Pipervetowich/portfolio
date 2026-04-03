@@ -84,7 +84,7 @@
 .nd__process { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .nd__phase { background: #fff; border: 1px solid rgba(26,26,26,0.1); border-radius: 4px; padding: 28px; }
 .nd__phase-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid rgba(26,26,26,0.08); }
-.nd__phase-num { font-size: 28px; font-weight: 800; color: #f0b8d0; line-height: 1; }
+.nd__phase-num { font-size: 28px; font-weight: 800; color: #e0458a; line-height: 1; }
 .nd__phase-name { font-size: 14px; font-weight: 700; color: #1a1a1a; }
 .nd__phase-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .nd__phase-list li { font-size: 14px; line-height: 1.6; color: #4a4a4a; padding-left: 16px; position: relative; }
@@ -141,7 +141,7 @@
   border-radius: 4px;
   border-left: 3px solid #e0458a;
 }
-.nd__characteristic-num { font-size: 28px; font-weight: 800; color: #f0b8d0; line-height: 1; flex-shrink: 0; width: 36px; }
+.nd__characteristic-num { font-size: 28px; font-weight: 800; color: #e0458a; line-height: 1; flex-shrink: 0; width: 36px; }
 .nd__characteristic-title { font-size: 15px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
 .nd__characteristic-desc { font-size: 14px; line-height: 1.65; color: #5a5a5a; }
 

@@ -42,7 +42,7 @@ export const projects = [
     type: "Brand Identity & Design Systems",
     role: "Brand & Systems Designer",
     tools: ["Figma", "Adobe Illustrator", "Design Systems"],
-    desc: "🚧 Work in progress — researching and designing a visual identity system for Bangkok as a host city for the Olympic Games, rooted in Thai cultural heritage, architecture, and urban energy.",
+    desc: "Work in progress — researching and designing a visual identity system for Bangkok as a host city for the Olympic Games, rooted in Thai cultural heritage, architecture, and urban energy.",
     color: "#c4b8d4",
     tag: "Identity & Branding",
     year: "2026",

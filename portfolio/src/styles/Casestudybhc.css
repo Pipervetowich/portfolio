@@ -128,7 +128,7 @@
   border-radius: 4px;
   padding: 24px 20px;
 }
-.bhc__ia-num { display: block; font-size: 28px; font-weight: 800; color: #f0b8d0; line-height: 1; margin-bottom: 10px; }
+.bhc__ia-num { display: block; font-size: 28px; font-weight: 800; color: #e0458a; line-height: 1; margin-bottom: 10px; }
 .bhc__ia-title { font-size: 15px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
 .bhc__ia-note { font-size: 14px; line-height: 1.55; color: #5a5a5a; }
 
@@ -151,7 +151,7 @@
   align-items: center;
   gap: 10px;
 }
-.bhc__journey-num { font-size: 12px; font-weight: 800; color: #e0458a; letter-spacing: 0.1em; flex-shrink: 0; }
+.bhc__journey-num { font-size: 16px; font-weight: 800; color: #e0458a; letter-spacing: 0.1em; flex-shrink: 0; }
 .bhc__journey-text { font-size: 14px; font-weight: 600; color: #1a1a1a; }
 .bhc__journey-arrow { color: #ccc; font-size: 16px; padding: 0 12px; }
 .bhc__journey-verdict {

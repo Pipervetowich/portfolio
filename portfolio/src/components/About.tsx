@@ -66,7 +66,7 @@ export default function About({ piperPhoto2 }: AboutProps) {
                   <p className="about__stat-num">{num}</p>
                   <p
                     className="section-label"
-                    style={{ marginTop: 6, fontSize: 9 }}
+                    style={{ marginTop: 6, fontSize: 12 }}
                   >
                     {label}
                   </p>
