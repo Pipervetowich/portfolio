@@ -1,3 +1,4 @@
+/* hi */
 import { useState, useEffect } from "react";
 import piperPhoto from "./assets/Piper_Vetowich.png";
 import piperPhoto2 from "./assets/Piper_Vetowich.jpg";
