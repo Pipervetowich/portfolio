@@ -27,7 +27,7 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
             <div className="project-item__thumb-overlay" />
             <img
               src={images.bandwidthLogo}
-              alt="Bandwidth App Preview"
+              alt="Band Width app logo — a mobile app connecting artists, venues, and fans in local music communities"
               className="project-item__thumb-img"
             />
           </div>
@@ -84,7 +84,7 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
                 {p.image && images[p.image] && (
                   <img
                     src={images[p.image]}
-                    alt={p.title}
+                    alt={`${p.title} — ${p.type}`}
                     className="project-item__thumb-img"
                   />
                 )}

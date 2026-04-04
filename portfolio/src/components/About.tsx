@@ -21,6 +21,20 @@ const interests = [
       "Colorado's trails are endlessly inspiring. I'm happiest when I'm above treeline with a good view and a long approach — the kind of effort that makes the destination feel earned.",
     detail: "Front Range · Backcountry",
   },
+  {
+    title: "Snowboarding",
+    emoji: "🏂",
+    description:
+      "Winter in Colorado means one thing — getting on the mountain. Snowboarding is my reset button, trading a screen for fresh powder and open runs.",
+    detail: "Winter Park · Copper · Eldora",
+  },
+  {
+    title: "Reading",
+    emoji: "📖",
+    description:
+      "I'm drawn to design theory, psychology, and fiction that makes me think differently. Reading keeps my ideas fresh and reminds me that good storytelling is at the heart of good design.",
+    detail: "For Fun",
+  },
 ];
 
 export default function About({ piperPhoto2, outdoorPhotos }: AboutProps) {
@@ -32,7 +46,7 @@ export default function About({ piperPhoto2, outdoorPhotos }: AboutProps) {
             <h1 className="about__heading">
               Hello, I am
               <br />
-              <span>Piper.</span>
+              <span>Piper,</span>
             </h1>
 
             <p className="body-text" style={{ marginBottom: 20 }}>
@@ -70,7 +84,7 @@ export default function About({ piperPhoto2, outdoorPhotos }: AboutProps) {
             <div className="about__photo-frame">
               <img
                 src={piperPhoto2}
-                alt="Piper Vetowich"
+                alt="Portrait of Piper Vetowich, UX designer based in Colorado"
                 className="about__photo"
               />
             </div>
@@ -140,7 +154,10 @@ export default function About({ piperPhoto2, outdoorPhotos }: AboutProps) {
               <div className="about__polaroid">
                 <div className="about__polaroid-img-wrap">
                   {p.photo ? (
-                    <img src={p.photo} alt={p.caption} />
+                    <img
+                      src={p.photo}
+                      alt={`Polaroid photo of Piper — ${p.caption}`}
+                    />
                   ) : (
                     <div className="about__polaroid-placeholder">
                       <span>+</span>
