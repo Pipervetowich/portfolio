@@ -1,10 +1,10 @@
 /* ── Denver Zoo — portfolio palette: cream / dark / pink ── */
 
 .dz {
-  background: #F5F0E8;
+  background: #f5f5f5;
   color: #1a1a1a;
   min-height: 100vh;
-  font-family: inherit;
+  font-family: 'Playfair Display', serif;
 }
 
 .dz__hero {
@@ -24,9 +24,9 @@
 
 .dz__kicker {
   font-size: 16px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #c22d77; /* darkened from #e0458a — passes WCAG AA at 4.70:1 on cream */
+  color: #e0458a;
   margin-bottom: 20px;
   font-weight: 600;
 }
@@ -41,14 +41,14 @@
 }
 .dz__title span { color: #e0458a; font-style: italic; font-weight: 800; }
 
-.dz__role { font-size: 13px; color: #5a5a5a; letter-spacing: 0.06em; margin-bottom: 20px; }
+.dz__role { font-size: 15px; color: #5a5a5a; letter-spacing: 0.06em; margin-bottom: 20px; }
 
 .dz__tools-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .dz__tool-chip {
   border: 1px solid rgba(26,26,26,0.2);
   padding: 5px 12px;
-  font-size: 13px;
-  letter-spacing: 0.08em;
+  font-size: 15px;
+  letter-spacing: 0.03em;
   color: #4a4a4a;
   border-radius: 4px;
 }
@@ -63,7 +63,7 @@
 }
 .dz__intro-text {
   font-size: clamp(16px, 2.5vw, 26px);
-  color: #ddd8d0;
+  color: #e0e0e0;
   font-style: italic;
   max-width: 700px;
   margin: 0 auto;
@@ -76,7 +76,7 @@
 .dz__label {
   display: block;
   font-size: 24px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #e0458a;
   margin-bottom: 16px;
@@ -128,7 +128,7 @@
 .dz__metrics {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background: #E8DDD0;
+  background: #ececec;
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 64px;
@@ -140,7 +140,7 @@
 }
 .dz__metric:last-child { border-right: none; }
 .dz__metric-n { font-size: 40px; font-weight: 800; color: #1a1a1a; letter-spacing: -0.02em; line-height: 1; margin-bottom: 8px; }
-.dz__metric-l { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #5a5a5a; }
+.dz__metric-l { font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; color: #5a5a5a; }
 
 /* Timeline (design process) */
 .dz__timeline { display: flex; flex-direction: column; border: 1px solid rgba(26,26,26,0.12); border-radius: 4px; overflow: hidden; }
@@ -148,9 +148,9 @@
 .dz__timeline-item:last-child { border-bottom: none; }
 .dz__timeline-num {
   background: #1a1a1a;
-  color: #8a8480;
-  font-size: 13px;
-  letter-spacing: 0.1em;
+  color: #888888;
+  font-size: 15px;
+  letter-spacing: 0.04em;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -190,7 +190,7 @@
 /* Outcome */
 .dz__outcome { background: #1a1a1a; border-radius: 4px; padding: 48px; margin-bottom: 60px; }
 .dz__outcome .dz__label { color: #FF69B4; }
-.dz__outcome-text { font-size: 16px; line-height: 1.75; color: #c8c0b8; }
+.dz__outcome-text { font-size: 16px; line-height: 1.75; color: #cccccc; }
 
 .dz__cta { text-align: center; }
 

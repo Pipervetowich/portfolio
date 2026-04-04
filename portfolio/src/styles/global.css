@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
 
 :root {
   --pink: #c22d77;
-  --cream: #F5F0E8;
-  --warm-tan: #E8DDD0;
-  --dark: #1a1a1a;
+  --cream: #ffffff;
+  --warm-tan: #f0f0f0;
+  --dark: #111111;
 }
 
 * {
@@ -14,28 +14,28 @@
 }
 
 body {
-  font-family: 'Georgia', serif;
-  background: var(--cream);
+  font-family: 'Playfair Display', serif;
+  background: #ffffff;
   overflow-x: hidden;
 }
 
 .section-label {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Playfair Display', serif;
   font-size: 16px;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  color: #4a4a4a; /* improved contrast on cream bg: ~5.2:1 */
+  color: #333333;
 }
 
 .body-text {
-  font-family: 'Space Mono', monospace;
-  font-size: 14px;
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
   line-height: 1.9;
-  color: #444;
+  color: #333333;
 }
 
 .handwriting {
-  font-family: 'Georgia', serif;
+  font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: clamp(14px, 2.5vw, 22px);
   color: var(--dark);
@@ -45,9 +45,9 @@ body {
   display: inline-block;
   border: 1.5px solid var(--dark);
   padding: 6px 14px;
-  font-family: 'Space Mono', monospace;
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   margin: 4px;
   transition: all 0.2s;
@@ -65,9 +65,9 @@ body {
   display: inline-block;
   border: 1.5px solid var(--dark);
   padding: 6px 14px;
-  font-family: 'Space Mono', monospace;
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   margin: 4px;
   transition: all 0.2s;
@@ -87,10 +87,10 @@ body {
   background: rgba(194, 45, 119, 0.12);
   border: 1px solid rgba(194, 45, 119, 0.3);
   color: var(--pink);
-  font-family: 'Space Mono', monospace;
-  font-size: 14px;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
   letter-spacing: 1px;
-  padding: 4px 10px;
+  padding: 3px 8px;
   margin: 2px;
   border-radius: 4px;
 }
@@ -128,9 +128,9 @@ body {
 }
 .project-card__cta {
   display: inline-block;
-  font-family: 'Space Mono', monospace;
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  letter-spacing: 0.5px;
   color: white;
   text-transform: uppercase;
   background: var(--pink);

@@ -35,10 +35,6 @@ export default function Contact() {
             ))}
           </div>
         </div>
-
-        <p className="section-label contact__footer">
-          © 2026 Piper Vetowich — All Rights Reserved
-        </p>
       </div>
     </section>
   );

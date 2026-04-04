@@ -8,10 +8,15 @@ const sections = [
   { id: "contact", label: "Contact Me" },
 ];
 
-export default function Nav() {
+interface NavProps {
+  onBack?: () => void;
+}
+
+export default function Nav({ onBack }: NavProps) {
   const [active, setActive] = useState("");
 
   useEffect(() => {
+    if (onBack) return;
     const observers: IntersectionObserver[] = [];
 
     sections.forEach(({ id }) => {
@@ -29,10 +34,14 @@ export default function Nav() {
     });
 
     return () => observers.forEach((o) => o.disconnect());
-  }, []);
+  }, [onBack]);
 
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const handleClick = (id: string) => {
+    if (onBack) {
+      onBack();
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -43,7 +52,7 @@ export default function Nav() {
           <button
             key={id}
             className={`nav__item ${active === id ? "nav__item--active" : ""}`}
-            onClick={() => scrollTo(id)}
+            onClick={() => handleClick(id)}
           >
             {label}
           </button>

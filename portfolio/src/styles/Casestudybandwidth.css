@@ -1,10 +1,10 @@
 /* ── Band Width — portfolio palette: cream / dark / pink ── */
 
 .bw {
-  background: #F5F0E8;
+  background: #f5f5f5;
   color: #1a1a1a;
   min-height: 100vh;
-  font-family: inherit;
+  font-family: 'Playfair Display', serif;
 }
 
 .cs-back {
@@ -12,12 +12,12 @@
   top: 24px;
   left: 28px;
   z-index: 100;
-  background: rgba(245, 240, 232, 0.95);
+  background: rgba(255,255,255,0.97);
   border: 1px solid rgba(26, 26, 26, 0.25);
   color: #1a1a1a;
-  font-family: inherit;
-  font-size: 10px;
-  letter-spacing: 0.12em;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 10px 22px;
   border-radius: 4px;
@@ -27,15 +27,15 @@
 }
 .cs-back:hover {
   background: #1a1a1a;
-  color: #F5F0E8;
+  color: #ffffff;
 }
 
 .cs-cta-btn {
   display: inline-block;
   background: #1a1a1a;
-  color: #F5F0E8;
-  font-size: 11px;
-  letter-spacing: 0.12em;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   text-decoration: none;
   padding: 14px 36px;
@@ -57,8 +57,8 @@
 
 .bw__eyebrow {
   display: block;
-  font-size: 13px;
-  letter-spacing: 0.2em;
+  font-size: 15px;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #FF69B4;
   margin-bottom: 20px;
@@ -68,21 +68,21 @@
   font-size: clamp(60px, 10vw, 120px);
   font-weight: 800;
   line-height: 0.9;
-  color: #F5F0E8;
+  color: #ffffff;
   letter-spacing: -0.02em;
   margin-bottom: 24px;
 }
 .bw__title em { font-style: normal; color: #FF69B4; }
 
-.bw__tagline { font-size: 14px; color: #b0a8a0; margin-bottom: 28px; line-height: 1.6; }
+.bw__tagline { font-size: 14px; color: #999999; margin-bottom: 28px; line-height: 1.6; }
 
 .bw__chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .bw__chip {
-  border: 1px solid rgba(245,240,232,0.35);
+  border: 1px solid rgba(255,255,255,0.4);
   padding: 5px 12px;
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  color: #c8c0b8;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  color: #cccccc;
   border-radius: 4px;
 }
 
@@ -99,7 +99,7 @@
 .bw__stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background: #E8DDD0;
+  background: #ececec;
 }
 .bw__stat {
   padding: 32px 40px;
@@ -108,7 +108,7 @@
 }
 .bw__stat:last-child { border-right: none; }
 .bw__stat-n { font-size: 44px; font-weight: 800; color: #1a1a1a; line-height: 1; letter-spacing: -0.02em; }
-.bw__stat-l { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #5a5a5a; }
+.bw__stat-l { font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: #5a5a5a; }
 
 /* Body */
 .bw__body { max-width: 860px; margin: 0 auto; padding: 80px 40px 120px; }
@@ -117,7 +117,7 @@
 .bw__label {
   display: block;
   font-size: 24px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #e0458a;
   margin-bottom: 20px;
@@ -133,7 +133,7 @@
   margin-bottom: 64px;
 }
 .bw__callout .bw__label { color: #FF69B4; }
-.bw__callout-text { font-size: 20px; line-height: 1.55; color: #F5F0E8; font-style: italic; }
+.bw__callout-text { font-size: 20px; line-height: 1.55; color: #ffffff; font-style: italic; }
 
 /* Process */
 .bw__process { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -148,7 +148,7 @@
 /* Outcome */
 .bw__outcome { background: #1a1a1a; border-radius: 4px; padding: 48px; margin-bottom: 60px; }
 .bw__outcome .bw__label { color: #FF69B4; }
-.bw__outcome-text { font-size: 16px; line-height: 1.75; color: #c8c0b8; }
+.bw__outcome-text { font-size: 16px; line-height: 1.75; color: #cccccc; }
 
 .bw__cta { text-align: center; }
 
@@ -175,8 +175,8 @@
   flex-direction: column;
   gap: 16px;
 }
-.bw__insight-quote { font-size: 14px; line-height: 1.7; color: #ddd8d0; font-style: italic; }
-.bw__insight-name { font-size: 12px; letter-spacing: 0.08em; color: #FF69B4; font-weight: 600; }
+.bw__insight-quote { font-size: 14px; line-height: 1.7; color: #e0e0e0; font-style: italic; }
+.bw__insight-name { font-size: 14px; letter-spacing: 0.03em; color: #FF69B4; font-weight: 600; }
 
 @media (max-width: 768px) {
   .bw__hero { flex-direction: column; padding: 100px 24px 60px; }

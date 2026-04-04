@@ -33,10 +33,10 @@
 }
 
 .process-step__num {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Playfair Display', serif;
   font-size: 16px;
   color: var(--pink);
-  letter-spacing: 3px;
+  letter-spacing: 0.5px;
   margin-bottom: 4px;
 }
 

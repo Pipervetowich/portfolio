@@ -121,6 +121,7 @@ export default function App() {
     return (
       <>
         <div className={loaderClass} />
+        <Nav onBack={handleBack} />
         <CaseStudyBandWidth image={images.bandwidthLogo} onBack={handleBack} />
       </>
     );
@@ -128,6 +129,7 @@ export default function App() {
     return (
       <>
         <div className={loaderClass} />
+        <Nav onBack={handleBack} />
         <CaseStudyDenverZoo image={images.denverZoo} onBack={handleBack} />
       </>
     );
@@ -135,6 +137,7 @@ export default function App() {
     return (
       <>
         <div className={loaderClass} />
+        <Nav onBack={handleBack} />
         <CaseStudyYMCA image={images.ymcaPhoto} onBack={handleBack} />
       </>
     );
@@ -142,6 +145,7 @@ export default function App() {
     return (
       <>
         <div className={loaderClass} />
+        <Nav onBack={handleBack} />
         <CaseStudyBHC image={images.bhcPhoto} onBack={handleBack} />
       </>
     );
@@ -149,6 +153,7 @@ export default function App() {
     return (
       <>
         <div className={loaderClass} />
+        <Nav onBack={handleBack} />
         <CaseStudyNoodles image={images.noodlesPhoto} onBack={handleBack} />
       </>
     );

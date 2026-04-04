@@ -1,5 +1,5 @@
 .about {
-  background: var(--warm-tan);
+  background: #f5f5f5;
   padding: 100px 60px;
 }
 
@@ -38,9 +38,10 @@
 
 .about__love-bullet {
   color: var(--pink);
-  font-family: 'Space Mono', monospace;
-  font-size: 30px;
-  margin-top: 2px;
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  margin-top: 3px;
+  flex-shrink: 0;
 }
 
 .about__media {
@@ -51,7 +52,7 @@
 
 .about__photo-frame {
   height: 340px;
-  background: #c8c0b4;
+  background: #222222;
   position: relative;
   overflow: hidden;
   border-radius: 4px;
@@ -73,8 +74,8 @@
 .about__stat {
   padding: 20px 12px;
   text-align: center;
-  border: 1px solid #d4c8b8;
-  background: var(--cream);
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
   border-radius: 4px;
 }
 
