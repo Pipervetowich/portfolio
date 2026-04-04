@@ -7,9 +7,9 @@ import ymcaPhoto from "./assets/YMCA.jpg";
 import bhcPhoto from "./assets/BHC.jpg";
 import noodlesPhoto from "./assets/Noodles.jpg";
 
-import climber1 from "./assets/Climber1.jpg";
+import climber1 from "./assets/climber1.JPG";
 import climber2 from "./assets/Climber2.jpg";
-import hiker1 from "./assets/Hiker1.jpg";
+import hiker1 from "./assets/Hiker1.JPG";
 import hiker2 from "./assets/Hiker2.jpg";
 import snowboarder from "./assets/Snowboarder.jpg";
 
