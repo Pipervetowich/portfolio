@@ -141,3 +141,13 @@
   .ymca__steps { grid-template-columns: 1fr; }
   .ymca__outcome { padding: 32px 24px; }
 }
+@media (max-width: 480px) {
+  .ymca__hero-left { height: 220px; }
+  .ymca__hero-right { padding: 32px 16px; }
+  .ymca__body { padding: 36px 16px 60px; }
+  .ymca__problem { padding: 24px 16px; }
+  .ymca__stats { grid-template-columns: 1fr 1fr; }
+  .ymca__stat { padding: 20px 12px; }
+  .ymca__outcome { padding: 24px 16px; }
+  .cs-back { top: 16px; left: 16px; font-size: 13px; padding: 8px 14px; }
+}

@@ -5,7 +5,7 @@ const sections = [
   { id: "about-me", label: "About" },
   { id: "work", label: "My Work" },
   { id: "crafts", label: "My Process" },
-  { id: "contact", label: "Contact Me" },
+  { id: "contact", label: "Contact" },
 ];
 
 interface NavProps {

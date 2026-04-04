@@ -188,3 +188,14 @@
   .bw__callout { padding: 28px 24px; }
   .bw__outcome { padding: 32px 24px; }
 }
+@media (max-width: 480px) {
+  .bw__hero { padding: 80px 16px 48px; gap: 32px; }
+  .bw__hero-img-wrap { width: 100%; height: 260px; }
+  .bw__stats { grid-template-columns: 1fr 1fr; }
+  .bw__stat { padding: 20px 16px; }
+  .bw__body { padding: 36px 16px 60px; }
+  .bw__callout { padding: 20px 16px; }
+  .bw__callout-text { font-size: 16px; }
+  .bw__outcome { padding: 24px 16px; }
+  .cs-back { top: 16px; left: 16px; font-size: 13px; padding: 8px 14px; }
+}

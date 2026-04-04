@@ -47,3 +47,18 @@
   color: var(--dark);
   margin-bottom: 4px;
 }
+@media (max-width: 768px) {
+  .crafts {
+    padding: 80px 24px;
+  }
+  .crafts__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .crafts {
+    padding: 72px 16px;
+  }
+}

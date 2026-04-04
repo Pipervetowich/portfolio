@@ -215,3 +215,13 @@
   .bhc__journey-arrow { display: none; }
   .bhc__outcome { padding: 32px 24px; }
 }
+@media (max-width: 480px) {
+  .bhc__hero-text { padding: 48px 16px 32px; }
+  .bhc__banner { padding: 20px 16px; }
+  .bhc__body { padding: 36px 16px 60px; }
+  .bhc__findings { grid-template-columns: 1fr 1fr; }
+  .bhc__stats { grid-template-columns: 1fr 1fr; }
+  .bhc__ia-grid { grid-template-columns: 1fr; }
+  .bhc__outcome { padding: 24px 16px; }
+  .cs-back { top: 16px; left: 16px; font-size: 13px; padding: 8px 14px; }
+}

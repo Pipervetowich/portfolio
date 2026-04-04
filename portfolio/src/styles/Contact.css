@@ -98,3 +98,20 @@
   color: rgb(255, 255, 255);
   margin-top: 48px;
 }
+@media (max-width: 768px) {
+  .contact {
+    padding: 80px 24px;
+  }
+  .envelope {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 72px 16px;
+  }
+  .envelope {
+    max-width: 100%;
+  }
+}

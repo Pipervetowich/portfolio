@@ -262,3 +262,31 @@
 .featured-item .project-item__thumb {
   height: 320px;
 }
+@media (max-width: 768px) {
+  .work {
+    padding: 80px 24px;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .featured-item .project-item__thumb {
+    height: 220px;
+  }
+  .project-item__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .work {
+    padding: 72px 16px;
+  }
+  .project-item__body {
+    padding: 20px;
+  }
+  .project-item__thumb {
+    height: 180px;
+  }
+}

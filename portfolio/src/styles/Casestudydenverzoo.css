@@ -208,3 +208,14 @@
   .dz__timeline-item { grid-template-columns: 1fr; }
   .dz__outcome { padding: 32px 24px; }
 }
+@media (max-width: 480px) {
+  .dz__hero-text { padding: 80px 16px 32px; }
+  .dz__hero-img-wrap { height: 220px; }
+  .dz__intro-strip { padding: 24px 16px; }
+  .dz__body { padding: 36px 16px 60px; }
+  .dz__metrics { grid-template-columns: 1fr 1fr; }
+  .dz__metric { padding: 24px 16px; }
+  .dz__outcome { padding: 24px 16px; }
+  .dz__timeline-content { padding: 20px 16px; }
+  .cs-back { top: 16px; left: 16px; font-size: 13px; padding: 8px 14px; }
+}

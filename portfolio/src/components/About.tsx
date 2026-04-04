@@ -111,7 +111,7 @@ export default function About({ piperPhoto2, outdoorPhotos }: AboutProps) {
         {/* Interests */}
         <div className="about__interests">
           <h2 className="section-label" style={{ marginBottom: 24 }}>
-            Outside the studio:
+            Outside Work:
           </h2>
           <div className="about__interests-grid">
             {interests.map((interest) => (

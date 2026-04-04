@@ -156,3 +156,12 @@
   .nd__process { grid-template-columns: 1fr; }
   .nd__outcome { padding: 32px 24px; }
 }
+@media (max-width: 480px) {
+  .nd__hero-text { padding: 80px 16px 36px; }
+  .nd__hero-img-wrap { height: 200px; }
+  .nd__strip { padding: 20px 16px; }
+  .nd__body { padding: 36px 16px 60px; }
+  .nd__stats { grid-template-columns: 1fr 1fr; }
+  .nd__outcome { padding: 24px 16px; }
+  .cs-back { top: 16px; left: 16px; font-size: 13px; padding: 8px 14px; }
+}

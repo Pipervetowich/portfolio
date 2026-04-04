@@ -318,3 +318,34 @@
     height: 110px;
   }
 }
+@media (max-width: 768px) {
+  .about {
+    padding: 80px 24px;
+  }
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about__media {
+    order: -1;
+  }
+  .about__photo {
+    height: 260px;
+  }
+  .about__interests-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 72px 16px;
+  }
+  .about__interest-card {
+    padding: 24px 20px;
+    gap: 16px;
+  }
+  .about__interest-emoji {
+    font-size: 32px;
+  }
+}

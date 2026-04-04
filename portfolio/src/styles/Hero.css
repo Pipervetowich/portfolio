@@ -84,3 +84,31 @@
   background: var(--pink);
   margin: 10px auto 0;
 }
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 24px 60px;
+  }
+  .hero__photo-wrapper {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: clamp(100px, 40vw, 160px);
+    height: clamp(180px, 60vw, 280px);
+    margin: 24px auto 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 90px 16px 48px;
+    align-items: center;
+    text-align: center;
+  }
+  .hero__topbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+}
