@@ -11,66 +11,50 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
     <section id="work" className="work">
       <div className="work__inner">
         <div className="work__header">
-          <h2 className="work__heading">
+          <h1 className="work__heading">
             My
             <br />
             <span>Work.</span>
-          </h2>
+          </h1>
         </div>
 
         {/* Featured */}
         <div
-          className="project-card featured-card"
-          role="button"
-          tabIndex={0}
+          className="project-card project-item featured-item"
           onClick={() => onOpenCaseStudy("featured")}
-          onKeyDown={(e) =>
-            (e.key === "Enter" || e.key === " ") && onOpenCaseStudy("featured")
-          }
-          aria-label="View Band Width case study"
         >
-          <div className="featured-card__image-pane">
+          <div className="project-item__thumb">
+            <div className="project-item__thumb-overlay" />
             <img
               src={images.bandwidthLogo}
               alt="Bandwidth App Preview"
-              className="featured-card__img"
+              className="project-item__thumb-img"
             />
-            <span className="project-card__badge featured-card__badge-tl">
-              Mobile App
-            </span>
-            <span className="project-card__badge featured-card__badge-tr">
-              Current
-            </span>
           </div>
 
-          <div className="featured-card__body">
-            <p
-              className="section-label"
-              style={{ color: "#333", marginBottom: 12 }}
-            >
-              Capstone Project · Mobile App
-            </p>
-            <h3 className="featured-card__title">Band Width</h3>
+          <div className="project-item__body">
+            <div className="project-item__header">
+              <div>
+                <h2 className="project-item__title">Band Width</h2>
+                <p
+                  className="section-label"
+                  style={{ marginTop: 4, color: "#555", fontSize: 13 }}
+                >
+                  Capstone Project · Mobile App
+                </p>
+              </div>
+              <span className="project-item__role">Front-End Developer</span>
+            </div>
+
             <p
               className="body-text"
-              style={{ color: "#333", marginBottom: 20 }}
+              style={{ fontSize: 15, marginBottom: 16, color: "#444" }}
             >
-              Bandwidth is a mobile app designed to make local music discovery
-              easy and community-focused. We make discovering, promoting, and
-              organizing local music easy for bands, fans, and hosts, all on one
-              platform. The app connects artists with audiences by highlighting
-              local shows, helping bands promote events, and allowing fans to
-              explore music happening in their area. By bringing together
-              performers, venues, and listeners, Bandwidth builds a stronger and
-              more accessible local music community. It also gives emerging
-              artists more visibility and opportunities to grow their local
-              following. Users can easily browse upcoming shows, discover new
-              artists, and stay connected to the music scene around them. This
-              helps strengthen relationships within the local music community
-              and supports independent artists.
+              A mobile app connecting artists, venues, and fans to strengthen
+              local music communities and give emerging artists more visibility.
             </p>
 
-            <div style={{ marginBottom: 24 }}>
+            <div style={{ marginBottom: 20 }}>
               {["React Native", "Figma", "Expo", "Adobe Illustrator"].map(
                 (t) => (
                   <span key={t} className="tool-chip">
@@ -80,7 +64,7 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
               )}
             </div>
 
-            <span className="project-card__cta">view case study →</span>
+            <span className="project-card__cta">View case study →</span>
           </div>
         </div>
 
@@ -90,13 +74,7 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
             <div
               key={i}
               className="project-card project-item"
-              role="button"
-              tabIndex={0}
               onClick={() => onOpenCaseStudy(i)}
-              onKeyDown={(e) =>
-                (e.key === "Enter" || e.key === " ") && onOpenCaseStudy(i)
-              }
-              aria-label={`View ${p.title} case study`}
             >
               <div
                 className="project-item__thumb"
@@ -110,21 +88,15 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
                     className="project-item__thumb-img"
                   />
                 )}
-                <span className="project-card__badge project-item__badge-tl">
-                  {p.tag}
-                </span>
-                <span className="project-card__badge project-item__badge-tr">
-                  {p.year}
-                </span>
               </div>
 
               <div className="project-item__body">
                 <div className="project-item__header">
                   <div>
-                    <h3 className="project-item__title">{p.title}</h3>
+                    <h2 className="project-item__title">{p.title}</h2>
                     <p
                       className="section-label"
-                      style={{ marginTop: 4, color: "#333" }}
+                      style={{ marginTop: 4, color: "#333", fontSize: 12 }}
                     >
                       {p.type}
                     </p>
@@ -134,7 +106,7 @@ export default function Work({ onOpenCaseStudy, images }: WorkProps) {
 
                 <p
                   className="body-text"
-                  style={{ marginBottom: 12, color: "#333" }}
+                  style={{ fontSize: 13, marginBottom: 12, color: "#333" }}
                 >
                   {p.desc}
                 </p>

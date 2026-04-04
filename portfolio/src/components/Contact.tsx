@@ -5,12 +5,11 @@ export default function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="contact__inner">
-        <h2 className="contact__heading">
-          and
+        <h1 className="contact__heading">
           <br />
           that's
           <br />a wrap.
-        </h2>
+        </h1>
 
         <h2 className="contact__divider">✦✦✦</h2>
 

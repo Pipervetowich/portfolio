@@ -7,11 +7,11 @@ export default function Crafts() {
       <div className="crafts__inner">
         <div className="crafts__grid">
           <div>
-            <h2 className="crafts__heading">
+            <h1 className="crafts__heading">
               Tools
               <br />&<br />
               Process
-            </h2>
+            </h1>
             <div style={{ marginBottom: 32 }}>
               {skills.map((s) => (
                 <span key={s} className="skill-tag">
@@ -30,9 +30,12 @@ export default function Crafts() {
             </h2>
             {process.map(({ num, label, desc }) => (
               <div key={num} className="process-step">
-                <p className="process-step__num">{num}</p>
-                <h2 className="process-step__label">{label}</h2>
-                <p className="body-text" style={{ color: "#3d3d3d" }}>
+                <h2 className="process-step__num">{num}</h2>
+                <h3 className="process-step__label">{label}</h3>
+                <p
+                  className="body-text"
+                  style={{ color: "#3d3d3d", fontSize: 16 }}
+                >
                   {desc}
                 </p>
               </div>

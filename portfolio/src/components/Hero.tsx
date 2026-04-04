@@ -14,11 +14,8 @@ export default function Hero({ loaded, piperPhoto }: HeroProps) {
           <p className="section-label">Colorado, USA</p>
         </div>
 
-        <h2 className="handwriting hero__greeting">Hi. Glad you're here.</h2>
-        <h2
-          className="handwriting hero__greeting"
-          style={{ textAlign: "right" }}
-        >
+        <h2 className="handwriting">Hi. Glad you're here.</h2>
+        <h2 className="handwriting" style={{ textAlign: "right" }}>
           Let me show you my work ✦
         </h2>
 
@@ -39,11 +36,6 @@ export default function Hero({ loaded, piperPhoto }: HeroProps) {
             VETOWICH
           </h1>
         </div>
-      </div>
-
-      <div className="hero__scroll-hint">
-        <p className="section-label">Scroll to explore</p>
-        <div className="hero__scroll-line" />
       </div>
     </section>
   );

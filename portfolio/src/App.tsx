@@ -7,6 +7,12 @@ import ymcaPhoto from "./assets/YMCA.jpg";
 import bhcPhoto from "./assets/BHC.jpg";
 import noodlesPhoto from "./assets/Noodles.jpg";
 
+import climber1 from "./assets/Climber1.jpg";
+import climber2 from "./assets/Climber2.jpg";
+import hiker1 from "./assets/Hiker1.jpg";
+import hiker2 from "./assets/Hiker2.jpg";
+import snowboarder from "./assets/Snowboarder.jpg";
+
 import Nav from "./components/Nav.tsx";
 
 import "./styles/global.css";
@@ -30,18 +36,30 @@ const images: Record<string, string> = {
   noodlesPhoto,
 };
 
-type PageKey = "home" | "bandwidth" | "denver-zoo" | "ymca" | "bhc" | "noodles";
+type PageKey =
+  | "home"
+  | "about-me"
+  | "work"
+  | "crafts"
+  | "contact"
+  | "bandwidth"
+  | "denver-zoo"
+  | "ymca"
+  | "bhc"
+  | "noodles";
+
+const caseStudyKeys: PageKey[] = [
+  "bandwidth",
+  "denver-zoo",
+  "ymca",
+  "bhc",
+  "noodles",
+];
+const mainPages: PageKey[] = ["home", "about-me", "work", "crafts", "contact"];
 
 function getPageFromHash(): PageKey {
   const hash = window.location.hash.replace("#", "") as PageKey;
-  const valid: PageKey[] = [
-    "bandwidth",
-    "denver-zoo",
-    "ymca",
-    "bhc",
-    "noodles",
-  ];
-  return valid.includes(hash) ? hash : "home";
+  return [...mainPages, ...caseStudyKeys].includes(hash) ? hash : "home";
 }
 
 export default function App() {
@@ -56,17 +74,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const onPop = () => {
-      const next = getPageFromHash();
-      setPage(next);
-      if (next === "home") {
-        setTimeout(() => {
-          document
-            .getElementById("work")
-            ?.scrollIntoView({ behavior: "smooth" });
-        }, 100);
-      }
-    };
+    const onPop = () => setPage(getPageFromHash());
     window.addEventListener("popstate", onPop);
     return () => window.removeEventListener("popstate", onPop);
   }, []);
@@ -74,20 +82,18 @@ export default function App() {
   const navigate = (next: PageKey) => {
     setLoaderDone(false);
     setLoading(true);
-
     setTimeout(() => {
-      if (next === "home") {
-        window.history.pushState({}, "", window.location.pathname);
-      } else {
-        window.history.pushState({}, "", `#${next}`);
-      }
+      window.history.pushState(
+        {},
+        "",
+        next === "home" ? window.location.pathname : `#${next}`,
+      );
       setPage(next);
+      window.scrollTo({ top: 0 });
       setLoading(false);
       setLoaderDone(true);
-
-      // Reset done state after fade-out completes
       setTimeout(() => setLoaderDone(false), 400);
-    }, 400);
+    }, 300);
   };
 
   const handleOpenCaseStudy = (id: number | "featured") => {
@@ -99,17 +105,7 @@ export default function App() {
     navigate(keys[id as number] ?? "home");
   };
 
-  const handleBack = () => {
-    setLoaderDone(false);
-    setLoading(true);
-
-    setTimeout(() => {
-      window.history.back();
-      setLoading(false);
-      setLoaderDone(true);
-      setTimeout(() => setLoaderDone(false), 400);
-    }, 400);
-  };
+  const handleBack = () => navigate("work");
 
   const loaderClass = loading
     ? "page-loader loading"
@@ -117,11 +113,18 @@ export default function App() {
       ? "page-loader done"
       : "page-loader";
 
+  const isCaseStudy = caseStudyKeys.includes(page);
+  const activeNavPage = isCaseStudy ? "work" : page;
+
+  // Case study pages
   if (page === "bandwidth")
     return (
       <>
         <div className={loaderClass} />
-        <Nav onBack={handleBack} />
+        <Nav
+          activePage={activeNavPage}
+          onNavigate={(id) => navigate(id as PageKey)}
+        />
         <CaseStudyBandWidth image={images.bandwidthLogo} onBack={handleBack} />
       </>
     );
@@ -129,7 +132,10 @@ export default function App() {
     return (
       <>
         <div className={loaderClass} />
-        <Nav onBack={handleBack} />
+        <Nav
+          activePage={activeNavPage}
+          onNavigate={(id) => navigate(id as PageKey)}
+        />
         <CaseStudyDenverZoo image={images.denverZoo} onBack={handleBack} />
       </>
     );
@@ -137,7 +143,10 @@ export default function App() {
     return (
       <>
         <div className={loaderClass} />
-        <Nav onBack={handleBack} />
+        <Nav
+          activePage={activeNavPage}
+          onNavigate={(id) => navigate(id as PageKey)}
+        />
         <CaseStudyYMCA image={images.ymcaPhoto} onBack={handleBack} />
       </>
     );
@@ -145,7 +154,10 @@ export default function App() {
     return (
       <>
         <div className={loaderClass} />
-        <Nav onBack={handleBack} />
+        <Nav
+          activePage={activeNavPage}
+          onNavigate={(id) => navigate(id as PageKey)}
+        />
         <CaseStudyBHC image={images.bhcPhoto} onBack={handleBack} />
       </>
     );
@@ -153,21 +165,44 @@ export default function App() {
     return (
       <>
         <div className={loaderClass} />
-        <Nav onBack={handleBack} />
+        <Nav
+          activePage={activeNavPage}
+          onNavigate={(id) => navigate(id as PageKey)}
+        />
         <CaseStudyNoodles image={images.noodlesPhoto} onBack={handleBack} />
       </>
     );
+
+  // Main section pages
+  const renderPage = () => {
+    switch (page) {
+      case "about-me":
+        return (
+          <About
+            piperPhoto2={piperPhoto2}
+            outdoorPhotos={[climber1, climber2, hiker1, hiker2, snowboarder]}
+          />
+        );
+      case "work":
+        return <Work onOpenCaseStudy={handleOpenCaseStudy} images={images} />;
+      case "crafts":
+        return <Crafts />;
+      case "contact":
+        return <Contact />;
+      default:
+        return <Hero loaded={loaded} piperPhoto={piperPhoto} />;
+    }
+  };
 
   return (
     <div>
       <div className={loaderClass} />
       <div className="grain-overlay" />
-      <Nav />
-      <Hero loaded={loaded} piperPhoto={piperPhoto} />
-      <About piperPhoto2={piperPhoto2} />
-      <Work onOpenCaseStudy={handleOpenCaseStudy} images={images} />
-      <Crafts />
-      <Contact />
+      <Nav
+        activePage={activeNavPage}
+        onNavigate={(id) => navigate(id as PageKey)}
+      />
+      {renderPage()}
     </div>
   );
 }

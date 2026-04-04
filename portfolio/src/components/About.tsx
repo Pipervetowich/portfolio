@@ -3,19 +3,37 @@ import { stats, loveItems } from "../Constants";
 
 interface AboutProps {
   piperPhoto2: string;
+  outdoorPhotos: string[];
 }
 
-export default function About({ piperPhoto2 }: AboutProps) {
+const interests = [
+  {
+    title: "Climbing",
+    emoji: "🧗",
+    description:
+      "Whether it's bouldering at the gym or sport climbing in Eldorado Canyon, climbing keeps me grounded, focused, and constantly problem-solving — a mindset I bring straight to design.",
+    detail: "Sport · Bouldering",
+  },
+  {
+    title: "Hiking",
+    emoji: "⛰️",
+    description:
+      "Colorado's trails are endlessly inspiring. I'm happiest when I'm above treeline with a good view and a long approach — the kind of effort that makes the destination feel earned.",
+    detail: "Front Range · Backcountry",
+  },
+];
+
+export default function About({ piperPhoto2, outdoorPhotos }: AboutProps) {
   return (
     <section id="about-me" className="about">
       <div className="about__inner">
         <div className="about__grid">
           <div>
-            <h2 className="about__heading">
+            <h1 className="about__heading">
               Hello, I am
               <br />
               <span>Piper.</span>
-            </h2>
+            </h1>
 
             <p className="body-text" style={{ marginBottom: 20 }}>
               I'm a 4th-year student at the University of Colorado, Boulder,
@@ -36,9 +54,9 @@ export default function About({ piperPhoto2 }: AboutProps) {
             </p>
 
             <div style={{ marginBottom: 16 }}>
-              <p className="section-label" style={{ marginBottom: 12 }}>
+              <h2 className="section-label" style={{ marginBottom: 12 }}>
                 I care about:
-              </p>
+              </h2>
               {loveItems.map((item, i) => (
                 <div key={i} className="about__love-item">
                   <span className="about__love-bullet">✦</span>
@@ -63,10 +81,10 @@ export default function About({ piperPhoto2 }: AboutProps) {
                   key={i}
                   className={`about__stat ${i === 1 ? "about__stat--highlight" : ""}`}
                 >
-                  <h1 className="about__stat-num">{num}</h1>
+                  <h2 className="about__stat-num">{num}</h2>
                   <p
                     className="section-label"
-                    style={{ marginTop: 6, fontSize: 14 }}
+                    style={{ marginTop: 6, fontSize: 12 }}
                   >
                     {label}
                   </p>
@@ -74,6 +92,65 @@ export default function About({ piperPhoto2 }: AboutProps) {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Interests */}
+        <div className="about__interests">
+          <h2 className="section-label" style={{ marginBottom: 24 }}>
+            Outside the studio:
+          </h2>
+          <div className="about__interests-grid">
+            {interests.map((interest) => (
+              <div key={interest.title} className="about__interest-card">
+                <div className="about__interest-emoji">{interest.emoji}</div>
+                <div className="about__interest-body">
+                  <h3 className="about__interest-title">{interest.title}</h3>
+                  <p className="about__interest-detail">{interest.detail}</p>
+                  <p className="about__interest-desc">{interest.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Polaroid string */}
+        <div className="about__string-wrap">
+          <div className="about__string-line" />
+          {[
+            {
+              rotation: -4,
+              caption: "Zion National Park",
+              photo: outdoorPhotos[2],
+            },
+            {
+              rotation: 3,
+              caption: "Multipitch Climb",
+              photo: outdoorPhotos[0],
+            },
+            { rotation: -2, caption: "Lake Hike", photo: outdoorPhotos[3] },
+            { rotation: 5, caption: "Moab, UT", photo: outdoorPhotos[1] },
+            { rotation: -3, caption: "Shredding", photo: outdoorPhotos[4] },
+          ].map((p, i) => (
+            <div
+              key={i}
+              className="about__polaroid-hang"
+              style={{ "--rot": `${p.rotation}deg` } as React.CSSProperties}
+            >
+              <div className="about__string-clip" />
+              <div className="about__polaroid">
+                <div className="about__polaroid-img-wrap">
+                  {p.photo ? (
+                    <img src={p.photo} alt={p.caption} />
+                  ) : (
+                    <div className="about__polaroid-placeholder">
+                      <span>+</span>
+                    </div>
+                  )}
+                </div>
+                <p className="about__polaroid-caption">{p.caption}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -51,18 +51,39 @@
 }
 
 .about__photo-frame {
-  height: 340px;
-  background: #222222;
+  background: #ffffff;
+  padding: 16px 16px 80px 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  overflow: hidden;
-  border-radius: 4px;
+  border-radius: 2px;
+}
+
+.about__photo-frame:hover {
+  transform: rotate(0deg);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.22), 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.about__photo-frame::after {
+  content: 'Piper ✦';
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #888888;
 }
 
 .about__photo {
   width: 100%;
-  height: 100%;
+  height: 320px;
   object-fit: cover;
   object-position: center 35%;
+  display: block;
 }
 
 .about__stats {
@@ -97,4 +118,203 @@
 
 .about__stat--highlight .section-label {
   color: rgb(255, 255, 255);
+}
+.about__interests {
+  margin-top: 60px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 48px;
+}
+
+.about__interests > .section-label {
+  font-size: 22px;
+}
+
+.about__interests-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.about__interest-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 36px 32px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  border-top: 3px solid var(--pink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about__interest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.about__interest-emoji {
+  font-size: 40px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.about__interest-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.about__interest-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--dark);
+  line-height: 1;
+}
+
+.about__interest-detail {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--pink);
+  font-weight: 700;
+}
+
+.about__interest-desc {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #555555;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .about__interests-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Polaroid string ── */
+.about__string-wrap {
+  position: relative;
+  margin-top: 64px;
+  padding: 0 0 48px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0;
+}
+
+.about__string-line {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #888 8%, #888 92%, transparent);
+}
+
+/* The hanging wrapper for each polaroid */
+.about__polaroid-hang {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transform-origin: top center;
+  transform: rotate(var(--rot));
+  transition: transform 0.3s ease;
+  flex: 1;
+  padding-top: 8px;
+}
+
+.about__polaroid-hang:hover {
+  transform: rotate(0deg) scale(1.06);
+  z-index: 10;
+}
+
+/* The little binder clip */
+.about__string-clip {
+  width: 10px;
+  height: 18px;
+  background: #999;
+  border-radius: 2px 2px 0 0;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2);
+}
+
+.about__string-clip::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 8px;
+  background: #888;
+  border-radius: 1px;
+}
+
+/* The polaroid card */
+.about__polaroid {
+  background: #ffffff;
+  padding: 10px 10px 36px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 1px 4px rgba(0,0,0,0.08);
+  width: 160px;
+}
+
+.about__polaroid-img-wrap {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  background: #eeeeee;
+}
+
+.about__polaroid-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about__polaroid-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+  border: 2px dashed #cccccc;
+}
+
+.about__polaroid-caption {
+  margin-top: 8px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .about__string-wrap {
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+  .about__string-line {
+    display: none;
+  }
+  .about__polaroid {
+    width: 130px;
+  }
+  .about__polaroid-img-wrap {
+    height: 110px;
+  }
 }
