@@ -11,28 +11,28 @@ const interests = [
     title: "Climbing",
     emoji: "🧗",
     description:
-      "Whether it's bouldering at the gym or sport climbing in Eldorado Canyon, climbing keeps me grounded, focused, and constantly problem-solving — a mindset I bring straight to design.",
+      "I love climbing! Whether I'm bouldering at the gym or sport climbing in Boulder Canyon, I keep pushing myself. There's always another problem to crack.",
     detail: "Sport · Bouldering",
   },
   {
     title: "Hiking",
     emoji: "⛰️",
     description:
-      "Colorado's trails are endlessly inspiring. I'm happiest when I'm above treeline with a good view and a long approach — the kind of effort that makes the destination feel earned.",
+      "There's nothing better than a long trail, a good view, and a well-earned trail snack. Hiking keeps me outside and inspired.",
     detail: "Front Range · Backcountry",
   },
   {
     title: "Snowboarding",
     emoji: "🏂",
     description:
-      "Winter in Colorado means one thing — getting on the mountain. Snowboarding is my reset button, trading a screen for fresh powder and open runs.",
+      "Winter in Colorado means shredding on the mountain. When it's not climbing season, I'm hitting the slopes and making the most of every run.",
     detail: "Winter Park · Copper · Eldora",
   },
   {
     title: "Reading",
     emoji: "📖",
     description:
-      "I'm drawn to design theory, psychology, and fiction that makes me think differently. Reading keeps my ideas fresh and reminds me that good storytelling is at the heart of good design.",
+      "I'm drawn to fiction that makes me think differently. Reading keeps my ideas fresh and reminds me that good storytelling is everything.",
     detail: "For Fun",
   },
 ];
