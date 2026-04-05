@@ -20,7 +20,7 @@ export default function CaseStudyNoodles({ image: _image, onBack }: Props) {
       <header className="nd__hero">
         <div className="nd__hero-text">
           <div className="nd__wip-badge"> Work in Progress</div>
-          <p className="nd__kicker">Brand Identity & Design Systems · 2026</p>
+          <p className="nd__kicker">Brand Identity & Design Systems</p>
           <h1 className="nd__title">
             Bangkok
             <br />

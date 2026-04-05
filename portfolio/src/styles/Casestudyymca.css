@@ -30,10 +30,10 @@
 
 .ymca__tag {
   display: inline-block;
-  font-size: 15px;
+  font-size: 20px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #e0458a;
+  color: #c83b7b;
   margin-bottom: 20px;
   font-weight: 600;
 }
@@ -118,7 +118,7 @@
 }
 .ymca__direction-label {
   display: block;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;

@@ -22,7 +22,7 @@ export default function CaseStudyYMCA({ image, onBack }: Props) {
           <img src={image} alt="YMCA Rebrand" className="ymca__hero-img" />
         </div>
         <div className="ymca__hero-right">
-          <span className="ymca__tag">Identity & Branding · 2026</span>
+          <span className="ymca__tag">Identity & Branding</span>
           <h1 className="ymca__title">
             YMCA
             <br />

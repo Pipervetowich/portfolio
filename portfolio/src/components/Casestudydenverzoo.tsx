@@ -19,7 +19,7 @@ export default function CaseStudyDenverZoo({ image, onBack }: Props) {
 
       <header className="dz__hero">
         <div className="dz__hero-text">
-          <p className="dz__kicker">UX/UI Design · 2024</p>
+          <p className="dz__kicker">UX/UI Design</p>
           <h1 className="dz__title">
             Denver Zoo
             <br />

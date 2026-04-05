@@ -27,7 +27,7 @@ export default function CaseStudyBHC({ image, onBack }: Props) {
           <div className="bhc__hero-overlay" />
         </div>
         <div className="bhc__hero-text">
-          <p className="bhc__kicker">UX Audit · 2025</p>
+          <p className="bhc__kicker">UX Audit</p>
           <h1 className="bhc__title">
             Boulder
             <br />

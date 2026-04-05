@@ -33,7 +33,7 @@
 .bhc__tool-chip { border: 1px solid rgba(255,255,255,0.5); padding: 5px 12px; font-size: 15px; letter-spacing: 0.03em; color: #cccccc; border-radius: 4px; }
 
 .bhc__banner {
-  background: #e0458a;
+  background: #bf3975;
   padding: 32px 80px;
   text-align: center;
 }
@@ -71,7 +71,7 @@
   gap: 8px;
   border-top: 3px solid #e0458a;
 }
-.bhc__finding-severity { font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: #e0458a; font-weight: 700; }
+.bhc__finding-severity { font-size: 18px; letter-spacing: 0.06em; text-transform: uppercase; color: #ca3c7c; font-weight: 700; }
 .bhc__finding-count { font-size: 52px; font-weight: 800; color: #1a1a1a; line-height: 1; letter-spacing: -0.02em; }
 .bhc__finding-label { font-size: 16px; color: #5a5a5a; line-height: 1.4; }
 
@@ -151,9 +151,9 @@
   align-items: center;
   gap: 10px;
 }
-.bhc__journey-num { font-size: 16px; font-weight: 800; color: #e0458a; letter-spacing: 0.04em; flex-shrink: 0; }
+.bhc__journey-num { font-size: 20px; font-weight: 800; color: #e0458a; letter-spacing: 0.04em; flex-shrink: 0; }
 .bhc__journey-text { font-size: 14px; font-weight: 600; color: #1a1a1a; }
-.bhc__journey-arrow { color: #ccc; font-size: 16px; padding: 0 12px; }
+.bhc__journey-arrow { color: #000000; font-size: 16px; padding: 0 12px; }
 .bhc__journey-verdict {
   background: #1a1a1a;
   padding: 20px 32px;
@@ -180,7 +180,7 @@
 }
 .bhc__a11y-type { font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: #888; font-weight: 600; }
 .bhc__a11y-issue { font-size: 15px; font-weight: 700; color: #1a1a1a; }
-.bhc__a11y-rec { font-size: 14px; line-height: 1.6; color: #e0458a; font-weight: 600; padding-top: 8px; border-top: 1px solid rgba(26,26,26,0.08); }
+.bhc__a11y-rec { font-size: 14px; line-height: 1.6; color: #1a1a1a; font-weight: 400; padding-top: 8px; border-top: 1px solid rgba(26,26,26,0.08); }
 
 /* Stats */
 .bhc__stats {

@@ -19,7 +19,7 @@ export default function CaseStudyBandWidth({ image, onBack }: Props) {
 
       <header className="bw__hero">
         <div className="bw__hero-content">
-          <span className="bw__eyebrow">Capstone Project · 2026</span>
+          <span className="bw__eyebrow">Capstone Project</span>
           <h1 className="bw__title">
             Band
             <br />
