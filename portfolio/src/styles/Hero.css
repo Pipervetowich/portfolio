@@ -47,6 +47,16 @@
   background: transparent;
 }
 
+.hero__title--script {
+  font-family: 'Corinthia', cursive;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 2px;
+  font-size: clamp(100px, 21vw, 400px);
+  line-height: 0.8;
+  margin-left: 15%;
+}
+
 .hero__photo-wrapper {
   position: absolute;
   top: 74%;

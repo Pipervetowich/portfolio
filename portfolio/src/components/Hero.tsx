@@ -10,8 +10,7 @@ export default function Hero({ loaded, piperPhoto }: HeroProps) {
     <section id="about" className="hero">
       <div className="hero__inner">
         <div className="hero__topbar">
-          <p className="section-label">UX Designer / Product Designer</p>
-          <p className="section-label">Colorado, USA</p>
+          <p className="section-label">UX Designer </p>
         </div>
 
         <h2 className="handwriting">Hi. Glad you're here.</h2>
@@ -31,9 +30,9 @@ export default function Hero({ loaded, piperPhoto }: HeroProps) {
           </div>
 
           <h1
-            className={`hero__title hero__title--delayed ${loaded ? "visible" : ""}`}
+            className={`hero__title hero__title--delayed hero__title--script ${loaded ? "visible" : ""}`}
           >
-            VETOWICH
+            Vetowich
           </h1>
         </div>
       </div>

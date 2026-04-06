@@ -19,7 +19,6 @@ import "./styles/global.css";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Work from "./components/Work";
-import Crafts from "./components/Crafts";
 import Contact from "./components/Contact";
 
 import CaseStudyBandWidth from "./components/Casestudybandwidth";
@@ -40,7 +39,6 @@ type PageKey =
   | "home"
   | "about-me"
   | "work"
-  | "crafts"
   | "contact"
   | "bandwidth"
   | "denver-zoo"
@@ -55,7 +53,7 @@ const caseStudyKeys: PageKey[] = [
   "bhc",
   "noodles",
 ];
-const mainPages: PageKey[] = ["home", "about-me", "work", "crafts", "contact"];
+const mainPages: PageKey[] = ["home", "about-me", "work", "contact"];
 
 function getPageFromHash(): PageKey {
   const hash = window.location.hash.replace("#", "") as PageKey;
@@ -185,8 +183,6 @@ export default function App() {
         );
       case "work":
         return <Work onOpenCaseStudy={handleOpenCaseStudy} images={images} />;
-      case "crafts":
-        return <Crafts />;
       case "contact":
         return <Contact />;
       default:

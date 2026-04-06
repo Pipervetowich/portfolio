@@ -9,11 +9,11 @@
   margin: 0 auto;
 }
 
-.crafts__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.crafts__header {
+  display: flex;
+  align-items: baseline;
   gap: 60px;
-  align-items: start;
+  margin-bottom: 64px;
 }
 
 .crafts__heading {
@@ -23,37 +23,122 @@
   color: var(--pink);
   font-style: italic;
   line-height: 0.9;
-  margin-bottom: 32px;
+  flex-shrink: 0;
 }
 
-.process-step {
-  border-left: 2px solid var(--pink);
-  padding-left: 20px;
-  margin-bottom: 32px;
-}
-
-.process-step__num {
+.crafts__intro {
   font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  color: var(--pink);
-  letter-spacing: 0.5px;
-  margin-bottom: 4px;
+  font-size: clamp(15px, 1.8vw, 19px);
+  color: #3d3d3d;
+  line-height: 1.6;
+  max-width: 420px;
+  font-style: italic;
 }
 
-.process-step__label {
+.crafts__groups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.crafts__group {
+  border-top: 2px solid var(--pink);
+  padding-top: 24px;
+}
+
+.crafts__group-label {
   font-family: 'Playfair Display', serif;
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--dark);
   margin-bottom: 4px;
 }
+
+.crafts__group-desc {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.crafts__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.crafts__pill {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid;
+}
+
+.crafts__pill--design {
+  background: #fdf0f5;
+  color: #b04070;
+  border-color: #f0c0d5;
+}
+
+.crafts__pill--code {
+  background: #eff5fd;
+  color: #2a5fa0;
+  border-color: #bdd3f0;
+}
+
+.crafts__pill--methods {
+  background: #f4f4f4;
+  color: #555;
+  border-color: #ddd;
+}
+
+.crafts__built-with {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.crafts__built-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  color: #aaa;
+  font-style: italic;
+}
+
+.crafts__built-stack {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  color: #555;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 900px) {
+  .crafts__header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .crafts__groups {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .crafts {
     padding: 80px 24px;
   }
-  .crafts__grid {
+}
+
+@media (max-width: 560px) {
+  .crafts__groups {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
 }
 
@@ -61,4 +146,9 @@
   .crafts {
     padding: 72px 16px;
   }
+}
+
+.crafts__graphic {
+  margin-top: 48px;
+  opacity: 0.9;
 }
