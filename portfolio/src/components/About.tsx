@@ -66,18 +66,6 @@ export default function About({ piperPhoto2, outdoorPhotos }: AboutProps) {
               contribute meaningfully to a team. I'm especially excited to
               innovate and create engaging experiences for users.
             </p>
-
-            <div style={{ marginBottom: 16 }}>
-              <h2 className="section-label" style={{ marginBottom: 12 }}>
-                I care about:
-              </h2>
-              {loveItems.map((item, i) => (
-                <div key={i} className="about__love-item">
-                  <span className="about__love-bullet">✦</span>
-                  <p className="body-text">{item}</p>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="about__media">
@@ -116,7 +104,6 @@ export default function About({ piperPhoto2, outdoorPhotos }: AboutProps) {
           <div className="about__interests-grid">
             {interests.map((interest) => (
               <div key={interest.title} className="about__interest-card">
-                <div className="about__interest-emoji">{interest.emoji}</div>
                 <div className="about__interest-body">
                   <h3 className="about__interest-title">{interest.title}</h3>
                   <p className="about__interest-detail">{interest.detail}</p>
