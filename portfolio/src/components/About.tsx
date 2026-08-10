@@ -50,9 +50,9 @@ export default function About({ piperPhoto2, outdoorPhotos }: AboutProps) {
             </h1>
 
             <p className="body-text" style={{ marginBottom: 20 }}>
-              I'm a 4th-year student at the University of Colorado, Boulder,
-              completing my B.S. in Creative Technology and Design in May 2026.
-              Throughout my studies, I've developed a strong foundation in
+              I'm a recent graduate of the University of Colorado, Boulder,
+              where I earned my B.S. in Creative Technology and Design in May
+              2026. Throughout my studies, I developed a strong foundation in
               design thinking, user experience, front-end development, and
               creative problem-solving. My experience spans designing intuitive
               digital experiences, building responsive interfaces, and iterating
@@ -61,10 +61,10 @@ export default function About({ piperPhoto2, outdoorPhotos }: AboutProps) {
             </p>
 
             <p className="body-text" style={{ marginBottom: 28 }}>
-              I'm actively seeking internships and entry-level opportunities
-              where I can continue learning, apply my skills to real-world
-              projects, and contribute meaningfully to a team. I'm especially
-              excited to innovate and create engaging experiences for users.
+              I'm actively seeking entry-level opportunities where I can
+              continue learning, apply my skills to real-world projects, and
+              contribute meaningfully to a team. I'm especially excited to
+              innovate and create engaging experiences for users.
             </p>
 
             <div style={{ marginBottom: 16 }}>

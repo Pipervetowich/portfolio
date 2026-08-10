@@ -63,9 +63,9 @@ export const skills = [
 ];
 
 export const stats = [
-  { num: "4th", label: "year student" },
+  { num: "B.S.", label: "degree earned" },
   { num: "8+", label: "projects completed" },
-  { num: "2026", label: "graduating" },
+  { num: "2026", label: "graduate" },
 ];
 
 export const contactItems = [
