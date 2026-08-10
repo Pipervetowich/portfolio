@@ -50,13 +50,6 @@ export const projects = [
   },
 ];
 
-export const process = [
-  { num: "01", label: "Discover", desc: "User interviews, competitive audits, heuristic evals" },
-  { num: "02", label: "Define", desc: "Personas, journey maps, affinity mapping" },
-  { num: "03", label: "Design", desc: "Wireframes, prototypes, accessibility" },
-  { num: "04", label: "Test", desc: "User testing, iterate feedback, refine" },
-];
-
 export const skills = [
   "Figma", "React", "HTML", "JavaScript",
   "Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "3D Modeling",
@@ -64,7 +57,7 @@ export const skills = [
 
 export const stats = [
   { num: "B.S.", label: "degree earned" },
-  { num: "8+", label: "projects completed" },
+  { num: "Certificate", label: "User Experience" },
   { num: "2026", label: "graduate" },
 ];
 

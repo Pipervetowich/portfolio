@@ -1,5 +1,5 @@
 import "../styles/About.css";
-import { stats, loveItems } from "../Constants";
+import { stats } from "../Constants";
 
 interface AboutProps {
   piperPhoto2: string;
@@ -9,28 +9,24 @@ interface AboutProps {
 const interests = [
   {
     title: "Climbing",
-    emoji: "🧗",
     description:
       "I love climbing! Whether I'm bouldering at the gym or sport climbing in Boulder Canyon, I keep pushing myself. There's always another problem to crack.",
     detail: "Sport · Bouldering",
   },
   {
     title: "Hiking",
-    emoji: "⛰️",
     description:
       "There's nothing better than a long trail, a good view, and a well-earned trail snack. Hiking keeps me outside and inspired.",
     detail: "Front Range · Backcountry",
   },
   {
     title: "Snowboarding",
-    emoji: "🏂",
     description:
       "Winter in Colorado means shredding on the mountain. When it's not climbing season, I'm hitting the slopes and making the most of every run.",
     detail: "Winter Park · Copper · Eldora",
   },
   {
     title: "Reading",
-    emoji: "📖",
     description:
       "I'm drawn to fiction that makes me think differently. Reading keeps my ideas fresh and reminds me that good storytelling is everything.",
     detail: "For Fun",
